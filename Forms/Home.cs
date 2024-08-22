@@ -33,7 +33,7 @@ namespace AdminSystem.Forms
             {
                 this.mainpanel.Controls.RemoveAt(0);
             }
-            Form f = new Form();
+            Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
