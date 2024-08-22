@@ -774,7 +774,7 @@
             this.mainpanel.Margin = new System.Windows.Forms.Padding(1);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainpanel.Size = new System.Drawing.Size(1328, 745);
+            this.mainpanel.Size = new System.Drawing.Size(1219, 675);
             this.mainpanel.TabIndex = 4;
             this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 

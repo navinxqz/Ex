@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.schedulePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelschdata = new System.Windows.Forms.Panel();
             this.labeld7c1 = new System.Windows.Forms.Label();
@@ -62,9 +61,10 @@
             this.labeld1c1 = new System.Windows.Forms.Label();
             this.labeld5c1 = new System.Windows.Forms.Label();
             this.labelsh = new System.Windows.Forms.Label();
-            this.schedulePanel.SuspendLayout();
+            this.schedulePanel = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panelschdata.SuspendLayout();
+            this.schedulePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -72,26 +72,14 @@
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this.schedulePanel;
             // 
-            // schedulePanel
-            // 
-            this.schedulePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.schedulePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.schedulePanel.Controls.Add(this.panel4);
-            this.schedulePanel.Location = new System.Drawing.Point(50, 31);
-            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.schedulePanel.Name = "schedulePanel";
-            this.schedulePanel.Size = new System.Drawing.Size(1201, 262);
-            this.schedulePanel.TabIndex = 2;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panelschdata);
             this.panel4.Controls.Add(this.labelsh);
-            this.panel4.Location = new System.Drawing.Point(-1, 8);
+            this.panel4.Location = new System.Drawing.Point(2, 14);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1145, 246);
+            this.panel4.Size = new System.Drawing.Size(1133, 246);
             this.panel4.TabIndex = 44;
             // 
             // panelschdata
@@ -124,10 +112,10 @@
             this.panelschdata.Controls.Add(this.label4);
             this.panelschdata.Controls.Add(this.labeld1c1);
             this.panelschdata.Controls.Add(this.labeld5c1);
-            this.panelschdata.Location = new System.Drawing.Point(27, 87);
+            this.panelschdata.Location = new System.Drawing.Point(2, 83);
             this.panelschdata.Margin = new System.Windows.Forms.Padding(2);
             this.panelschdata.Name = "panelschdata";
-            this.panelschdata.Size = new System.Drawing.Size(1118, 157);
+            this.panelschdata.Size = new System.Drawing.Size(1092, 161);
             this.panelschdata.TabIndex = 1;
             // 
             // labeld7c1
@@ -471,12 +459,24 @@
             this.labelsh.AutoSize = true;
             this.labelsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelsh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            this.labelsh.Location = new System.Drawing.Point(15, 0);
+            this.labelsh.Location = new System.Drawing.Point(2, 0);
             this.labelsh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelsh.Name = "labelsh";
             this.labelsh.Size = new System.Drawing.Size(279, 69);
             this.labelsh.TabIndex = 0;
             this.labelsh.Text = "Schedule";
+            // 
+            // schedulePanel
+            // 
+            this.schedulePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.schedulePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.schedulePanel.Controls.Add(this.panel4);
+            this.schedulePanel.Location = new System.Drawing.Point(11, 11);
+            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.schedulePanel.Name = "schedulePanel";
+            this.schedulePanel.Size = new System.Drawing.Size(1107, 242);
+            this.schedulePanel.TabIndex = 2;
             // 
             // HomeForm
             // 
@@ -489,11 +489,11 @@
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
-            this.schedulePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panelschdata.ResumeLayout(false);
             this.panelschdata.PerformLayout();
+            this.schedulePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -501,7 +501,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel schedulePanel;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelschdata;
         private System.Windows.Forms.Label labeld7c1;
@@ -533,5 +532,6 @@
         private System.Windows.Forms.Label labeld1c1;
         private System.Windows.Forms.Label labeld5c1;
         private System.Windows.Forms.Label labelsh;
+        private System.Windows.Forms.Panel schedulePanel;
     }
 }
