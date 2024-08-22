@@ -609,6 +609,7 @@
             this.btnEmployees.TabIndex = 27;
             this.btnEmployees.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployees.Values.Image")));
             this.btnEmployees.Values.Text = "Employees";
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // btnMembers
             // 

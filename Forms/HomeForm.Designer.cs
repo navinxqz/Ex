@@ -487,7 +487,6 @@
             this.Controls.Add(this.schedulePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.schedulePanel.ResumeLayout(false);

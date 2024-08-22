@@ -16,6 +16,7 @@ namespace AdminSystem.Forms
         private KryptonCheckButton cb = new KryptonCheckButton();
         private List<Form> forms = new List<Form>();
         private HomeForm home = new HomeForm();
+        private Employee emp = new Employee();
         
         public Home()
         {
@@ -134,6 +135,17 @@ namespace AdminSystem.Forms
             Login l = new Login();
             l.Visible = true;
             this.Hide();
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            if(!btnEmployees.Checked)
+            {
+                btnEmployees.Checked = true;
+                return;
+            }
+            LoadForm(emp);
+            ButtonSetting(btnEmployees);
         }
     }
 }
