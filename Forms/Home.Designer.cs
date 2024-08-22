@@ -34,15 +34,15 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cuiButton2 = new CuoreUI.Controls.cuiButton();
             this.slidePanel = new System.Windows.Forms.Panel();
-            this.cuiButton3 = new CuoreUI.Controls.cuiButton();
-            this.logoutBtn = new CuoreUI.Controls.cuiButton();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnHome = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.btnSubscriptions = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.btnTrainer = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.btnPayment = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.btnEmployees = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
             this.btnMembers = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
-            this.btnHome = new ComponentFactory.Krypton.Toolkit.KryptonCheckButton();
+            this.cuiButton3 = new CuoreUI.Controls.cuiButton();
+            this.logoutBtn = new CuoreUI.Controls.cuiButton();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.faddingTimer = new System.Windows.Forms.Timer(this.components);
@@ -137,70 +137,6 @@
             this.slidePanel.Size = new System.Drawing.Size(68, 740);
             this.slidePanel.TabIndex = 2;
             // 
-            // cuiButton3
-            // 
-            this.cuiButton3.CheckButton = false;
-            this.cuiButton3.Checked = false;
-            this.cuiButton3.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.cuiButton3.CheckedImageTint = System.Drawing.Color.White;
-            this.cuiButton3.CheckedOutline = System.Drawing.Color.Transparent;
-            this.cuiButton3.Content = "";
-            this.cuiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cuiButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cuiButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.cuiButton3.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.cuiButton3.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton3.HoverOutline = System.Drawing.Color.White;
-            this.cuiButton3.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton3.Image")));
-            this.cuiButton3.ImageAutoCenter = true;
-            this.cuiButton3.ImageExpand = new System.Drawing.Point(5, 5);
-            this.cuiButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton3.ImageTint = System.Drawing.Color.White;
-            this.cuiButton3.Location = new System.Drawing.Point(10, 606);
-            this.cuiButton3.Name = "cuiButton3";
-            this.cuiButton3.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.cuiButton3.NormalOutline = System.Drawing.Color.White;
-            this.cuiButton3.OutlineThickness = 1.6F;
-            this.cuiButton3.PressedBackground = System.Drawing.Color.Transparent;
-            this.cuiButton3.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton3.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.cuiButton3.Rounding = new System.Windows.Forms.Padding(20);
-            this.cuiButton3.Size = new System.Drawing.Size(48, 49);
-            this.cuiButton3.TabIndex = 3;
-            this.cuiButton3.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.CheckButton = false;
-            this.logoutBtn.Checked = false;
-            this.logoutBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.logoutBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.logoutBtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.logoutBtn.Content = "";
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.logoutBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.logoutBtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
-            this.logoutBtn.ImageAutoCenter = true;
-            this.logoutBtn.ImageExpand = new System.Drawing.Point(8, 8);
-            this.logoutBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.logoutBtn.ImageTint = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(12, 675);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.logoutBtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.logoutBtn.OutlineThickness = 1.6F;
-            this.logoutBtn.PressedBackground = System.Drawing.Color.Transparent;
-            this.logoutBtn.PressedImageTint = System.Drawing.Color.White;
-            this.logoutBtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.logoutBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.logoutBtn.Size = new System.Drawing.Size(40, 40);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
             // kryptonPanel1
             // 
             this.kryptonPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -217,6 +153,98 @@
             this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.TabLowProfile;
             this.kryptonPanel1.Size = new System.Drawing.Size(269, 367);
             this.kryptonPanel1.TabIndex = 36;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Location = new System.Drawing.Point(4, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.btnHome.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.btnHome.Size = new System.Drawing.Size(263, 53);
+            this.btnHome.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnHome.StateCheckedNormal.Content.AdjacentGap = 20;
+            this.btnHome.StateCheckedNormal.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedNormal.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StateCheckedNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StateCheckedNormal.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedNormal.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Character;
+            this.btnHome.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedPressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnHome.StateCheckedPressed.Content.AdjacentGap = 20;
+            this.btnHome.StateCheckedPressed.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedPressed.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedPressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StateCheckedPressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedPressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedPressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StateCheckedPressed.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedPressed.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedPressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
+            this.btnHome.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btnHome.StateCheckedTracking.Content.AdjacentGap = 20;
+            this.btnHome.StateCheckedTracking.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedTracking.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StateCheckedTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StateCheckedTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StateCheckedTracking.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateCheckedTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateCheckedTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
+            this.btnHome.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.btnHome.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.btnHome.StateNormal.Content.AdjacentGap = 20;
+            this.btnHome.StateNormal.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateNormal.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.btnHome.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.btnHome.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StateNormal.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateNormal.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
+            this.btnHome.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StatePressed.Content.AdjacentGap = 20;
+            this.btnHome.StatePressed.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StatePressed.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StatePressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.btnHome.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StatePressed.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StatePressed.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StatePressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
+            this.btnHome.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(129)))));
+            this.btnHome.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(129)))));
+            this.btnHome.StateTracking.Content.AdjacentGap = 20;
+            this.btnHome.StateTracking.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateTracking.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.btnHome.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.btnHome.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.btnHome.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
+            this.btnHome.StateTracking.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.btnHome.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.btnHome.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
+            this.btnHome.TabIndex = 31;
+            this.btnHome.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Values.Image")));
+            this.btnHome.Values.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnSubscriptions
             // 
@@ -306,7 +334,7 @@
             this.btnSubscriptions.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnSubscriptions.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
             this.btnSubscriptions.TabIndex = 29;
-            this.btnSubscriptions.Values.Image = ((System.Drawing.Image)(resources.GetObject("ButtonSubscriptions.Values.Image")));
+            this.btnSubscriptions.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnSubscriptions.Values.Image")));
             this.btnSubscriptions.Values.Text = "Subscription";
             // 
             // btnTrainer
@@ -397,7 +425,7 @@
             this.btnTrainer.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnTrainer.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
             this.btnTrainer.TabIndex = 30;
-            this.btnTrainer.Values.Image = ((System.Drawing.Image)(resources.GetObject("ButtonTrainer.Values.Image")));
+            this.btnTrainer.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnTrainer.Values.Image")));
             this.btnTrainer.Values.Text = "Trainer";
             // 
             // btnPayment
@@ -488,7 +516,7 @@
             this.btnPayment.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnPayment.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
             this.btnPayment.TabIndex = 29;
-            this.btnPayment.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton6.Values.Image")));
+            this.btnPayment.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Values.Image")));
             this.btnPayment.Values.Text = "Payments";
             // 
             // btnEmployees
@@ -579,7 +607,7 @@
             this.btnEmployees.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnEmployees.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
             this.btnEmployees.TabIndex = 27;
-            this.btnEmployees.Values.Image = ((System.Drawing.Image)(resources.GetObject("ButtonEmployees.Values.Image")));
+            this.btnEmployees.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployees.Values.Image")));
             this.btnEmployees.Values.Text = "Employees";
             // 
             // btnMembers
@@ -670,100 +698,73 @@
             this.btnMembers.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnMembers.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
             this.btnMembers.TabIndex = 25;
-            this.btnMembers.Values.Image = ((System.Drawing.Image)(resources.GetObject("ButtonMembers.Values.Image")));
+            this.btnMembers.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Values.Image")));
             this.btnMembers.Values.Text = "Members";
             // 
-            // btnHome
+            // cuiButton3
             // 
-            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHome.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Location = new System.Drawing.Point(4, 2);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.Size = new System.Drawing.Size(263, 53);
-            this.btnHome.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.btnHome.StateCheckedNormal.Content.AdjacentGap = 20;
-            this.btnHome.StateCheckedNormal.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedNormal.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StateCheckedNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StateCheckedNormal.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedNormal.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Character;
-            this.btnHome.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedPressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.btnHome.StateCheckedPressed.Content.AdjacentGap = 20;
-            this.btnHome.StateCheckedPressed.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedPressed.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedPressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StateCheckedPressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedPressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedPressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StateCheckedPressed.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedPressed.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedPressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
-            this.btnHome.StateCheckedTracking.Content.AdjacentGap = 20;
-            this.btnHome.StateCheckedTracking.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedTracking.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StateCheckedTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StateCheckedTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StateCheckedTracking.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateCheckedTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateCheckedTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.StateNormal.Content.AdjacentGap = 20;
-            this.btnHome.StateNormal.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateNormal.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.btnHome.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.btnHome.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StateNormal.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateNormal.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StatePressed.Content.AdjacentGap = 20;
-            this.btnHome.StatePressed.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StatePressed.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StatePressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.btnHome.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StatePressed.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StatePressed.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StatePressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(129)))));
-            this.btnHome.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(129)))));
-            this.btnHome.StateTracking.Content.AdjacentGap = 20;
-            this.btnHome.StateTracking.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateTracking.Content.Image.ImageV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
-            this.btnHome.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.btnHome.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.btnHome.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold);
-            this.btnHome.StateTracking.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.btnHome.StateTracking.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.btnHome.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.TabIndex = 31;
-            this.btnHome.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image")));
-            this.btnHome.Values.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.cuiButton3.CheckButton = false;
+            this.cuiButton3.Checked = false;
+            this.cuiButton3.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.cuiButton3.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton3.CheckedOutline = System.Drawing.Color.Transparent;
+            this.cuiButton3.Content = "";
+            this.cuiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cuiButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton3.ForeColor = System.Drawing.Color.Transparent;
+            this.cuiButton3.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.cuiButton3.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton3.HoverOutline = System.Drawing.Color.White;
+            this.cuiButton3.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton3.Image")));
+            this.cuiButton3.ImageAutoCenter = true;
+            this.cuiButton3.ImageExpand = new System.Drawing.Point(5, 5);
+            this.cuiButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton3.ImageTint = System.Drawing.Color.White;
+            this.cuiButton3.Location = new System.Drawing.Point(10, 606);
+            this.cuiButton3.Name = "cuiButton3";
+            this.cuiButton3.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.cuiButton3.NormalOutline = System.Drawing.Color.White;
+            this.cuiButton3.OutlineThickness = 1.6F;
+            this.cuiButton3.PressedBackground = System.Drawing.Color.Transparent;
+            this.cuiButton3.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton3.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.cuiButton3.Rounding = new System.Windows.Forms.Padding(20);
+            this.cuiButton3.Size = new System.Drawing.Size(48, 49);
+            this.cuiButton3.TabIndex = 3;
+            this.cuiButton3.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.CheckButton = false;
+            this.logoutBtn.Checked = false;
+            this.logoutBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logoutBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.logoutBtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.logoutBtn.Content = "";
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.logoutBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logoutBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.logoutBtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
+            this.logoutBtn.ImageAutoCenter = true;
+            this.logoutBtn.ImageExpand = new System.Drawing.Point(8, 8);
+            this.logoutBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.logoutBtn.ImageTint = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(12, 675);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.logoutBtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.logoutBtn.OutlineThickness = 1.6F;
+            this.logoutBtn.PressedBackground = System.Drawing.Color.Transparent;
+            this.logoutBtn.PressedImageTint = System.Drawing.Color.White;
+            this.logoutBtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.logoutBtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.logoutBtn.Size = new System.Drawing.Size(40, 40);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // mainpanel
             // 

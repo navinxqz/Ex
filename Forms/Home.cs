@@ -123,5 +123,17 @@ namespace AdminSystem.Forms
             LoadForm(home);
             ButtonSetting(btnHome);
         }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            if(!logoutBtn.Checked)
+            {
+                logoutBtn.Checked = true;
+                return;
+            }
+            Login l = new Login();
+            l.Visible = true;
+            this.Hide();
+        }
     }
 }
