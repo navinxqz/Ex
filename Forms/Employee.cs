@@ -12,6 +12,9 @@ namespace AdminSystem.Forms
 {
     public partial class Employee : Form
     {
+        private List<Employee> employees;
+        private Home h;
+
         public Employee()
         {
             InitializeComponent();
@@ -34,7 +37,26 @@ namespace AdminSystem.Forms
 
         private void faddingTimer_Tick(object sender, EventArgs e)
         {
-            if()
+            if(h.Opacity>0.86)
+            {
+                h.Opacity -= 0.01;
+            }
+            else
+            {
+                faddingTimer.Stop();
+            }
+        }
+
+        private void faddingTime2_Tick(object sender, EventArgs e)
+        {
+            if (h.Opacity < 1)
+            {
+                h.Opacity += 0.01;
+            }
+            else
+            {
+                faddingTime2.Stop();
+            }
         }
     }
 }
