@@ -28,25 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelMemberView = new System.Windows.Forms.Panel();
-            this.EmployeeData = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Brithday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Admin = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Account = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.textSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
-            this.panelMemberView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).BeginInit();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.searchBtn = new CuoreUI.Controls.cuiButton();
+            this.EmpData = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.EmpData)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,187 +65,36 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Employees";
             // 
-            // panelMemberView
+            // searchtxtbox
             // 
-            this.panelMemberView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMemberView.Controls.Add(this.EmployeeData);
-            this.panelMemberView.Location = new System.Drawing.Point(0, 74);
-            this.panelMemberView.Margin = new System.Windows.Forms.Padding(2);
-            this.panelMemberView.Name = "panelMemberView";
-            this.panelMemberView.Size = new System.Drawing.Size(1423, 679);
-            this.panelMemberView.TabIndex = 6;
-            this.panelMemberView.Visible = false;
-            // 
-            // EmployeeData
-            // 
-            this.EmployeeData.AllowUserToAddRows = false;
-            this.EmployeeData.AllowUserToDeleteRows = false;
-            this.EmployeeData.AllowUserToResizeColumns = false;
-            this.EmployeeData.AllowUserToResizeRows = false;
-            this.EmployeeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeeData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.EmployeeData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.EmployeeData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeeData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.EmployeeData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(72)))), ((int)(((byte)(153)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.EmployeeData.ColumnHeadersHeight = 55;
-            this.EmployeeData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.MName,
-            this.Username,
-            this.Gender,
-            this.Age,
-            this.Brithday,
-            this.Email,
-            this.Phone,
-            this.Admin,
-            this.Account});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmployeeData.DefaultCellStyle = dataGridViewCellStyle8;
-            this.EmployeeData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.EmployeeData.EnableHeadersVisualStyles = false;
-            this.EmployeeData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.EmployeeData.Location = new System.Drawing.Point(23, 5);
-            this.EmployeeData.Margin = new System.Windows.Forms.Padding(1, 5, 25, 26);
-            this.EmployeeData.MultiSelect = false;
-            this.EmployeeData.Name = "EmployeeData";
-            this.EmployeeData.ReadOnly = true;
-            this.EmployeeData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.EmployeeData.RowHeadersVisible = false;
-            this.EmployeeData.RowHeadersWidth = 82;
-            this.EmployeeData.RowTemplate.Height = 45;
-            this.EmployeeData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeeData.Size = new System.Drawing.Size(1308, 674);
-            this.EmployeeData.TabIndex = 36;
-            this.EmployeeData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeData_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 8;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // MName
-            // 
-            this.MName.DataPropertyName = "Name";
-            this.MName.HeaderText = "Name";
-            this.MName.MinimumWidth = 8;
-            this.MName.Name = "MName";
-            this.MName.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Username";
-            this.Username.MinimumWidth = 8;
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 8;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Age
-            // 
-            this.Age.DataPropertyName = "Age";
-            this.Age.HeaderText = "Age";
-            this.Age.MinimumWidth = 8;
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // Brithday
-            // 
-            this.Brithday.DataPropertyName = "BrithDay";
-            this.Brithday.HeaderText = "Brithday";
-            this.Brithday.MinimumWidth = 8;
-            this.Brithday.Name = "Brithday";
-            this.Brithday.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Phone
-            // 
-            this.Phone.DataPropertyName = "PhoneNumber";
-            this.Phone.HeaderText = "Phone";
-            this.Phone.MinimumWidth = 8;
-            this.Phone.Name = "Phone";
-            this.Phone.ReadOnly = true;
-            // 
-            // Admin
-            // 
-            this.Admin.DataPropertyName = "Admin";
-            this.Admin.HeaderText = "Admin";
-            this.Admin.MinimumWidth = 8;
-            this.Admin.Name = "Admin";
-            this.Admin.ReadOnly = true;
-            // 
-            // Account
-            // 
-            this.Account.DataPropertyName = "AccountStatus";
-            this.Account.HeaderText = "Account";
-            this.Account.MinimumWidth = 8;
-            this.Account.Name = "Account";
-            this.Account.ReadOnly = true;
-            // 
-            // textSearch
-            // 
-            this.textSearch.Location = new System.Drawing.Point(876, 9);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(307, 54);
-            this.textSearch.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.textSearch.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.textSearch.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.textSearch.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.searchtxtbox.Location = new System.Drawing.Point(876, 9);
+            this.searchtxtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.searchtxtbox.Name = "searchtxtbox";
+            this.searchtxtbox.Size = new System.Drawing.Size(307, 54);
+            this.searchtxtbox.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textSearch.StateActive.Border.Width = -2;
-            this.textSearch.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.textSearch.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textSearch.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.textSearch.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.textSearch.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.textSearch.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.searchtxtbox.StateActive.Border.Width = -2;
+            this.searchtxtbox.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.searchtxtbox.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtxtbox.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.searchtxtbox.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textSearch.StateDisabled.Border.Width = -2;
-            this.textSearch.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.textSearch.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textSearch.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textSearch.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.textSearch.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textSearch.TabIndex = 3;
-            this.textSearch.Text = "Search";
+            this.searchtxtbox.StateDisabled.Border.Width = -2;
+            this.searchtxtbox.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.searchtxtbox.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.searchtxtbox.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.searchtxtbox.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.searchtxtbox.TabIndex = 3;
+            this.searchtxtbox.Text = "Search";
             // 
             // btnAdd
             // 
@@ -274,21 +128,185 @@
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 35;
+            this.bunifuElipse1.TargetControl = this.searchtxtbox;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.CheckButton = false;
+            this.searchBtn.Checked = false;
+            this.searchBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchBtn.CheckedImageTint = System.Drawing.Color.White;
+            this.searchBtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.searchBtn.Content = "";
+            this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.searchBtn.ForeColor = System.Drawing.Color.Transparent;
+            this.searchBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchBtn.HoveredImageTint = System.Drawing.Color.White;
+            this.searchBtn.HoverOutline = System.Drawing.Color.White;
+            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
+            this.searchBtn.ImageAutoCenter = true;
+            this.searchBtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.searchBtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.searchBtn.ImageTint = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(1198, 12);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.searchBtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.searchBtn.OutlineThickness = 1.6F;
+            this.searchBtn.PressedBackground = System.Drawing.Color.Transparent;
+            this.searchBtn.PressedImageTint = System.Drawing.Color.White;
+            this.searchBtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.searchBtn.Rounding = new System.Windows.Forms.Padding(20);
+            this.searchBtn.Size = new System.Drawing.Size(48, 51);
+            this.searchBtn.TabIndex = 8;
+            this.searchBtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // EmpData
+            // 
+            this.EmpData.AllowUserToAddRows = false;
+            this.EmpData.AllowUserToDeleteRows = false;
+            this.EmpData.AllowUserToResizeColumns = false;
+            this.EmpData.AllowUserToResizeRows = false;
+            this.EmpData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmpData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmpData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.EmpData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.EmpData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmpData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.EmpData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.EmpData.ColumnHeadersHeight = 60;
+            this.EmpData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmpData.DefaultCellStyle = dataGridViewCellStyle6;
+            this.EmpData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.EmpData.EnableHeadersVisualStyles = false;
+            this.EmpData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.EmpData.Location = new System.Drawing.Point(22, 80);
+            this.EmpData.Margin = new System.Windows.Forms.Padding(1, 5, 25, 26);
+            this.EmpData.MultiSelect = false;
+            this.EmpData.Name = "EmpData";
+            this.EmpData.ReadOnly = true;
+            this.EmpData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.EmpData.RowHeadersWidth = 80;
+            this.EmpData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmpData.Size = new System.Drawing.Size(1224, 606);
+            this.EmpData.TabIndex = 9;
+            this.EmpData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "FullName";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "UserName";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Gender";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Age";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column6.HeaderText = "Birthday";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "PhoneNo.";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Email";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column9.HeaderText = "Salary";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Status";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // faddingTimer
+            // 
+            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 40;
+            this.bunifuElipse2.TargetControl = this.EmpData;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1293, 715);
+            this.Controls.Add(this.EmpData);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.panelMemberView);
-            this.Controls.Add(this.textSearch);
+            this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employee";
             this.Text = "Employee";
-            this.panelMemberView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmpData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,19 +315,22 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelMemberView;
-        private System.Windows.Forms.DataGridView EmployeeData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Brithday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Admin;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Account;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textSearch;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox searchtxtbox;
         private CuoreUI.Controls.cuiButton btnAdd;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private CuoreUI.Controls.cuiButton searchBtn;
+        private System.Windows.Forms.DataGridView EmpData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewImageColumn Column10;
+        private System.Windows.Forms.Timer faddingTimer;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }

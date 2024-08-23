@@ -26,5 +26,15 @@ namespace AdminSystem.Forms
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void faddingTimer_Tick(object sender, EventArgs e)
+        {
+            if()
+        }
     }
 }
