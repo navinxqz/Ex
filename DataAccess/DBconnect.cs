@@ -1,9 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SqlKata.Compilers;
+using SqlKata.Execution;
+using SqlKata;
 
 namespace AdminSystem.DataAccess
 {
@@ -14,8 +12,17 @@ namespace AdminSystem.DataAccess
         {
             if (connection == null)
             {
-                connection = new MySqlConnection("");
+                connection = new MySqlConnection("Server=127.0.0.1;Database=employee;Uid=root;");
             }return connection;
+        }
+        static QueryFactory db = null;
+        public static QueryFactory Db() {
+            if(db == null)
+            {
+                var compiler = new MySqlCompiler();
+                db = new QueryFactory(GetConnection(),compiler);
+            }
+            return db;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using SqlKata.Execution;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -24,6 +25,35 @@ namespace AdminSystem.Forms
                 EmpData.Rows.Add(new object[] {
                     imageList1.Images[0],
                 });
+            }
+        }
+
+        void LoadData()
+        {
+            EmpData.Rows.Clear();
+            //for searching
+            var db = DataAccess.DBconnect.Db();
+            if(searchtxtbox.Text.Trim().Length > 0 )
+            {
+
+            }
+            IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
+            foreach(var employee in result)
+            {
+                EmpData.Rows.Add(new object[]{
+                    imageList1.Images[0],
+                    employee.ID,
+                    employee.FullName,
+                    employee.Username,
+                    employee.Gender,
+                    employee.Age,
+                    employee.Birthday,
+                    employee.phone,
+                    employee.Email,
+                    employee.Salary,
+                    null
+                });
+
             }
         }
 
@@ -66,6 +96,10 @@ namespace AdminSystem.Forms
             }
         }
 
-        
+        private void formMain_Shown(object sender, EventArgs e)
+        {
+            //load Data
+            LoadData();
+        }
     }
 }

@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccess\DBconnect.cs" />
+    <Compile Include="DataAccess\Employee.cs" />
     <Compile Include="Forms\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
