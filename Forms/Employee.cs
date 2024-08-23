@@ -30,17 +30,19 @@ namespace AdminSystem.Forms
 
         void LoadData()
         {
-         //   EmpData.Rows.Clear();
-            //for searching
-            var db = DataAccess.DBconnect.Db();
-            if(searchtxtbox.Text.Trim().Length > 0 )
+            EmpData.Rows.Clear();
+            try
             {
+                //for searching
+                var db = DataAccess.DBconnect.Db();
+                if (searchtxtbox.Text.Trim().Length > 0)
+                {
 
-            }
-            IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
-            foreach(var emp in result)
-            {
-                EmpData.Rows.Add(new object[]{
+                }
+                IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
+                foreach (var emp in result)
+                {
+                    EmpData.Rows.Add(new object[]{
                     imageList1.Images[0],
                     emp.ID,
                     emp.FullName,
@@ -53,7 +55,10 @@ namespace AdminSystem.Forms
                     emp.Salary,
                     emp.Status
                 });
-
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("An Error Occured!");
             }
         }
 
