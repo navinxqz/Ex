@@ -18,6 +18,13 @@ namespace AdminSystem.Forms
         public Employee()
         {
             InitializeComponent();
+
+            for(int i = 0; i < 100; i++)
+            {
+                EmpData.Rows.Add(new object[] {
+                    imageList1.Images[0],
+                });
+            }
         }
 
         private void EmployeeData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,5 +65,7 @@ namespace AdminSystem.Forms
                 faddingTime2.Stop();
             }
         }
+
+        
     }
 }
