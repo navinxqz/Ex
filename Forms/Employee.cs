@@ -13,14 +13,14 @@ namespace AdminSystem.Forms
 {
     public partial class Employee : Form
     {
-        private List<Employee> employees;
+        private List<Employee> employee;
         private Home h;
 
         public Employee()
         {
             InitializeComponent();
 
-            for(int i = 0; i < 100; i++)
+            for(int i = 0; i < EmpData.Rows.Count; i++)
             {
                 EmpData.Rows.Add(new object[] {
                     imageList1.Images[0],
@@ -30,7 +30,7 @@ namespace AdminSystem.Forms
 
         void LoadData()
         {
-            EmpData.Rows.Clear();
+         //   EmpData.Rows.Clear();
             //for searching
             var db = DataAccess.DBconnect.Db();
             if(searchtxtbox.Text.Trim().Length > 0 )
@@ -38,20 +38,20 @@ namespace AdminSystem.Forms
 
             }
             IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
-            foreach(var employee in result)
+            foreach(var emp in result)
             {
                 EmpData.Rows.Add(new object[]{
                     imageList1.Images[0],
-                    employee.ID,
-                    employee.FullName,
-                    employee.Username,
-                    employee.Gender,
-                    employee.Age,
-                    employee.Birthday,
-                    employee.phone,
-                    employee.Email,
-                    employee.Salary,
-                    null
+                    emp.ID,
+                    emp.FullName,
+                    emp.Username,
+                    emp.Gender,
+                    emp.Age,
+                    emp.Birthday,
+                    emp.phone,
+                    emp.Email,
+                    emp.Salary,
+                    emp.Status
                 });
 
             }
