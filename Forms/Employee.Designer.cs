@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.EmpData = new System.Windows.Forms.DataGridView();
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +52,7 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
+            this.cuiScrollbar1 = new CuoreUI.Controls.cuiScrollbar();
             ((System.ComponentModel.ISupportInitialize)(this.EmpData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -153,7 +154,7 @@
             this.searchBtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.searchBtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.searchBtn.ImageTint = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(1198, 12);
+            this.searchBtn.Location = new System.Drawing.Point(1198, 9);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.searchBtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -194,14 +195,14 @@
             this.Column8,
             this.Column9,
             this.Column10});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmpData.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmpData.DefaultCellStyle = dataGridViewCellStyle15;
             this.EmpData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.EmpData.EnableHeadersVisualStyles = false;
             this.EmpData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
@@ -215,9 +216,24 @@
             this.EmpData.RowHeadersWidth = 80;
             this.EmpData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EmpData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmpData.Size = new System.Drawing.Size(1224, 606);
+            this.EmpData.Size = new System.Drawing.Size(1224, 600);
             this.EmpData.TabIndex = 9;
             this.EmpData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // faddingTimer
+            // 
+            this.faddingTimer.Interval = 20;
+            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 40;
+            this.bunifuElipse2.TargetControl = this.EmpData;
+            // 
+            // faddingTime2
+            // 
+            this.faddingTime2.Interval = 15;
+            this.faddingTime2.Tick += new System.EventHandler(this.faddingTime2_Tick);
             // 
             // Column1
             // 
@@ -251,9 +267,9 @@
             // 
             // Column6
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Format = "d";
+            dataGridViewCellStyle13.NullValue = null;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column6.HeaderText = "Birthday";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
@@ -272,9 +288,11 @@
             // 
             // Column9
             // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle14.Format = "C2";
+            dataGridViewCellStyle14.NullValue = "0";
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column9.HeaderText = "Salary";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
@@ -287,20 +305,24 @@
             this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // faddingTimer
+            // cuiScrollbar1
             // 
-            this.faddingTimer.Interval = 20;
-            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 40;
-            this.bunifuElipse2.TargetControl = this.EmpData;
-            // 
-            // faddingTime2
-            // 
-            this.faddingTime2.Interval = 15;
-            this.faddingTime2.Tick += new System.EventHandler(this.faddingTime2_Tick);
+            this.cuiScrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cuiScrollbar1.Background = System.Drawing.Color.Transparent;
+            this.cuiScrollbar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cuiScrollbar1.HoveredThumbColor = System.Drawing.Color.DarkGray;
+            this.cuiScrollbar1.Location = new System.Drawing.Point(1226, 140);
+            this.cuiScrollbar1.MinimumSize = new System.Drawing.Size(20, 50);
+            this.cuiScrollbar1.Name = "cuiScrollbar1";
+            this.cuiScrollbar1.PressedThumbColor = System.Drawing.Color.DarkGray;
+            this.cuiScrollbar1.Rounding = 5;
+            this.cuiScrollbar1.Size = new System.Drawing.Size(20, 540);
+            this.cuiScrollbar1.TabIndex = 10;
+            this.cuiScrollbar1.TargetControl = null;
+            this.cuiScrollbar1.Text = "cuiScrollbar1";
+            this.cuiScrollbar1.ThumbColor = System.Drawing.Color.Silver;
+            this.cuiScrollbar1.ThumbHeight = 50;
             // 
             // Employee
             // 
@@ -308,6 +330,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1293, 715);
+            this.Controls.Add(this.cuiScrollbar1);
             this.Controls.Add(this.EmpData);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.btnAdd);
@@ -330,6 +353,9 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CuoreUI.Controls.cuiButton searchBtn;
         private System.Windows.Forms.DataGridView EmpData;
+        private System.Windows.Forms.Timer faddingTimer;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private System.Windows.Forms.Timer faddingTime2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -340,8 +366,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewImageColumn Column10;
-        private System.Windows.Forms.Timer faddingTimer;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Timer faddingTime2;
+        private CuoreUI.Controls.cuiScrollbar cuiScrollbar1;
     }
 }
