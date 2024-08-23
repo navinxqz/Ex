@@ -44,16 +44,16 @@
             this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.Column11 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.EmpData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,16 +187,16 @@
             this.EmpData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.EmpData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column11,
-            this.Column1,
-            this.Column2,
-            this.Column3,
+            this.ID,
+            this.FullName,
+            this.Username,
             this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10});
+            this.Age,
+            this.Birthday,
+            this.phone,
+            this.Email,
+            this.Salary,
+            this.Status});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,25 +252,25 @@
             this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Column1
+            // ID
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // Column2
+            // FullName
             // 
-            this.Column2.FillWeight = 200F;
-            this.Column2.HeaderText = "FullName";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.FullName.FillWeight = 200F;
+            this.FullName.HeaderText = "FullName";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
             // 
-            // Column3
+            // Username
             // 
-            this.Column3.FillWeight = 200F;
-            this.Column3.HeaderText = "UserName";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Username.FillWeight = 200F;
+            this.Username.HeaderText = "UserName";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
             // 
             // Column4
             // 
@@ -278,51 +278,50 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column5
+            // Age
             // 
-            this.Column5.HeaderText = "Age";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
             // 
-            // Column6
+            // Birthday
             // 
             dataGridViewCellStyle1.Format = "d";
             dataGridViewCellStyle1.NullValue = null;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column6.HeaderText = "Birthday";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.Birthday.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Birthday.HeaderText = "Birthday";
+            this.Birthday.Name = "Birthday";
+            this.Birthday.ReadOnly = true;
             // 
-            // Column7
+            // phone
             // 
-            this.Column7.HeaderText = "PhoneNo.";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.phone.HeaderText = "PhoneNo.";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
             // 
-            // Column8
+            // Email
             // 
-            this.Column8.HeaderText = "Email";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
-            // Column9
+            // Salary
             // 
             dataGridViewCellStyle2.Format = "C2";
             dataGridViewCellStyle2.NullValue = "0";
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
-            this.Column9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column9.HeaderText = "Salary";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
             // 
-            // Column10
+            // Status
             // 
-            this.Column10.FillWeight = 50F;
-            this.Column10.HeaderText = "Status";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Status.FillWeight = 50F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Employee
             // 
@@ -357,15 +356,15 @@
         private System.Windows.Forms.Timer faddingTime2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridViewImageColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewImageColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
     }
 }
