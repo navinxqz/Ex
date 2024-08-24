@@ -32,8 +32,13 @@ namespace AdminSystem.Classes
 
         public override int GenerateID()
         {
-            Random r = new Random();
-            return r.Next(1,10000);
+            //Random r = new Random();
+            //return r.Next(1,10000);
+
+            double currentYear = DateTime.Now.Year;
+            currentYear = (((currentYear % 100) / 100) + 1) * 1000000;
+            int y = (int)currentYear;
+            int lastID = StaticClass.
         }
     }
 }
