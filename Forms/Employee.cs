@@ -19,8 +19,9 @@ namespace AdminSystem.Forms
         public Employee()
         {
             InitializeComponent();
+            EmpData.AutoGenerateColumns = false;
 
-            for(int i = 0; i < EmpData.Rows.Count; i++)
+            for(int i = 0; i < 3; i++)
             {
                 EmpData.Rows.Add(new object[] {
                     imageList1.Images[0],
@@ -53,12 +54,12 @@ namespace AdminSystem.Forms
                     emp.phone,
                     emp.Email,
                     emp.Salary,
-                    emp.Status
+                    null
                 });
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show("An Error Occured!");
+                MessageBox.Show($"An Error Occured! {ex.Message}");
             }
         }
 

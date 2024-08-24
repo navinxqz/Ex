@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace AdminSystem.DataAccess
 {
     public class Employee
@@ -16,7 +11,7 @@ namespace AdminSystem.DataAccess
         public DateTime BirthDate { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public decimal Salary { get; set; }
+        public int Salary { get; set; }
         public bool Status { get; set; }
     }
 }

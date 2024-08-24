@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
@@ -197,14 +197,14 @@
             this.Email,
             this.Salary,
             this.Status});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmpData.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmpData.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmpData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.EmpData.EnableHeadersVisualStyles = false;
             this.EmpData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
@@ -254,12 +254,15 @@
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "Id";
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 3;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
             // FullName
             // 
+            this.FullName.DataPropertyName = "FullName";
             this.FullName.FillWeight = 200F;
             this.FullName.HeaderText = "FullName";
             this.FullName.Name = "FullName";
@@ -267,6 +270,7 @@
             // 
             // Username
             // 
+            this.Username.DataPropertyName = "Username";
             this.Username.FillWeight = 200F;
             this.Username.HeaderText = "UserName";
             this.Username.Name = "Username";
@@ -274,49 +278,56 @@
             // 
             // Gender
             // 
+            this.Gender.DataPropertyName = "Gender";
             this.Gender.HeaderText = "Gender";
             this.Gender.Name = "Gender";
             this.Gender.ReadOnly = true;
             // 
             // Age
             // 
+            this.Age.DataPropertyName = "Age";
             this.Age.HeaderText = "Age";
             this.Age.Name = "Age";
             this.Age.ReadOnly = true;
             // 
             // Birthday
             // 
-            dataGridViewCellStyle10.Format = "d";
-            dataGridViewCellStyle10.NullValue = null;
-            this.Birthday.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Birthday.DataPropertyName = "Birthday";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Birthday.DefaultCellStyle = dataGridViewCellStyle1;
             this.Birthday.HeaderText = "Birthday";
             this.Birthday.Name = "Birthday";
             this.Birthday.ReadOnly = true;
             // 
             // phone
             // 
+            this.phone.DataPropertyName = "phone";
             this.phone.HeaderText = "PhoneNo.";
             this.phone.Name = "phone";
             this.phone.ReadOnly = true;
             // 
             // Email
             // 
+            this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             // 
             // Salary
             // 
-            dataGridViewCellStyle11.Format = "C2";
-            dataGridViewCellStyle11.NullValue = "0";
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Aqua;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Salary.DataPropertyName = "Salary";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle2;
             this.Salary.HeaderText = "Salary";
             this.Salary.Name = "Salary";
             this.Salary.ReadOnly = true;
             // 
             // Status
             // 
+            this.Status.DataPropertyName = "Status";
             this.Status.FillWeight = 50F;
             this.Status.HeaderText = "Status";
             this.Status.Name = "Status";
