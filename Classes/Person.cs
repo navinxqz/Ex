@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdminSystem.Classes
 {
@@ -98,5 +95,6 @@ namespace AdminSystem.Classes
             if (birthDate.Date > today.AddYears(-age)) { age--; }
             return age;
         }
+        public abstract int GenerateID();   //to b implemented by derived cls
     }
 }

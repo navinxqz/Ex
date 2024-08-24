@@ -21,6 +21,7 @@ namespace AdminSystem.Forms
             InitializeComponent();
             EmpData.AutoGenerateColumns = false;
 
+
             for(int i = 0; i < 3; i++)
             {
                 EmpData.Rows.Add(new object[] {
@@ -106,6 +107,11 @@ namespace AdminSystem.Forms
         {
             //load Data
             LoadData();
+        }
+
+        private void bgWorkerGetEmp_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }
