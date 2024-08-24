@@ -12,7 +12,7 @@ namespace AdminSystem.DataAccess
         {
             if (connection == null)
             {
-                connection = new MySqlConnection("Server=127.0.0.1;Database=employee;Uid=root;");
+                connection = new MySqlConnection("Server=127.0.0.1;Database=adminsystem;Uid=root;");
             }return connection;
         }
         static QueryFactory db = null;
