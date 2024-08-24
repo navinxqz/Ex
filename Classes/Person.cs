@@ -38,13 +38,14 @@ namespace AdminSystem.Classes
         public string LastName
         {
             get { return lastname; }
-            set { lastname = value ?? throw new ArgumentNullException(nameof(value)); }
+            set { lastname = value; }
         }
+        public string Name { get { return (firstname + " " + lastname); } }
 
         public string Gender
         {
             get { return gender; }
-            set { gender = value ?? throw new ArgumentNullException(nameof(value)); }
+            set { gender = value; }
         }
 
         public string ImgBase
@@ -56,19 +57,46 @@ namespace AdminSystem.Classes
         public string Email
         {
             get { return email; }
-            set { email = value ?? throw new ArgumentNullException(nameof(value)); }
+            set { email = value; }
         }
 
         public string Phone
         {
             get { return phone; }
-            set { phone = value ?? throw new ArgumentNullException(nameof(value)); }
+            set { phone = value; }
         }
 
         public string Password
         {
             get { return password; }
-            set { password = value ?? throw new ArgumentNullException(nameof(value)); }
+            set { password = value; }
+        }
+        public DateTime Birthday
+        {
+            get { return birthday; }
+            set
+            {
+                birthday = value;
+                age = AgeCalc(birthday); // Recalculate age when birthday changes
+            }
+        }
+
+        public int Age
+        {
+            get { return age; }
+        }
+
+        public Image Pic
+        {
+            get { return pic; }
+            set { pic = value; }
+        }
+        private int AgeCalc(DateTime birthDate)
+        {
+            var today = DateTime.Today;
+            int age = today.Year - birthDate.Year;
+            if (birthDate.Date > today.AddYears(-age)) { age--; }
+            return age;
         }
     }
 }
