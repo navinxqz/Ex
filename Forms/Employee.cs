@@ -129,12 +129,12 @@ namespace AdminSystem.Forms
         private void formMain_Shown(object sender, EventArgs e)
         {
             //load Data
-            LoadData();
+            //LoadData();
         }
 
         private void bgWorkerGetEmp_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            //employee = StaticClass.data.Grid(emp)
         }
     }
 }
