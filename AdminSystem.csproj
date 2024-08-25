@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="Classes\EmployeeBase.cs" />
     <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\StaticClass.cs" />
     <Compile Include="DataAccess\DBconnect.cs" />
     <Compile Include="DataAccess\Employee.cs" />
     <Compile Include="Forms\Employee.cs">
@@ -194,6 +195,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Query\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

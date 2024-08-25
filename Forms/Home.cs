@@ -34,12 +34,13 @@ namespace AdminSystem.Forms
             {
                 this.mainpanel.Controls.RemoveAt(0);
             }
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.mainpanel.Controls.Add(f);
-            this.mainpanel.Tag = f;
-            f.Visible = true;
+            if(Form is Form f) {
+                f.TopLevel = false;
+                f.Dock = DockStyle.Fill;
+                this.mainpanel.Controls.Add(f);
+                this.mainpanel.Tag = f;
+                f.Visible = true;
+            }
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)

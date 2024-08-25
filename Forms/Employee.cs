@@ -8,18 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminSystem.Classes;
 
 namespace AdminSystem.Forms
 {
     public partial class Employee : Form
     {
-        private List<Employee> employee;
+        private List<EmployeeBase> employee;
+        private List<EmployeeBase> list;
+        private EmployeeBase emp;
         private Home h;
 
         public Employee()
         {
             InitializeComponent();
             EmpData.AutoGenerateColumns = false;
+            bgWorkerGetEmp.RunWorkerAsync();
 
 
             for(int i = 0; i < 3; i++)
@@ -29,6 +33,14 @@ namespace AdminSystem.Forms
                 });
             }
         }
+        public Employee(EmployeeBase e, Home home)
+        {
+            InitializeComponent();
+            EmpData.AutoGenerateColumns = false;
+            bgWorkerGetEmp.RunWorkerAsync();
+            emp = e;
+            h = home;
+        }
 
         void LoadData()
         {
@@ -37,14 +49,16 @@ namespace AdminSystem.Forms
             {
                 //for searching
                 var db = DataAccess.DBconnect.Db();
-                if (searchtxtbox.Text.Trim().Length > 0)
+                if (!string.IsNullOrWhiteSpace(searchtxtbox.Text))
                 {
 
                 }
                 IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
                 foreach (var emp in result)
                 {
-                    EmpData.Rows.Add(new object[]{
+                    int id;
+                    if(int.TryParse(emp.ID.ToString(), out id)) {
+                        EmpData.Rows.Add(new object[]{
                     imageList1.Images[0],
                     emp.ID,
                     emp.FullName,
@@ -56,7 +70,12 @@ namespace AdminSystem.Forms
                     emp.Email,
                     emp.Salary,
                     null
-                });
+                    });
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid ID! " + emp.ID);
+                    }
                 }
             }catch(Exception ex)
             {
