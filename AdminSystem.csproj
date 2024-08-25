@@ -125,6 +125,12 @@
     <Compile Include="Classes\StaticClass.cs" />
     <Compile Include="DataAccess\DBconnect.cs" />
     <Compile Include="DataAccess\Employee.cs" />
+    <Compile Include="Forms\AddPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddPeople.Designer.cs">
+      <DependentUpon>AddPeople.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddPeople.resx">
+      <DependentUpon>AddPeople.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>

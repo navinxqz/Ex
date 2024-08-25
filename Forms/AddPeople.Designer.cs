@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPeople));
             this.labelName = new System.Windows.Forms.Label();
             this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
@@ -36,7 +37,7 @@
             this.hide_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn = new System.Windows.Forms.PictureBox();
-            this.panelR = new System.Windows.Forms.Panel();
+            this.checkpanel = new System.Windows.Forms.Panel();
             this.radioButtonA = new System.Windows.Forms.RadioButton();
             this.radioButtonU = new System.Windows.Forms.RadioButton();
             this.genderPanel = new System.Windows.Forms.Panel();
@@ -52,12 +53,23 @@
             this.dobtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
-            this.panelR.SuspendLayout();
+            this.checkpanel.SuspendLayout();
             this.genderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +107,7 @@
             this.panel1.Controls.Add(this.hide_pass_btn2);
             this.panel1.Controls.Add(this.show_pass_btn);
             this.panel1.Controls.Add(this.hide_pass_btn);
-            this.panel1.Controls.Add(this.panelR);
+            this.panel1.Controls.Add(this.checkpanel);
             this.panel1.Controls.Add(this.phntxt);
             this.panel1.Controls.Add(this.genderPanel);
             this.panel1.Controls.Add(this.passtxt);
@@ -116,7 +128,7 @@
             this.show_pass_btn2.BackColor = System.Drawing.Color.Transparent;
             this.show_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_pass_btn2.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn2.Image")));
-            this.show_pass_btn2.Location = new System.Drawing.Point(339, 371);
+            this.show_pass_btn2.Location = new System.Drawing.Point(339, 382);
             this.show_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
             this.show_pass_btn2.Name = "show_pass_btn2";
             this.show_pass_btn2.Size = new System.Drawing.Size(45, 28);
@@ -129,7 +141,7 @@
             // 
             this.hide_pass_btn2.BackColor = System.Drawing.Color.Transparent;
             this.hide_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hide_pass_btn2.Location = new System.Drawing.Point(339, 371);
+            this.hide_pass_btn2.Location = new System.Drawing.Point(339, 382);
             this.hide_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
             this.hide_pass_btn2.Name = "hide_pass_btn2";
             this.hide_pass_btn2.Size = new System.Drawing.Size(45, 28);
@@ -143,7 +155,7 @@
             this.show_pass_btn.BackColor = System.Drawing.Color.Transparent;
             this.show_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
-            this.show_pass_btn.Location = new System.Drawing.Point(339, 313);
+            this.show_pass_btn.Location = new System.Drawing.Point(339, 318);
             this.show_pass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.show_pass_btn.Name = "show_pass_btn";
             this.show_pass_btn.Size = new System.Drawing.Size(45, 28);
@@ -151,12 +163,13 @@
             this.show_pass_btn.TabIndex = 44;
             this.show_pass_btn.TabStop = false;
             this.show_pass_btn.Visible = false;
+            this.show_pass_btn.Click += new System.EventHandler(this.show_pass_btn_Click);
             // 
             // hide_pass_btn
             // 
             this.hide_pass_btn.BackColor = System.Drawing.Color.Transparent;
             this.hide_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hide_pass_btn.Location = new System.Drawing.Point(339, 313);
+            this.hide_pass_btn.Location = new System.Drawing.Point(339, 317);
             this.hide_pass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.hide_pass_btn.Name = "hide_pass_btn";
             this.hide_pass_btn.Size = new System.Drawing.Size(45, 28);
@@ -165,19 +178,19 @@
             this.hide_pass_btn.TabStop = false;
             this.hide_pass_btn.Visible = false;
             // 
-            // panelR
+            // checkpanel
             // 
-            this.panelR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panelR.Controls.Add(this.radioButtonA);
-            this.panelR.Controls.Add(this.radioButtonU);
-            this.panelR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.panelR.Location = new System.Drawing.Point(369, 239);
-            this.panelR.Margin = new System.Windows.Forms.Padding(2);
-            this.panelR.Name = "panelR";
-            this.panelR.Size = new System.Drawing.Size(307, 54);
-            this.panelR.TabIndex = 43;
-            this.panelR.Visible = false;
+            this.checkpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.checkpanel.Controls.Add(this.radioButtonA);
+            this.checkpanel.Controls.Add(this.radioButtonU);
+            this.checkpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkpanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.checkpanel.Location = new System.Drawing.Point(369, 239);
+            this.checkpanel.Margin = new System.Windows.Forms.Padding(2);
+            this.checkpanel.Name = "checkpanel";
+            this.checkpanel.Size = new System.Drawing.Size(307, 54);
+            this.checkpanel.TabIndex = 43;
+            this.checkpanel.Visible = false;
             // 
             // radioButtonA
             // 
@@ -242,7 +255,7 @@
             // 
             // passtxt
             // 
-            this.passtxt.Location = new System.Drawing.Point(28, 304);
+            this.passtxt.Location = new System.Drawing.Point(28, 303);
             this.passtxt.Margin = new System.Windows.Forms.Padding(2);
             this.passtxt.Name = "passtxt";
             this.passtxt.Size = new System.Drawing.Size(307, 54);
@@ -274,7 +287,7 @@
             // 
             // passconfirmtxt
             // 
-            this.passconfirmtxt.Location = new System.Drawing.Point(28, 366);
+            this.passconfirmtxt.Location = new System.Drawing.Point(28, 369);
             this.passconfirmtxt.Margin = new System.Windows.Forms.Padding(2);
             this.passconfirmtxt.Name = "passconfirmtxt";
             this.passconfirmtxt.Size = new System.Drawing.Size(307, 54);
@@ -303,6 +316,7 @@
             this.passconfirmtxt.TabIndex = 10;
             this.passconfirmtxt.Text = "Confirm Password";
             this.passconfirmtxt.Visible = false;
+            this.passconfirmtxt.TextChanged += new System.EventHandler(this.passconfirmtxt_TextChanged);
             // 
             // fnametxt
             // 
@@ -554,6 +568,60 @@
             this.cancelbtn.TabIndex = 42;
             this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this.fnametxt;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 40;
+            this.bunifuElipse2.TargetControl = this.lnametxt;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 40;
+            this.bunifuElipse3.TargetControl = this.dobtxt;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 40;
+            this.bunifuElipse4.TargetControl = this.genderPanel;
+            // 
+            // bunifuElipse5
+            // 
+            this.bunifuElipse5.ElipseRadius = 40;
+            this.bunifuElipse5.TargetControl = this.mailtxt;
+            // 
+            // bunifuElipse6
+            // 
+            this.bunifuElipse6.ElipseRadius = 40;
+            this.bunifuElipse6.TargetControl = this.phntxt;
+            // 
+            // bunifuElipse7
+            // 
+            this.bunifuElipse7.ElipseRadius = 40;
+            this.bunifuElipse7.TargetControl = this.unametxt;
+            // 
+            // bunifuElipse8
+            // 
+            this.bunifuElipse8.ElipseRadius = 40;
+            this.bunifuElipse8.TargetControl = this.checkpanel;
+            // 
+            // bunifuElipse9
+            // 
+            this.bunifuElipse9.ElipseRadius = 40;
+            this.bunifuElipse9.TargetControl = this.passtxt;
+            // 
+            // bunifuElipse10
+            // 
+            this.bunifuElipse10.ElipseRadius = 40;
+            this.bunifuElipse10.TargetControl = this.passconfirmtxt;
+            // 
+            // bgWorkerAdd
+            // 
+            this.bgWorkerAdd.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerAdd_DoWork);
+            // 
             // AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,8 +644,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).EndInit();
-            this.panelR.ResumeLayout(false);
-            this.panelR.PerformLayout();
+            this.checkpanel.ResumeLayout(false);
+            this.checkpanel.PerformLayout();
             this.genderPanel.ResumeLayout(false);
             this.genderPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -594,7 +662,7 @@
         private System.Windows.Forms.PictureBox hide_pass_btn2;
         private System.Windows.Forms.PictureBox show_pass_btn;
         private System.Windows.Forms.PictureBox hide_pass_btn;
-        private System.Windows.Forms.Panel panelR;
+        private System.Windows.Forms.Panel checkpanel;
         private System.Windows.Forms.RadioButton radioButtonA;
         private System.Windows.Forms.RadioButton radioButtonU;
         private System.Windows.Forms.Panel genderPanel;
@@ -610,5 +678,16 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox dobtxt;
         private CuoreUI.Controls.cuiButton btnAdd;
         private CuoreUI.Controls.cuiButton cancelbtn;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
+        private System.ComponentModel.BackgroundWorker bgWorkerAdd;
     }
 }
