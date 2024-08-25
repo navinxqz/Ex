@@ -90,7 +90,7 @@ namespace AdminSystem.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            AddPeople ppl = new AddPeople( );
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
