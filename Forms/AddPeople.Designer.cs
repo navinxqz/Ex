@@ -32,7 +32,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pricetxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.show_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,8 @@
             this.mailtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.phntxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dobtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnAdd = new CuoreUI.Controls.cuiButton();
+            this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).BeginInit();
@@ -90,12 +91,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.panel1.Controls.Add(this.pricetxt);
             this.panel1.Controls.Add(this.show_pass_btn2);
             this.panel1.Controls.Add(this.hide_pass_btn2);
             this.panel1.Controls.Add(this.show_pass_btn);
             this.panel1.Controls.Add(this.hide_pass_btn);
             this.panel1.Controls.Add(this.panelR);
+            this.panel1.Controls.Add(this.phntxt);
             this.panel1.Controls.Add(this.genderPanel);
             this.panel1.Controls.Add(this.passtxt);
             this.panel1.Controls.Add(this.passconfirmtxt);
@@ -103,45 +104,12 @@
             this.panel1.Controls.Add(this.unametxt);
             this.panel1.Controls.Add(this.lnametxt);
             this.panel1.Controls.Add(this.mailtxt);
-            this.panel1.Controls.Add(this.phntxt);
             this.panel1.Controls.Add(this.dobtxt);
-            this.panel1.Location = new System.Drawing.Point(375, 70);
+            this.panel1.Location = new System.Drawing.Point(375, 61);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 489);
             this.panel1.TabIndex = 40;
-            // 
-            // pricetxt
-            // 
-            this.pricetxt.Location = new System.Drawing.Point(369, 239);
-            this.pricetxt.Margin = new System.Windows.Forms.Padding(2);
-            this.pricetxt.Name = "pricetxt";
-            this.pricetxt.Size = new System.Drawing.Size(307, 54);
-            this.pricetxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.pricetxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.pricetxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.pricetxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.pricetxt.StateActive.Border.Width = -2;
-            this.pricetxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.pricetxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pricetxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.pricetxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.pricetxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.pricetxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.pricetxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.pricetxt.StateDisabled.Border.Width = -2;
-            this.pricetxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.pricetxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.pricetxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.pricetxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.pricetxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.pricetxt.TabIndex = 48;
-            this.pricetxt.Text = "Price";
-            this.pricetxt.Visible = false;
             // 
             // show_pass_btn2
             // 
@@ -204,10 +172,10 @@
             this.panelR.Controls.Add(this.radioButtonU);
             this.panelR.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.panelR.Location = new System.Drawing.Point(28, 429);
+            this.panelR.Location = new System.Drawing.Point(369, 239);
             this.panelR.Margin = new System.Windows.Forms.Padding(2);
             this.panelR.Name = "panelR";
-            this.panelR.Size = new System.Drawing.Size(307, 46);
+            this.panelR.Size = new System.Drawing.Size(307, 54);
             this.panelR.TabIndex = 43;
             this.panelR.Visible = false;
             // 
@@ -245,7 +213,7 @@
             this.genderPanel.Location = new System.Drawing.Point(369, 101);
             this.genderPanel.Margin = new System.Windows.Forms.Padding(2);
             this.genderPanel.Name = "genderPanel";
-            this.genderPanel.Size = new System.Drawing.Size(307, 46);
+            this.genderPanel.Size = new System.Drawing.Size(307, 54);
             this.genderPanel.TabIndex = 5;
             // 
             // radioButtonM
@@ -463,7 +431,7 @@
             // 
             // phntxt
             // 
-            this.phntxt.Location = new System.Drawing.Point(28, 101);
+            this.phntxt.Location = new System.Drawing.Point(369, 171);
             this.phntxt.Margin = new System.Windows.Forms.Padding(2);
             this.phntxt.Name = "phntxt";
             this.phntxt.Size = new System.Drawing.Size(307, 54);
@@ -494,7 +462,7 @@
             // 
             // dobtxt
             // 
-            this.dobtxt.Location = new System.Drawing.Point(369, 171);
+            this.dobtxt.Location = new System.Drawing.Point(28, 101);
             this.dobtxt.Margin = new System.Windows.Forms.Padding(2);
             this.dobtxt.Name = "dobtxt";
             this.dobtxt.ReadOnly = true;
@@ -524,12 +492,76 @@
             this.dobtxt.TabIndex = 6;
             this.dobtxt.Text = "Date of Birth";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.CheckButton = false;
+            this.btnAdd.Checked = false;
+            this.btnAdd.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
+            this.btnAdd.CheckedImageTint = System.Drawing.Color.White;
+            this.btnAdd.CheckedOutline = System.Drawing.Color.White;
+            this.btnAdd.Content = "Add";
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnAdd.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
+            this.btnAdd.HoveredImageTint = System.Drawing.Color.White;
+            this.btnAdd.HoverOutline = System.Drawing.Color.Transparent;
+            this.btnAdd.Image = null;
+            this.btnAdd.ImageAutoCenter = true;
+            this.btnAdd.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageTint = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(52, 415);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
+            this.btnAdd.NormalOutline = System.Drawing.Color.Transparent;
+            this.btnAdd.OutlineThickness = 1.6F;
+            this.btnAdd.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.btnAdd.PressedImageTint = System.Drawing.Color.White;
+            this.btnAdd.PressedOutline = System.Drawing.Color.White;
+            this.btnAdd.Rounding = new System.Windows.Forms.Padding(15);
+            this.btnAdd.Size = new System.Drawing.Size(137, 54);
+            this.btnAdd.TabIndex = 41;
+            this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // cancelbtn
+            // 
+            this.cancelbtn.CheckButton = false;
+            this.cancelbtn.Checked = false;
+            this.cancelbtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
+            this.cancelbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.cancelbtn.CheckedOutline = System.Drawing.Color.White;
+            this.cancelbtn.Content = "Cancel";
+            this.cancelbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.cancelbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
+            this.cancelbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.cancelbtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cancelbtn.Image = null;
+            this.cancelbtn.ImageAutoCenter = true;
+            this.cancelbtn.ImageExpand = new System.Drawing.Point(0, 0);
+            this.cancelbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cancelbtn.ImageTint = System.Drawing.Color.White;
+            this.cancelbtn.Location = new System.Drawing.Point(195, 415);
+            this.cancelbtn.Name = "cancelbtn";
+            this.cancelbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.cancelbtn.NormalOutline = System.Drawing.Color.White;
+            this.cancelbtn.OutlineThickness = 1.6F;
+            this.cancelbtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.cancelbtn.PressedImageTint = System.Drawing.Color.White;
+            this.cancelbtn.PressedOutline = System.Drawing.Color.White;
+            this.cancelbtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.cancelbtn.Size = new System.Drawing.Size(147, 54);
+            this.cancelbtn.TabIndex = 42;
+            this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
             // AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1122, 644);
+            this.Controls.Add(this.cancelbtn);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cuiPictureBox1);
             this.Controls.Add(this.labelName);
@@ -558,7 +590,6 @@
         private System.Windows.Forms.Label labelName;
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox pricetxt;
         private System.Windows.Forms.PictureBox show_pass_btn2;
         private System.Windows.Forms.PictureBox hide_pass_btn2;
         private System.Windows.Forms.PictureBox show_pass_btn;
@@ -577,5 +608,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox mailtxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox phntxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox dobtxt;
+        private CuoreUI.Controls.cuiButton btnAdd;
+        private CuoreUI.Controls.cuiButton cancelbtn;
     }
 }

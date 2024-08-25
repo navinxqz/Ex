@@ -90,7 +90,8 @@ namespace AdminSystem.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddPeople ppl = new AddPeople( );
+            AddPeople ppl = new AddPeople(emp,e: true);//continue...
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
