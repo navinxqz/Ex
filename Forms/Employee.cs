@@ -42,7 +42,7 @@ namespace AdminSystem.Forms
             h = home;
         }
 
-        void LoadData()
+        /*void LoadData()
         {
             EmpData.Rows.Clear();
             try
@@ -81,7 +81,7 @@ namespace AdminSystem.Forms
             {
                 MessageBox.Show($"An Error Occured! {ex.Message}");
             }
-        }
+        }   */
 
         private void EmployeeData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
