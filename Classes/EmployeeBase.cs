@@ -16,11 +16,13 @@ namespace AdminSystem.Classes
             : base(id, firstname, lastname, gender, imgbase, email, phone, password, birthday,pic)
         {
             Username = username;
-            //admin = admin;
+            Admin = admin;
             Status = status;
         }
         public string Username {  get { return username; } set {  username = value; } }
         public bool Status { get { return status; } set { status = value; } }
+        public bool Admin { get { return admin; } set { admin = value; } }
+
         public static EmployeeBase Instance
         {
             get
@@ -37,10 +39,11 @@ namespace AdminSystem.Classes
             //Random r = new Random();
             //return r.Next(1,10000);
 
-            //double currentYear = DateTime.Now.Year;
-            //currentYear = (((currentYear % 100) / 100) + 1) * 1000000;
-            //int y = (int)currentYear;
-            //    int lastID = StaticClass.
+            int id;
+            double currentYear = DateTime.Now.Year;
+            currentYear = (((currentYear % 100) / 100) + 1) * 1000000;
+            int y = (int)currentYear;
+            //int lastID = StaticClass.empQuery.get
             return 0;
         }
     }

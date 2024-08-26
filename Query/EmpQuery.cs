@@ -43,7 +43,7 @@ namespace AdminSystem.Query
                 {
                     while(read.Read())
                     {
-                        EmployeeBase eb = new EmployeeBase(id: Convert.ToInt32(read["ID"]), firstname: read["FIRSTNAME"].ToString(), lastname: read["LASTNAME"].ToString(), birthday: Convert.ToDateTime(read["DOB"]), gender: read["GENDER"].ToString(), email: read["EMAIL"].ToString(), phone: read["PHONE"].ToString(), admin: Convert.ToBoolean(read["ADMIN"]), Status: Convert.ToBoolean(read["STATUS"]), username: read["USERNAME"].ToString());
+                        EmployeeBase eb = new EmployeeBase(id: Convert.ToInt32(read["ID"]), firstname: read["FIRSTNAME"].ToString(), lastname: read["LASTNAME"].ToString(), birthday: Convert.ToDateTime(read["DOB"]), gender: read["GENDER"].ToString(), email: read["EMAIL"].ToString(), phone: read["PHONE"].ToString(), admin: Convert.ToBoolean(read["ADMIN"]), status: Convert.ToBoolean(read["STATUS"]), username: read["USERNAME"].ToString());
                         if (incPic)
                         {
                             //eb.Pic = StaticClass.
