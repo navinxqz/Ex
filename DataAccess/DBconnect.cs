@@ -1,9 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.IO;
-using SqlKata.Compilers;
-using SqlKata.Execution;
-using SqlKata;
 using System;
 
 namespace AdminSystem.DataAccess

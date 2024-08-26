@@ -69,12 +69,6 @@
     <Reference Include="MySql.Data, Version=9.0.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.0.0\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="SqlKata, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SqlKata.2.4.0\lib\netstandard2.0\SqlKata.dll</HintPath>
-    </Reference>
-    <Reference Include="SqlKata.Execution, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SqlKata.Execution.2.4.0\lib\netstandard2.0\SqlKata.Execution.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
