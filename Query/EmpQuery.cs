@@ -12,14 +12,7 @@ namespace AdminSystem.Query
     {
         private string GetCol(bool incPic)
         {
-            if (incPic)
-            {
-                return "*";
-            }
-            else
-            {
-                return "ID, FIRSTNAME, LASTNAME, DOB, GENDER, EMAIL, PHONE, USERNAME, PASSWORD, STATUS, ADMIN";
-            }
+            return incPic ? "*" : "ID, FIRSTNAME, LASTNAME, DOB, GENDER, EMAIL, PHONE, USERNAME, PASSWORD, STATUS, ADMIN";
         }
         public List<EmployeeBase> Search(string search,bool incPic,bool byId = false, bool byUsername = false, bool byFulName = false)
         {
@@ -36,13 +29,15 @@ namespace AdminSystem.Query
                     query = $"SELECT {GetCol(incPic)} FROM [adminsystem].[employee] WHERE USERNAME = '{search}'";
                 }else if (byFulName)
                 {
-                    query = $"SELECT {{GetCol(incPic)}} FROM [adminsystem].[employee] WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{{search}}'\";
+                    query = $"SELECT {GetCol(incPic)} FROM [adminsystem].[employee] WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{{search}}'";
                 }
-                if(query == "")
+                if(string.IsNullOrEmpty(query))
                 {
                     Console.WriteLine($"Error Employee value!");
-                    return null;
+                    return new List<EmployeeBase>();    //null return
                 }
+
+
                 SqlDataReader read = StaticClass.sql.MySqlSelect(query);
                 if(read.HasRows)
                 {
@@ -53,6 +48,7 @@ namespace AdminSystem.Query
                         {
                             //eb.Pic = StaticClass.
                         }
+                        EmployeeBase.Add(eb);
                     }
                 }
             }

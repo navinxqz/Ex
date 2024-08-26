@@ -7,15 +7,17 @@ namespace AdminSystem.Classes
     {
         private static EmployeeBase instance;
         private string username;
-        private bool status;
+        private bool admin,status;
 
-        private EmployeeBase() : base(0, null, null, null, null, null, null, null, default, null)
+        //private EmployeeBase() : base(0, null, null, null, null, null, null, null, default, null)
+        //{}
+
+        public EmployeeBase(int id =0, string firstname = null,string imgbase=null, string lastname=null, string username = null, string password = null, string gender =null, string email=null, string phone = null, bool admin = false, bool status = false, DateTime birthday= default, Image pic = null) 
+            : base(id, firstname, lastname, gender, imgbase, email, phone, password, birthday,pic)
         {
-        }
-
-        public EmployeeBase(int id, string firstname, string lastname, string gender, string imgbase, string email, string phone, string password, DateTime birthday, Image pic,string username,bool status):base(id,firstname,lastname,gender,imgbase,email,phone,password,birthday,pic) {
-            this.username = username;
-            this.status = status;
+            Username = username;
+            //admin = admin;
+            Status = status;
         }
         public string Username {  get { return username; } set {  username = value; } }
         public bool Status { get { return status; } set { status = value; } }

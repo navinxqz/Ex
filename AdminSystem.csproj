@@ -123,6 +123,7 @@
     <Compile Include="Classes\EmployeeBase.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\StaticClass.cs" />
+    <Compile Include="DataAccess\Data.cs" />
     <Compile Include="DataAccess\DBconnect.cs" />
     <Compile Include="DataAccess\Employee.cs" />
     <Compile Include="Forms\AddPeople.cs">
@@ -163,6 +164,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\EmpQuery.cs" />
     <EmbeddedResource Include="Forms\AddPeople.resx">
       <DependentUpon>AddPeople.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,8 +206,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Query\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
