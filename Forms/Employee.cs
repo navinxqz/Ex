@@ -42,47 +42,6 @@ namespace AdminSystem.Forms
             h = home;
         }
 
-        /*void LoadData()
-        {
-            EmpData.Rows.Clear();
-            try
-            {
-                //for searching
-                var db = DataAccess.DBconnect.Db();
-                if (!string.IsNullOrWhiteSpace(searchtxtbox.Text))
-                {
-
-                }
-                IEnumerable<Employee> result = db.Query("employee").Get<Employee>();
-                foreach (var emp in result)
-                {
-                    int id;
-                    if(int.TryParse(emp.ID.ToString(), out id)) {
-                        EmpData.Rows.Add(new object[]{
-                    imageList1.Images[0],
-                    emp.ID,
-                    emp.FullName,
-                    emp.Username,
-                    emp.Gender,
-                    emp.Age,
-                    emp.Birthday,
-                    emp.phone,
-                    emp.Email,
-                    emp.Salary,
-                    null
-                    });
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid ID! " + emp.ID);
-                    }
-                }
-            }catch(Exception ex)
-            {
-                MessageBox.Show($"An Error Occured! {ex.Message}");
-            }
-        }   */
-
         private void EmployeeData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
