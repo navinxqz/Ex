@@ -136,5 +136,18 @@ namespace AdminSystem.Forms
         {
             //employee = StaticClass.data.Grid(emp)
         }
+
+        private void bgWorkerGetEmp_RunWorker(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(employee != null)
+            {
+                panelView.Visible = true;
+                EmpData = StaticClass.data.Grid(EmpData, employee);
+            }
+            else
+            {
+                panelView.Visible=false;
+            }
+        }
     }
 }

@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\EmployeeBase.cs" />
+    <Compile Include="Classes\ImgManager.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Classes\StaticClass.cs" />
     <Compile Include="DataAccess\Data.cs" />

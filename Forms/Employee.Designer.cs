@@ -30,20 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.EmpData = new System.Windows.Forms.DataGridView();
-            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bgWorkerGetEmp = new System.ComponentModel.BackgroundWorker();
             this.Column11 = new System.Windows.Forms.DataGridViewImageColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +50,12 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.bgWorkerGetEmp = new System.ComponentModel.BackgroundWorker();
+            this.panelView = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.EmpData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,14 +199,14 @@
             this.Email,
             this.Salary,
             this.Status});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.EmpData.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmpData.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmpData.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.EmpData.EnableHeadersVisualStyles = false;
             this.EmpData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
@@ -222,31 +223,6 @@
             this.EmpData.Size = new System.Drawing.Size(1224, 639);
             this.EmpData.TabIndex = 9;
             this.EmpData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // faddingTimer
-            // 
-            this.faddingTimer.Interval = 20;
-            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 40;
-            this.bunifuElipse2.TargetControl = this.EmpData;
-            // 
-            // faddingTime2
-            // 
-            this.faddingTime2.Interval = 15;
-            this.faddingTime2.Tick += new System.EventHandler(this.faddingTime2_Tick);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "guest-32.png");
-            // 
-            // bgWorkerGetEmp
-            // 
-            this.bgWorkerGetEmp.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerGetEmp_DoWork);
             // 
             // Column11
             // 
@@ -298,9 +274,9 @@
             // Birthday
             // 
             this.Birthday.DataPropertyName = "Birthday";
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Birthday.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Birthday.DefaultCellStyle = dataGridViewCellStyle1;
             this.Birthday.HeaderText = "Birthday";
             this.Birthday.Name = "Birthday";
             this.Birthday.ReadOnly = true;
@@ -322,10 +298,10 @@
             // Salary
             // 
             this.Salary.DataPropertyName = "Salary";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = "0";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Aqua;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle2;
             this.Salary.HeaderText = "Salary";
             this.Salary.Name = "Salary";
             this.Salary.ReadOnly = true;
@@ -339,6 +315,43 @@
             this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // faddingTimer
+            // 
+            this.faddingTimer.Interval = 20;
+            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 40;
+            this.bunifuElipse2.TargetControl = this.EmpData;
+            // 
+            // faddingTime2
+            // 
+            this.faddingTime2.Interval = 15;
+            this.faddingTime2.Tick += new System.EventHandler(this.faddingTime2_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "guest-32.png");
+            // 
+            // bgWorkerGetEmp
+            // 
+            this.bgWorkerGetEmp.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerGetEmp_DoWork);
+            this.bgWorkerGetEmp.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerGetEmp_RunWorker);
+            // 
+            // panelView
+            // 
+            this.panelView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelView.Location = new System.Drawing.Point(0, 73);
+            this.panelView.Margin = new System.Windows.Forms.Padding(2);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(1297, 658);
+            this.panelView.TabIndex = 10;
+            this.panelView.Visible = false;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +363,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employee";
             this.Text = "Employee";
@@ -384,5 +398,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
+        private System.Windows.Forms.Panel panelView;
     }
 }
