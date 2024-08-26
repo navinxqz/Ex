@@ -94,6 +94,7 @@ namespace AdminSystem.Forms
             faddingTimer.Start();
             ppl.ShowDialog();
             faddingTime2.Start();
+            panelView.Visible = false;
             bgWorkerGetEmp.RunWorkerAsync();
         }
 
@@ -134,7 +135,7 @@ namespace AdminSystem.Forms
 
         private void bgWorkerGetEmp_DoWork(object sender, DoWorkEventArgs e)
         {
-            //employee = StaticClass.data.Grid(emp)
+            //employee = StaticClass.empQuery
         }
 
         private void bgWorkerGetEmp_RunWorker(object sender, RunWorkerCompletedEventArgs e)
@@ -147,6 +148,57 @@ namespace AdminSystem.Forms
             else
             {
                 panelView.Visible=false;
+            }
+        }
+
+        private void searchtxtbox_TextChanged(object sender, EventArgs e)
+        {
+            if(searchtxtbox.Text != "Search")
+            {
+                try
+                {
+                    bgWorkerList.RunWorkerAsync();
+                }catch (Exception ex)
+                {
+                    Console.WriteLine($"Error! {ex.Message}");
+                }
+            }
+        }
+
+        private void bgWorkerList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            list = employee.Where(employee => employee.Name.ToLower().Contains(searchtxtbox.Text) || employee.Name.Contains(searchtxtbox.Text) || employee.Name.ToUpper().Contains(searchtxtbox.Text) || employee.Id.ToString().Contains(searchtxtbox.Text) || employee.Username.ToUpper().Contains(searchtxtbox.Text) || employee.Username.ToLower().Contains(searchtxtbox.Text)).ToList();
+        }
+
+        private void bgrWorkerList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(list != null)
+            {
+                EmpData = StaticClass.data.Grid(EmpData, list);
+            }
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            if(searchtxtbox.Text == "")
+            {
+                searchtxtbox.Text = "Search";
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
+            }
+
+        }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+            if(searchtxtbox.Text == "Search")
+            {
+                searchtxtbox.Text = string.Empty;
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                
+                if(searchtxtbox.TabStop == false)
+                {
+                    searchtxtbox.TabStop = true;
+                }
             }
         }
     }
