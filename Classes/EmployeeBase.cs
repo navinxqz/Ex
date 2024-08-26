@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-
 namespace AdminSystem.Classes
 {
     public class EmployeeBase : Person

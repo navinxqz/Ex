@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 using AdminSystem.Classes;
 
 namespace AdminSystem.Query
@@ -38,7 +35,7 @@ namespace AdminSystem.Query
                 }
 
 
-                SqlDataReader read = StaticClass.sql.MySqlSelect(query);
+                MySqlDataReader read = StaticClass.sql.MySqlSelect(query);
                 if(read.HasRows)
                 {
                     while(read.Read())
@@ -49,11 +46,17 @@ namespace AdminSystem.Query
                             eb.Pic = StaticClass.imgManager.ImgbaseToImg(read["img"].ToString());
                             eb.ImgBase = read["img"].ToString();
                         }
-                        EmployeeBase.Add(eb);
+                        Ebase.Add(eb);
                     }
+                    return Ebase;
+                }
+                else
+                {
+                    Console.WriteLine($"Error! No records found '{search}'");
+                    return null;
                 }
             }
-            catch(SqlException ex)
+            catch(MySqlException ex)
             {
                 Console.WriteLine($"Error! {ex.Message}");
                 return null;
