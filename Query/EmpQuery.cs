@@ -114,5 +114,32 @@ namespace AdminSystem.Query
         {
             return incPic ? "*" : "ID, FIRSTNAME, LASTNAME, GENDER, DOB, EMAIL, PHONE, PICTURE, USERNAME, PASSWORD, ADMIN";
         }
+
+        public int lastID()
+        {
+            try
+            {
+                int id = 0;
+                string query = "SELECT ID FROM adminsystem.employee ORDER BY ID DESC LIMIT 1";
+                using (MySqlDataReader reader = StaticClass.sql.MySqlSelect(query))
+                {
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        id = Convert.ToInt32(reader["ID"]);
+                        return id;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error getting the last ID from the Employee table! No records found.");
+                        return id;
+                    }
+                }
+            }catch (MySqlException ex)
+            {
+                Console.WriteLine($"Error! while getting the last ID! {ex.Message}");
+                return -1;
+            }
+        }
     }
 }
