@@ -58,9 +58,22 @@ namespace AdminSystem.Query
             }
             catch(MySqlException ex)
             {
-                Console.WriteLine($"Error! {ex.Message}");
+                Console.WriteLine($"Error while  MySQL employee search! {ex.Message}");
                 return null;
             }
         }
+
+        public bool UsernameCheck(string uname)
+        {
+            try
+            {
+                string query = $"SELECT COUNT(*) FROM adminsystem.employee WHERE USERNAME = '{uname}'";
+                int counter = StaticClass.sql.MySqlExacute(query);
+                return counter > 0;
+        }catch(MySqlException ex)
+            {
+                Console.WriteLine($"Error username in MySQL! {ex.Message}");
+                return false;
+            }
     }
 }
