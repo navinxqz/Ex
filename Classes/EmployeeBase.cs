@@ -8,9 +8,6 @@ namespace AdminSystem.Classes
         private string username;
         private bool admin,status;
 
-        //private EmployeeBase() : base(0, null, null, null, null, null, null, null, default, null)
-        //{}
-
         public EmployeeBase(int id =0, string firstname = null,string imgbase=null, string lastname=null, string username = null, string password = null, string gender =null, string email=null, string phone = null, bool admin = false, bool status = false, DateTime birthday= default, Image pic = null) 
             : base(id, firstname, lastname, gender, imgbase, email, phone, password, birthday,pic)
         {
@@ -42,8 +39,14 @@ namespace AdminSystem.Classes
             double currentYear = DateTime.Now.Year;
             currentYear = (((currentYear % 100) / 100) + 1) * 1000000;
             int y = (int)currentYear;
-            //int lastID = StaticClass.empQuery.get
-            return 0;
+            int lastID = StaticClass.empQuery.lastID();
+
+            if(lastID != -1) { return -1; }
+            if(lastID== 0 || (lastID/ 1000000) != (y/ 1000000)) { id = ++y; }
+            else {  id = lastID +1; }
+            
+            this.id = id;
+            return id;
         }
     }
 }

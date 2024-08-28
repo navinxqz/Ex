@@ -141,5 +141,20 @@ namespace AdminSystem.Query
                 return -1;
             }
         }
+
+        public EmployeeBase Login(string username, string pass) {
+            try
+            {
+                string query = $"SELECT * FROM AdminSystem.employee WHERE username = '{username}'";
+                using (var reader = StaticClass.sql.MySqlSelect(query))
+                {
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        EmployeeBase.id = Convert.ToInt32(reader["ID"]);
+                    }
+                }
+            }
+        }
     }
 }

@@ -14,23 +14,15 @@ namespace AdminSystem.Classes
         protected DateTime birthday = default;
         protected Image pic = null;
 
-        public Person(int id,string firstname,string lastname,string gender, string imgbase,string email, string phone,string password,DateTime birthday, Image pic ) {
-            this.id = id;
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.gender = gender;
-            this.imgbase = imgbase;
-            this.email = email;
-            this.phone = phone;
-            this.password = password;
-            this.birthday = birthday;
-            this.pic = pic;
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
         }
-        public int Id { 
-            get { return id; } set { id = value; } 
-        }
-        public string FirstName {
-            get { return firstname; } set { firstname = value; } 
+        public string FirstName
+        {
+            get { return firstname; }
+            set { firstname = value; }
         }
         public string LastName
         {
@@ -88,6 +80,20 @@ namespace AdminSystem.Classes
             get { return pic; }
             set { pic = value; }
         }
+
+        public Person(int id,string firstname,string lastname,string gender, string imgbase,string email, string phone,string password,DateTime birthday, Image pic ) {
+            Id = id;
+            FirstName = firstname;
+            LastName = lastname;
+            Gender = gender;
+            ImgBase = imgbase;
+            Email = email;
+            Phone = phone;
+            Password = password;
+            Birthday = birthday;
+            Pic = pic;
+        }
+
         private int AgeCalc(DateTime birthDate)
         {
             var today = DateTime.Today;
