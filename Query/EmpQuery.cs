@@ -84,9 +84,25 @@ namespace AdminSystem.Query
             {
                 int id = e.GenerateID();
                 string query = $"INSERT INTO adminsystem.employee (ID, FIRSTNAME, LASTNAME, GENDER, DOB, EMAIL, PHONE, PICTURE, USERNAME, PASSWORD, ADMIN) VALUES " +
-                               $"('{id}', '{e.FirstName}', '{e.LastName}','{e.Gender}', '{e.Birthday:yyyy-MM-dd}', " +
+                               $"('{id}', '{e.FirstName}', '{e.LastName}','{e.Gender}', '{e.Birthday.ToString("yyyy-MM-dd")}', " +
                                $"'{e.Email}', '{e.Phone}','{e.ImgBase}', '{e.Username}'" +
                                $"'{StaticClass.mangePassword.encrypt_password(e.Password, id)}', {(e.Admin ? 1 : 0)})";
+
+                int rows = StaticClass.sql.MySqlNonQ(query);
+                if (rows > 0)
+                {
+                    Console.WriteLine("Employee created Successfully");
+                    return e;
+                }
+                else
+                {
+                    Console.WriteLine("Error while adding employee!");
+                    return null;
+                }
+            }catch(MySqlException ex)
+            {
+                Console.WriteLine($"Error while adding employee! {ex.Message}");
+                return null;
             }
         }
 
