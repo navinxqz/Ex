@@ -12,5 +12,6 @@ namespace AdminSystem.Classes
         public static DBconnect sql = new DBconnect();
         public static EmpQuery empQuery = new EmpQuery();
         public static ImgManager imgManager = new ImgManager();
+        public static PassManager passManager = new PassManager();
     }
 }
