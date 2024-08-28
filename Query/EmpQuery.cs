@@ -20,18 +20,18 @@ namespace AdminSystem.Query
 
                 if(byId && int.TryParse(search, out int id))
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM [adminsystem].[employee] WHERE ID = {id}";
+                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE ID = {id}";
                 }else if (byUsername)
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM [adminsystem].[employee] WHERE USERNAME = '{search}'";
+                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE USERNAME = '{search}'";
                 }else if (byFulName)
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM [adminsystem].[employee] WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{{search}}'";
+                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{{search}}'";
                 }
                 if(string.IsNullOrEmpty(query))
                 {
                     Console.WriteLine($"Error Employee value!");
-                    return new List<EmployeeBase>();    //null return
+                    return null;    //null return
                 }
 
 
