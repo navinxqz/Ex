@@ -151,9 +151,96 @@ namespace AdminSystem.Query
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        EmployeeBase.id = Convert.ToInt32(reader["ID"]);
+                        int id = Convert.ToInt32(reader["ID"]);
+                        string encryptedPassword = StaticClass.passManager.encryptedPass(pass, id);
+
+                        if (reader["password"].ToString() == encryptedPassword)
+                        {
+                            EmployeeBase em = new EmployeeBase(
+                                id: id,
+                                firstname: reader["FIRSTNAME"].ToString(),
+                                lastname: reader["LASTNAME"].ToString(),
+                                birthday: Convert.ToDateTime(reader["DOB"]),
+                                gender: reader["GENDER"].ToString(),
+                                email: reader["EMAIL"].ToString(),
+                                phone: reader["PHONE"].ToString(),
+                                admin: Convert.ToBoolean(reader["ADMIN"]),
+                                username: reader["USERNAME"].ToString()
+                            );
+
+                            if (reader["picture"] != DBNull.Value)
+                            {
+                                em.Pic = StaticClass.imgManager.ImgbaseToImg(reader["PICTURE"].ToString());
+                                em.ImgBase = reader["picture"].ToString();
+                            }return em;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Login failed! Incorrect password.");
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Login failed! Username not found.");
+                        return null;
                     }
                 }
+            }
+            catch(MySqlException ex)
+            {
+                Console.WriteLine($"Error while getting Employee! {ex.Message}");
+                return null;
+            }
+        }
+
+        //to retrive emp from database
+        public List<EmployeeBase> AllEmp(bool incPic = false)
+        {
+            try
+            {
+                List<EmployeeBase> e = new List<EmployeeBase>();
+                string query = $"SELECT {GetCols(incPic)} FROM adminsystem.employee";
+
+                using (var reader = StaticClass.sql.MySqlSelect(query))
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            EmployeeBase em = new EmployeeBase(
+                                id: Convert.ToInt32(reader["ID"]),
+                                firstname: reader["FIRSTNAME"].ToString(),
+                                lastname: reader["LASTNAME"].ToString(),
+                                birthday: Convert.ToDateTime(reader["DOB"]),
+                                gender: reader["GENDER"].ToString(),
+                                email: reader["EMAIL"].ToString(),
+                                phone: reader["PHONE"].ToString(),
+                                admin: Convert.ToBoolean(reader["ADMIN"]),
+                                username: reader["USERNAME"].ToString()
+                            );
+
+                            if (incPic && reader["PICTURE"] != DBNull.Value)
+                            {
+                                em.Pic = StaticClass.imgManager.ImgbaseToImg(reader["picture"].ToString());
+                                em.ImgBase = reader["picture"].ToString();
+                            }
+
+                            e.Add(em);
+                        }
+                        return e;
+                    }
+                    else
+                    {
+                        Console.WriteLine("No employees found.");
+                        return null;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"Error retrieving all employees from MySQL: {ex.Message}");
+                return null;
             }
         }
     }
