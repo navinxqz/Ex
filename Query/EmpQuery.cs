@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using AdminSystem.Classes;
+using ComponentFactory.Krypton.Toolkit;
 
 namespace AdminSystem.Query
 {
@@ -75,5 +76,18 @@ namespace AdminSystem.Query
                 Console.WriteLine($"Error username in MySQL! {ex.Message}");
                 return false;
             }
-    }
+        }
+
+        public EmployeeBase AddEmp(EmployeeBase e)
+        {
+            try
+            {
+                int id = e.GenerateID();
+                string query = $"INSERT INTO adminsystem.employee (ID, FIRSTNAME, LASTNAME, GENDER, DOB, EMAIL, PHONE, PICTURE, USERNAME, PASSWORD, ADMIN) VALUES " +
+                               $"('{id}', '{e.FirstName}', '{e.LastName}','{e.Gender}', '{e.Birthday:yyyy-MM-dd}', " +
+                               $"'{e.Email}', '{e.Phone}','{e.ImgBase}', '{e.Username}'" +
+                               $"'{StaticClass.mangePassword.encrypt_password(e.Password, id)}', {(e.Admin ? 1 : 0)})";
+            }
+        }
+
 }
