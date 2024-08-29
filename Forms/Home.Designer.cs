@@ -124,6 +124,7 @@
             this.cuiButton2.Size = new System.Drawing.Size(40, 40);
             this.cuiButton2.TabIndex = 1;
             this.cuiButton2.TextOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton2.Click += new System.EventHandler(this.cuiButton2_Click);
             // 
             // slidePanel
             // 
@@ -131,6 +132,7 @@
             this.slidePanel.Controls.Add(this.cuiButton3);
             this.slidePanel.Controls.Add(this.logoutBtn);
             this.slidePanel.Controls.Add(this.cuiButton2);
+            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.Location = new System.Drawing.Point(0, 0);
             this.slidePanel.Margin = new System.Windows.Forms.Padding(1);
             this.slidePanel.Name = "slidePanel";

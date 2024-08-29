@@ -1,12 +1,8 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using AdminSystem.Classes;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AdminSystem.Forms
@@ -17,6 +13,7 @@ namespace AdminSystem.Forms
         private List<Form> forms = new List<Form>();
         private HomeForm home = new HomeForm();
         private Employee emp = new Employee();
+        private EmployeeBase employee = new EmployeeBase();
         
         public Home()
         {
@@ -26,6 +23,12 @@ namespace AdminSystem.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
             cb = btnHome;
             cb.Checked = true;
+
+            if(employee != null) { 
+                if(employee.Pic != null) {
+                    cuiButton3.Image = employee.Pic;
+                }
+            }
         }
 
         public void LoadForm(object Form)
@@ -147,6 +150,20 @@ namespace AdminSystem.Forms
             }
             LoadForm(emp);
             ButtonSetting(btnEmployees);
+        }
+
+        private void cuiButton2_Click(object sender, EventArgs e)
+        {
+            if(sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
+            {
+                if(slidePanel.Size.Width == 333)
+                {
+                    sliderHideTimer.Start();
+                }else if(slidePanel.Size.Width == 102)
+                {
+                    sliderShowTimer.Start();
+                }
+            }
         }
     }
 }
