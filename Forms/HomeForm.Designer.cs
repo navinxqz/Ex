@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.schedulePanel = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelClass = new System.Windows.Forms.Panel();
+            this.label92 = new System.Windows.Forms.Label();
+            this.panelMonth = new System.Windows.Forms.Panel();
+            this.panelSchedule = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelschdata = new System.Windows.Forms.Panel();
             this.labeld7c1 = new System.Windows.Forms.Label();
@@ -62,37 +67,143 @@
             this.labeld1c1 = new System.Windows.Forms.Label();
             this.labeld5c1 = new System.Windows.Forms.Label();
             this.labelsh = new System.Windows.Forms.Label();
-            this.panelContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.schedulePanel.SuspendLayout();
+            this.panelconnectionError = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelloading = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer_fadding = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.backgroundWorkerclassSch = new System.ComponentModel.BackgroundWorker();
+            this.timerScheduleRef = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorkerpackages = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerMonth = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerClsss = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkertrainer = new System.ComponentModel.BackgroundWorker();
+            this.timer_fadding2 = new System.Windows.Forms.Timer(this.components);
+            this.panelconnectionerrorclass = new System.Windows.Forms.Panel();
+            this.panelconnectionerrortrainer = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelloadingtrainer = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.panelloadingclass = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelconnectionerrormonth = new System.Windows.Forms.Panel();
+            this.panelTrainer = new System.Windows.Forms.Panel();
+            this.label = new System.Windows.Forms.Label();
+            this.panelloadingmonth = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panelconnectionerrorpackage = new System.Windows.Forms.Panel();
+            this.panelloadingpackge = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
+            this.panelPackage = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelSchedule.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelschdata.SuspendLayout();
+            this.panelconnectionError.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelloading.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panelloadingtrainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panelloadingclass.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panelloadingmonth.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelloadingpackge.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // pictureBox3
             // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this.schedulePanel;
+            this.pictureBox3.Location = new System.Drawing.Point(38, -20);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(418, 235);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
-            // schedulePanel
+            // panel5
             // 
-            this.schedulePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.schedulePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.schedulePanel.Controls.Add(this.panel4);
-            this.schedulePanel.Location = new System.Drawing.Point(32, 11);
-            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.schedulePanel.Name = "schedulePanel";
-            this.schedulePanel.Size = new System.Drawing.Size(1233, 242);
-            this.schedulePanel.TabIndex = 2;
+            this.panel5.Location = new System.Drawing.Point(77, 1119);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1200, 32);
+            this.panel5.TabIndex = 38;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Location = new System.Drawing.Point(77, 846);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1200, 32);
+            this.panel2.TabIndex = 35;
+            // 
+            // panelClass
+            // 
+            this.panelClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelClass.AutoScroll = true;
+            this.panelClass.Location = new System.Drawing.Point(104, 950);
+            this.panelClass.Margin = new System.Windows.Forms.Padding(2);
+            this.panelClass.Name = "panelClass";
+            this.panelClass.Size = new System.Drawing.Size(1172, 191);
+            this.panelClass.TabIndex = 37;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            this.label92.Location = new System.Drawing.Point(99, 890);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(154, 44);
+            this.label92.TabIndex = 36;
+            this.label92.Text = "Classes";
+            // 
+            // panelMonth
+            // 
+            this.panelMonth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMonth.AutoScroll = true;
+            this.panelMonth.Location = new System.Drawing.Point(104, 681);
+            this.panelMonth.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMonth.Name = "panelMonth";
+            this.panelMonth.Size = new System.Drawing.Size(1172, 191);
+            this.panelMonth.TabIndex = 34;
+            // 
+            // panelSchedule
+            // 
+            this.panelSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.panelSchedule.Controls.Add(this.panel4);
+            this.panelSchedule.Location = new System.Drawing.Point(78, 33);
+            this.panelSchedule.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSchedule.Name = "panelSchedule";
+            this.panelSchedule.Size = new System.Drawing.Size(1198, 262);
+            this.panelSchedule.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panelschdata);
             this.panel4.Controls.Add(this.labelsh);
-            this.panel4.Location = new System.Drawing.Point(2, 2);
+            this.panel4.Controls.Add(this.panelconnectionError);
+            this.panel4.Controls.Add(this.panelloading);
+            this.panel4.Location = new System.Drawing.Point(-1, 8);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1196, 238);
+            this.panel4.Size = new System.Drawing.Size(1145, 246);
             this.panel4.TabIndex = 44;
             // 
             // panelschdata
@@ -125,10 +236,10 @@
             this.panelschdata.Controls.Add(this.label4);
             this.panelschdata.Controls.Add(this.labeld1c1);
             this.panelschdata.Controls.Add(this.labeld5c1);
-            this.panelschdata.Location = new System.Drawing.Point(45, 71);
+            this.panelschdata.Location = new System.Drawing.Point(17, 75);
             this.panelschdata.Margin = new System.Windows.Forms.Padding(2);
             this.panelschdata.Name = "panelschdata";
-            this.panelschdata.Size = new System.Drawing.Size(1134, 165);
+            this.panelschdata.Size = new System.Drawing.Size(1126, 157);
             this.panelschdata.TabIndex = 1;
             // 
             // labeld7c1
@@ -472,23 +583,294 @@
             this.labelsh.AutoSize = true;
             this.labelsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelsh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            this.labelsh.Location = new System.Drawing.Point(476, 1);
+            this.labelsh.Location = new System.Drawing.Point(15, 0);
             this.labelsh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelsh.Name = "labelsh";
             this.labelsh.Size = new System.Drawing.Size(279, 69);
             this.labelsh.TabIndex = 0;
             this.labelsh.Text = "Schedule";
             // 
-            // panelContainer
+            // panelconnectionError
             // 
-            this.panelContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelconnectionError.Controls.Add(this.label1);
+            this.panelconnectionError.Controls.Add(this.pictureBox2);
+            this.panelconnectionError.Location = new System.Drawing.Point(414, 39);
+            this.panelconnectionError.Margin = new System.Windows.Forms.Padding(2);
+            this.panelconnectionError.Name = "panelconnectionError";
+            this.panelconnectionError.Size = new System.Drawing.Size(352, 209);
+            this.panelconnectionError.TabIndex = 2;
+            this.panelconnectionError.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.label1.Location = new System.Drawing.Point(61, 125);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(233, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Check your connection";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(85, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(180, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panelloading
+            // 
+            this.panelloading.Controls.Add(this.pictureBox1);
+            this.panelloading.Location = new System.Drawing.Point(335, 41);
+            this.panelloading.Margin = new System.Windows.Forms.Padding(2);
+            this.panelloading.Name = "panelloading";
+            this.panelloading.Size = new System.Drawing.Size(487, 215);
+            this.panelloading.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(38, -20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(418, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer_fadding
+            // 
+            this.timer_fadding.Interval = 20;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this.panelSchedule;
+            // 
+            // timerScheduleRef
+            // 
+            this.timerScheduleRef.Enabled = true;
+            this.timerScheduleRef.Interval = 60000;
+            // 
+            // timer_fadding2
+            // 
+            this.timer_fadding2.Interval = 15;
+            // 
+            // panelconnectionerrorclass
+            // 
+            this.panelconnectionerrorclass.Location = new System.Drawing.Point(451, 958);
+            this.panelconnectionerrorclass.Margin = new System.Windows.Forms.Padding(2);
+            this.panelconnectionerrorclass.Name = "panelconnectionerrorclass";
+            this.panelconnectionerrorclass.Size = new System.Drawing.Size(396, 209);
+            this.panelconnectionerrorclass.TabIndex = 38;
+            this.panelconnectionerrorclass.Visible = false;
+            // 
+            // panelconnectionerrortrainer
+            // 
+            this.panelconnectionerrortrainer.Location = new System.Drawing.Point(451, 1233);
+            this.panelconnectionerrortrainer.Margin = new System.Windows.Forms.Padding(2);
+            this.panelconnectionerrortrainer.Name = "panelconnectionerrortrainer";
+            this.panelconnectionerrortrainer.Size = new System.Drawing.Size(396, 209);
+            this.panelconnectionerrortrainer.TabIndex = 42;
+            this.panelconnectionerrortrainer.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            this.label2.Location = new System.Drawing.Point(93, 350);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 44);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Packages";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContainer.AutoScroll = true;
-            this.panelContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1330, 767);
-            this.panelContainer.TabIndex = 4;
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panelconnectionerrortrainer);
+            this.panel1.Controls.Add(this.panelconnectionerrorclass);
+            this.panel1.Controls.Add(this.panelloadingtrainer);
+            this.panel1.Controls.Add(this.panelloadingclass);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.panelconnectionerrormonth);
+            this.panel1.Controls.Add(this.panelTrainer);
+            this.panel1.Controls.Add(this.label);
+            this.panel1.Controls.Add(this.panelloadingmonth);
+            this.panel1.Controls.Add(this.panelconnectionerrorpackage);
+            this.panel1.Controls.Add(this.panelloadingpackge);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panelClass);
+            this.panel1.Controls.Add(this.label92);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panelMonth);
+            this.panel1.Controls.Add(this.label63);
+            this.panel1.Controls.Add(this.panelPackage);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panelSchedule);
+            this.panel1.Location = new System.Drawing.Point(-67, -26);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1349, 767);
+            this.panel1.TabIndex = 1;
+            // 
+            // panelloadingtrainer
+            // 
+            this.panelloadingtrainer.Controls.Add(this.pictureBox10);
+            this.panelloadingtrainer.Location = new System.Drawing.Point(405, 1223);
+            this.panelloadingtrainer.Margin = new System.Windows.Forms.Padding(2);
+            this.panelloadingtrainer.Name = "panelloadingtrainer";
+            this.panelloadingtrainer.Size = new System.Drawing.Size(487, 215);
+            this.panelloadingtrainer.TabIndex = 39;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Location = new System.Drawing.Point(38, -20);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(418, 235);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            // 
+            // panelloadingclass
+            // 
+            this.panelloadingclass.Controls.Add(this.pictureBox7);
+            this.panelloadingclass.Location = new System.Drawing.Point(405, 948);
+            this.panelloadingclass.Margin = new System.Windows.Forms.Padding(2);
+            this.panelloadingclass.Name = "panelloadingclass";
+            this.panelloadingclass.Size = new System.Drawing.Size(487, 215);
+            this.panelloadingclass.TabIndex = 4;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(38, -20);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(418, 235);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Location = new System.Drawing.Point(77, 1394);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1200, 32);
+            this.panel7.TabIndex = 43;
+            // 
+            // panelconnectionerrormonth
+            // 
+            this.panelconnectionerrormonth.Location = new System.Drawing.Point(451, 685);
+            this.panelconnectionerrormonth.Margin = new System.Windows.Forms.Padding(2);
+            this.panelconnectionerrormonth.Name = "panelconnectionerrormonth";
+            this.panelconnectionerrormonth.Size = new System.Drawing.Size(396, 209);
+            this.panelconnectionerrormonth.TabIndex = 37;
+            this.panelconnectionerrormonth.Visible = false;
+            // 
+            // panelTrainer
+            // 
+            this.panelTrainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTrainer.AutoScroll = true;
+            this.panelTrainer.Location = new System.Drawing.Point(104, 1225);
+            this.panelTrainer.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTrainer.Name = "panelTrainer";
+            this.panelTrainer.Size = new System.Drawing.Size(1172, 191);
+            this.panelTrainer.TabIndex = 41;
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            this.label.Location = new System.Drawing.Point(99, 1165);
+            this.label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(265, 44);
+            this.label.TabIndex = 40;
+            this.label.Text = "private Trainer";
+            // 
+            // panelloadingmonth
+            // 
+            this.panelloadingmonth.Controls.Add(this.pictureBox5);
+            this.panelloadingmonth.Location = new System.Drawing.Point(405, 663);
+            this.panelloadingmonth.Margin = new System.Windows.Forms.Padding(2);
+            this.panelloadingmonth.Name = "panelloadingmonth";
+            this.panelloadingmonth.Size = new System.Drawing.Size(487, 215);
+            this.panelloadingmonth.TabIndex = 3;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(38, -20);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(418, 235);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // panelconnectionerrorpackage
+            // 
+            this.panelconnectionerrorpackage.Location = new System.Drawing.Point(451, 412);
+            this.panelconnectionerrorpackage.Margin = new System.Windows.Forms.Padding(2);
+            this.panelconnectionerrorpackage.Name = "panelconnectionerrorpackage";
+            this.panelconnectionerrorpackage.Size = new System.Drawing.Size(396, 209);
+            this.panelconnectionerrorpackage.TabIndex = 36;
+            this.panelconnectionerrorpackage.Visible = false;
+            // 
+            // panelloadingpackge
+            // 
+            this.panelloadingpackge.Controls.Add(this.pictureBox3);
+            this.panelloadingpackge.Location = new System.Drawing.Point(403, 387);
+            this.panelloadingpackge.Margin = new System.Windows.Forms.Padding(2);
+            this.panelloadingpackge.Name = "panelloadingpackge";
+            this.panelloadingpackge.Size = new System.Drawing.Size(487, 215);
+            this.panelloadingpackge.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Location = new System.Drawing.Point(89, 586);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1188, 32);
+            this.panel3.TabIndex = 32;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            this.label63.Location = new System.Drawing.Point(99, 619);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(165, 44);
+            this.label63.TabIndex = 33;
+            this.label63.Text = "Monthes";
+            // 
+            // panelPackage
+            // 
+            this.panelPackage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPackage.AutoScroll = true;
+            this.panelPackage.Location = new System.Drawing.Point(95, 412);
+            this.panelPackage.Margin = new System.Windows.Forms.Padding(2);
+            this.panelPackage.Name = "panelPackage";
+            this.panelPackage.Size = new System.Drawing.Size(1172, 191);
+            this.panelPackage.TabIndex = 31;
             // 
             // HomeForm
             // 
@@ -496,24 +878,43 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1293, 715);
-            this.Controls.Add(this.schedulePanel);
-            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
-            this.schedulePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelSchedule.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panelschdata.ResumeLayout(false);
             this.panelschdata.PerformLayout();
+            this.panelconnectionError.ResumeLayout(false);
+            this.panelconnectionError.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelloading.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelloadingtrainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panelloadingclass.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panelloadingmonth.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelloadingpackge.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelClass;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Panel panelMonth;
+        private System.Windows.Forms.Panel panelSchedule;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelschdata;
         private System.Windows.Forms.Label labeld7c1;
@@ -545,7 +946,38 @@
         private System.Windows.Forms.Label labeld1c1;
         private System.Windows.Forms.Label labeld5c1;
         private System.Windows.Forms.Label labelsh;
-        private System.Windows.Forms.Panel schedulePanel;
-        private System.Windows.Forms.FlowLayoutPanel panelContainer;
+        private System.Windows.Forms.Panel panelconnectionError;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panelloading;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer_fadding;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerclassSch;
+        private System.Windows.Forms.Timer timerScheduleRef;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerpackages;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerMonth;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerClsss;
+        private System.ComponentModel.BackgroundWorker backgroundWorkertrainer;
+        private System.Windows.Forms.Timer timer_fadding2;
+        private System.Windows.Forms.Panel panelconnectionerrorclass;
+        private System.Windows.Forms.Panel panelconnectionerrortrainer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelloadingtrainer;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Panel panelloadingclass;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelconnectionerrormonth;
+        private System.Windows.Forms.Panel panelTrainer;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Panel panelloadingmonth;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panelconnectionerrorpackage;
+        private System.Windows.Forms.Panel panelloadingpackge;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Panel panelPackage;
     }
 }
