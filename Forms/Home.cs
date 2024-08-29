@@ -25,13 +25,8 @@ namespace AdminSystem.Forms
             cb.Checked = true;
 
             if(employee != null) { 
-                if(employee.Pic != null) {
-                    cuiButton3.Image = employee.Pic;
-                }
-                else
-                {
-                    Console.WriteLine("Error! No profile Image loaded.");
-                }
+                if (employee.Pic != null) { cuiButton3.Image = employee.Pic; }
+                else{ Console.WriteLine("Error! No profile Image loaded."); }
             }
             else
             {
@@ -50,7 +45,7 @@ namespace AdminSystem.Forms
 
             if (employee != null)
             {
-                home = new HomeForm(e, this);
+                //home = new HomeForm(e, this);
                 emp = new Employee(e, this);
                 //further options will b added
 
@@ -120,9 +115,12 @@ namespace AdminSystem.Forms
                 int y = slidePanel.Size.Height;
                 slidePanel.Size = new Size(x, y);
 
-                int z = mainpanel.Size.Width + 21, w = mainpanel.Size.Height;
-                mainpanel.Size = new Size(z, w);
-                int ly = mainpanel.Location.Y, lx = mainpanel.Location.X - 21;
+                int a = mainpanel.Size.Width + 21;
+                int b = mainpanel.Size.Height;
+                mainpanel.Size = new Size(a, b);
+
+                int lx = mainpanel.Location.X - 21;
+                int ly = mainpanel.Location.Y;
                 mainpanel.Location = new Point(lx, ly);
             }
             else
@@ -139,9 +137,12 @@ namespace AdminSystem.Forms
                 int y = slidePanel.Size.Height;
                 slidePanel.Size = new Size(x, y);
 
-                int z = mainpanel.Size.Width - 21, w = mainpanel.Size.Height;
-                mainpanel.Size = new Size(z, w);
-                int ly = mainpanel.Location.Y, lx = mainpanel.Location.X + 21;
+                int a = mainpanel.Size.Width - 21;
+                int b = mainpanel.Size.Height;
+                mainpanel.Size = new Size(a, b);
+
+                int lx = mainpanel.Location.X + 21;
+                int ly = mainpanel.Location.Y;
                 mainpanel.Location = new Point(lx, ly);
             }
             else
@@ -201,6 +202,50 @@ namespace AdminSystem.Forms
                     sliderShowTimer.Start();
                 }
             }
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            if (!btnMembers.Checked)
+            {
+                btnMembers.Checked = true;
+                return;
+            }
+            //LoadForm(emp);
+            ButtonSetting(btnMembers);
+        }
+
+        private void btnSubscriptions_Click(object sender, EventArgs e)
+        {
+            if (!btnSubscriptions.Checked)
+            {
+                btnSubscriptions.Checked = true;
+                return;
+            }
+            //LoadForm(emp);
+            ButtonSetting(btnSubscriptions);
+        }
+
+        private void btnTrainer_Click(object sender, EventArgs e)
+        {
+            if (!btnTrainer.Checked)
+            {
+                btnTrainer.Checked = true;
+                return;
+            }
+            //LoadForm(emp);
+            ButtonSetting(btnTrainer);
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (!btnPayment.Checked)
+            {
+                btnPayment.Checked = true;
+                return;
+            }
+            //LoadForm(emp);
+            ButtonSetting(btnPayment);
         }
     }
 }

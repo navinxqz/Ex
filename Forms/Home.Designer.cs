@@ -338,6 +338,7 @@
             this.btnSubscriptions.TabIndex = 29;
             this.btnSubscriptions.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnSubscriptions.Values.Image")));
             this.btnSubscriptions.Values.Text = "Subscription";
+            this.btnSubscriptions.Click += new System.EventHandler(this.btnSubscriptions_Click);
             // 
             // btnTrainer
             // 
@@ -429,6 +430,7 @@
             this.btnTrainer.TabIndex = 30;
             this.btnTrainer.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnTrainer.Values.Image")));
             this.btnTrainer.Values.Text = "Trainer";
+            this.btnTrainer.Click += new System.EventHandler(this.btnTrainer_Click);
             // 
             // btnPayment
             // 
@@ -520,6 +522,7 @@
             this.btnPayment.TabIndex = 29;
             this.btnPayment.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Values.Image")));
             this.btnPayment.Values.Text = "Payments";
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnEmployees
             // 
@@ -703,6 +706,7 @@
             this.btnMembers.TabIndex = 25;
             this.btnMembers.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Values.Image")));
             this.btnMembers.Values.Text = "Members";
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // cuiButton3
             // 
