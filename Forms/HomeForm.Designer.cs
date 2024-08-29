@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.schedulePanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelschdata = new System.Windows.Forms.Panel();
             this.labeld7c1 = new System.Windows.Forms.Label();
@@ -61,10 +62,10 @@
             this.labeld1c1 = new System.Windows.Forms.Label();
             this.labeld5c1 = new System.Windows.Forms.Label();
             this.labelsh = new System.Windows.Forms.Label();
-            this.schedulePanel = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.schedulePanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelschdata.SuspendLayout();
-            this.schedulePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -72,14 +73,26 @@
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this.schedulePanel;
             // 
+            // schedulePanel
+            // 
+            this.schedulePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.schedulePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.schedulePanel.Controls.Add(this.panel4);
+            this.schedulePanel.Location = new System.Drawing.Point(32, 11);
+            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.schedulePanel.Name = "schedulePanel";
+            this.schedulePanel.Size = new System.Drawing.Size(1233, 242);
+            this.schedulePanel.TabIndex = 2;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panelschdata);
             this.panel4.Controls.Add(this.labelsh);
-            this.panel4.Location = new System.Drawing.Point(2, 14);
+            this.panel4.Location = new System.Drawing.Point(2, 2);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1133, 246);
+            this.panel4.Size = new System.Drawing.Size(1196, 238);
             this.panel4.TabIndex = 44;
             // 
             // panelschdata
@@ -112,10 +125,10 @@
             this.panelschdata.Controls.Add(this.label4);
             this.panelschdata.Controls.Add(this.labeld1c1);
             this.panelschdata.Controls.Add(this.labeld5c1);
-            this.panelschdata.Location = new System.Drawing.Point(2, 83);
+            this.panelschdata.Location = new System.Drawing.Point(45, 71);
             this.panelschdata.Margin = new System.Windows.Forms.Padding(2);
             this.panelschdata.Name = "panelschdata";
-            this.panelschdata.Size = new System.Drawing.Size(1092, 161);
+            this.panelschdata.Size = new System.Drawing.Size(1134, 165);
             this.panelschdata.TabIndex = 1;
             // 
             // labeld7c1
@@ -459,24 +472,23 @@
             this.labelsh.AutoSize = true;
             this.labelsh.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelsh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            this.labelsh.Location = new System.Drawing.Point(2, 0);
+            this.labelsh.Location = new System.Drawing.Point(476, 1);
             this.labelsh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelsh.Name = "labelsh";
             this.labelsh.Size = new System.Drawing.Size(279, 69);
             this.labelsh.TabIndex = 0;
             this.labelsh.Text = "Schedule";
             // 
-            // schedulePanel
+            // panelContainer
             // 
-            this.schedulePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.schedulePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.schedulePanel.Controls.Add(this.panel4);
-            this.schedulePanel.Location = new System.Drawing.Point(11, 11);
-            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
-            this.schedulePanel.Name = "schedulePanel";
-            this.schedulePanel.Size = new System.Drawing.Size(1107, 242);
-            this.schedulePanel.TabIndex = 2;
+            this.panelContainer.AutoScroll = true;
+            this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1330, 767);
+            this.panelContainer.TabIndex = 4;
             // 
             // HomeForm
             // 
@@ -485,15 +497,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1293, 715);
             this.Controls.Add(this.schedulePanel);
+            this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
+            this.schedulePanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panelschdata.ResumeLayout(false);
             this.panelschdata.PerformLayout();
-            this.schedulePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -533,5 +546,6 @@
         private System.Windows.Forms.Label labeld5c1;
         private System.Windows.Forms.Label labelsh;
         private System.Windows.Forms.Panel schedulePanel;
+        private System.Windows.Forms.FlowLayoutPanel panelContainer;
     }
 }

@@ -113,6 +113,7 @@
             this.cuiButton2.ImageOffset = new System.Drawing.Point(0, 0);
             this.cuiButton2.ImageTint = System.Drawing.Color.White;
             this.cuiButton2.Location = new System.Drawing.Point(12, 12);
+            this.cuiButton2.Margin = new System.Windows.Forms.Padding(2);
             this.cuiButton2.Name = "cuiButton2";
             this.cuiButton2.NormalBackground = System.Drawing.Color.Transparent;
             this.cuiButton2.NormalOutline = System.Drawing.Color.Transparent;
@@ -782,7 +783,6 @@
             this.mainpanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mainpanel.Size = new System.Drawing.Size(1219, 675);
             this.mainpanel.TabIndex = 4;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // bunifuElipse2
             // 
@@ -806,8 +806,8 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1300, 740);
             this.Controls.Add(this.mainpanel);

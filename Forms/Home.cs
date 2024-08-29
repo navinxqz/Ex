@@ -83,11 +83,6 @@ namespace AdminSystem.Forms
             Application.Exit();
         }
 
-        private void mainpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Home_Load(object sender, EventArgs e)
         {
             LoadForm(home);
