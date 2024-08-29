@@ -18,7 +18,7 @@ namespace AdminSystem.Forms
         public Home()
         {
             InitializeComponent();
-            this.Show();
+            //this.Show();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
             cb = btnHome;
@@ -28,7 +28,43 @@ namespace AdminSystem.Forms
                 if(employee.Pic != null) {
                     cuiButton3.Image = employee.Pic;
                 }
+                else
+                {
+                    Console.WriteLine("Error! No profile Image loaded.");
+                }
             }
+            else
+            {
+                Console.WriteLine("Error! No employee data loaded.");
+            }
+        }
+
+        public Home(EmployeeBase e)
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cb = btnHome;
+            cb.Checked = true;
+            employee = e;
+
+            if (employee != null)
+            {
+                home = new HomeForm(e, this);
+                emp = new Employee(e, this);
+                //further options will b added
+
+                if (!employee.Admin)
+                {
+                    btnEmployees.Visible = false;
+                    btnTrainer.Visible = false;
+                    btnPayment.Visible = false;
+                }
+
+                if(employee.Pic != null) { cuiButton3.Image = employee.Pic; }
+                else { Console.WriteLine("Error! No profile Image loaded."); }
+            }
+
         }
 
         public void LoadForm(object Form)
@@ -37,13 +73,14 @@ namespace AdminSystem.Forms
             {
                 this.mainpanel.Controls.RemoveAt(0);
             }
-            if(Form is Form f) {
+            //if(Form is Form f) {
+            Form f = Form as Form;
                 f.TopLevel = false;
                 f.Dock = DockStyle.Fill;
                 this.mainpanel.Controls.Add(f);
                 this.mainpanel.Tag = f;
                 f.Visible = true;
-            }
+            //}
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
