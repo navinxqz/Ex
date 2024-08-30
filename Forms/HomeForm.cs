@@ -28,8 +28,36 @@ namespace AdminSystem.Forms
             bgWorkerMonths.RunWorkerAsync();
             bgWorkerCls.RunWorkerAsync();
             bgWorkerTrainer.RunWorkerAsync();
+
+            image.Add(Image.FromFile("assets/bg1.png"));
+            image.Add(Image.FromFile("assets/bg2.png"));
+            image.Add(Image.FromFile("assets/bg3.png"));
+            image.Add(Image.FromFile("assets/bg4.png"));
         }
 
+        public HomeForm(EmployeeBase empbase, Home h)
+        {
+            InitializeComponent();
+            schedulePanel.Visible = false;
+            bgWorkerSchedule.RunWorkerAsync();
+            bgWorkerPackage.RunWorkerAsync();
+            bgWorkerMonths.RunWorkerAsync();
+            bgWorkerCls.RunWorkerAsync();
+            bgWorkerTrainer.RunWorkerAsync();
+
+            image.Add(Image.FromFile("assets/bg1.png"));
+            image.Add(Image.FromFile("assets/bg2.png"));
+            image.Add(Image.FromFile("assets/bg3.png"));
+            image.Add(Image.FromFile("assets/bg4.png"));
+
+            image[0].Tag = "assets/bg1.png";
+            image[1].Tag = "assets/bg2.png";
+            image[2].Tag = "assets/bg3.png";
+            image[3].Tag = "assets/bg4.png";
+
+            this.empbase = empbase;
+            home = h;
+        }
         private void HomeForm_Load(object sender, EventArgs e)
         {
 
