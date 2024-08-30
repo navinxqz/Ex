@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,7 +36,7 @@
             this.panelMonth = new System.Windows.Forms.Panel();
             this.panelSchedule = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelschdata = new System.Windows.Forms.Panel();
+            this.schedulePanel = new System.Windows.Forms.Panel();
             this.labeld7c1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -68,19 +67,8 @@
             this.labeld5c1 = new System.Windows.Forms.Label();
             this.labelsh = new System.Windows.Forms.Label();
             this.panelconnectionError = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelloading = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer_fadding = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.backgroundWorkerclassSch = new System.ComponentModel.BackgroundWorker();
-            this.timerScheduleRef = new System.Windows.Forms.Timer(this.components);
-            this.backgroundWorkerpackages = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorkerMonth = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorkerClsss = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorkertrainer = new System.ComponentModel.BackgroundWorker();
-            this.timer_fadding2 = new System.Windows.Forms.Timer(this.components);
             this.panelconnectionerrorclass = new System.Windows.Forms.Panel();
             this.panelconnectionerrortrainer = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,12 +88,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label63 = new System.Windows.Forms.Label();
             this.panelPackage = new System.Windows.Forms.Panel();
+            this.bgWorkerPackage = new System.ComponentModel.BackgroundWorker();
+            this.bgWorkerMonths = new System.ComponentModel.BackgroundWorker();
+            this.bgWorkerCls = new System.ComponentModel.BackgroundWorker();
+            this.bgWorkerTrainer = new System.ComponentModel.BackgroundWorker();
+            this.bgWorkerSchedule = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSchedule.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panelschdata.SuspendLayout();
-            this.panelconnectionError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.schedulePanel.SuspendLayout();
             this.panelloading.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -196,7 +187,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panelschdata);
+            this.panel4.Controls.Add(this.schedulePanel);
             this.panel4.Controls.Add(this.labelsh);
             this.panel4.Controls.Add(this.panelconnectionError);
             this.panel4.Controls.Add(this.panelloading);
@@ -206,41 +197,41 @@
             this.panel4.Size = new System.Drawing.Size(1145, 246);
             this.panel4.TabIndex = 44;
             // 
-            // panelschdata
+            // schedulePanel
             // 
-            this.panelschdata.Controls.Add(this.labeld7c1);
-            this.panelschdata.Controls.Add(this.label12);
-            this.panelschdata.Controls.Add(this.label8);
-            this.panelschdata.Controls.Add(this.labeld7c2);
-            this.panelschdata.Controls.Add(this.labeld3c1);
-            this.panelschdata.Controls.Add(this.labeld4c3);
-            this.panelschdata.Controls.Add(this.labeld7c3);
-            this.panelschdata.Controls.Add(this.labeld3c2);
-            this.panelschdata.Controls.Add(this.labeld4c2);
-            this.panelschdata.Controls.Add(this.label16);
-            this.panelschdata.Controls.Add(this.labeld3c3);
-            this.panelschdata.Controls.Add(this.labeld4c1);
-            this.panelschdata.Controls.Add(this.labeld6c1);
-            this.panelschdata.Controls.Add(this.labeld2c1);
-            this.panelschdata.Controls.Add(this.labelday);
-            this.panelschdata.Controls.Add(this.label24);
-            this.panelschdata.Controls.Add(this.labeld6c2);
-            this.panelschdata.Controls.Add(this.labeld2c2);
-            this.panelschdata.Controls.Add(this.labeld1c3);
-            this.panelschdata.Controls.Add(this.labeld5c3);
-            this.panelschdata.Controls.Add(this.labeld6c3);
-            this.panelschdata.Controls.Add(this.labeld2c3);
-            this.panelschdata.Controls.Add(this.labeld1c2);
-            this.panelschdata.Controls.Add(this.labeld5c2);
-            this.panelschdata.Controls.Add(this.label20);
-            this.panelschdata.Controls.Add(this.label4);
-            this.panelschdata.Controls.Add(this.labeld1c1);
-            this.panelschdata.Controls.Add(this.labeld5c1);
-            this.panelschdata.Location = new System.Drawing.Point(17, 75);
-            this.panelschdata.Margin = new System.Windows.Forms.Padding(2);
-            this.panelschdata.Name = "panelschdata";
-            this.panelschdata.Size = new System.Drawing.Size(1126, 157);
-            this.panelschdata.TabIndex = 1;
+            this.schedulePanel.Controls.Add(this.labeld7c1);
+            this.schedulePanel.Controls.Add(this.label12);
+            this.schedulePanel.Controls.Add(this.label8);
+            this.schedulePanel.Controls.Add(this.labeld7c2);
+            this.schedulePanel.Controls.Add(this.labeld3c1);
+            this.schedulePanel.Controls.Add(this.labeld4c3);
+            this.schedulePanel.Controls.Add(this.labeld7c3);
+            this.schedulePanel.Controls.Add(this.labeld3c2);
+            this.schedulePanel.Controls.Add(this.labeld4c2);
+            this.schedulePanel.Controls.Add(this.label16);
+            this.schedulePanel.Controls.Add(this.labeld3c3);
+            this.schedulePanel.Controls.Add(this.labeld4c1);
+            this.schedulePanel.Controls.Add(this.labeld6c1);
+            this.schedulePanel.Controls.Add(this.labeld2c1);
+            this.schedulePanel.Controls.Add(this.labelday);
+            this.schedulePanel.Controls.Add(this.label24);
+            this.schedulePanel.Controls.Add(this.labeld6c2);
+            this.schedulePanel.Controls.Add(this.labeld2c2);
+            this.schedulePanel.Controls.Add(this.labeld1c3);
+            this.schedulePanel.Controls.Add(this.labeld5c3);
+            this.schedulePanel.Controls.Add(this.labeld6c3);
+            this.schedulePanel.Controls.Add(this.labeld2c3);
+            this.schedulePanel.Controls.Add(this.labeld1c2);
+            this.schedulePanel.Controls.Add(this.labeld5c2);
+            this.schedulePanel.Controls.Add(this.label20);
+            this.schedulePanel.Controls.Add(this.label4);
+            this.schedulePanel.Controls.Add(this.labeld1c1);
+            this.schedulePanel.Controls.Add(this.labeld5c1);
+            this.schedulePanel.Location = new System.Drawing.Point(17, 75);
+            this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.schedulePanel.Name = "schedulePanel";
+            this.schedulePanel.Size = new System.Drawing.Size(1126, 157);
+            this.schedulePanel.TabIndex = 1;
             // 
             // labeld7c1
             // 
@@ -592,36 +583,12 @@
             // 
             // panelconnectionError
             // 
-            this.panelconnectionError.Controls.Add(this.label1);
-            this.panelconnectionError.Controls.Add(this.pictureBox2);
             this.panelconnectionError.Location = new System.Drawing.Point(414, 39);
             this.panelconnectionError.Margin = new System.Windows.Forms.Padding(2);
             this.panelconnectionError.Name = "panelconnectionError";
             this.panelconnectionError.Size = new System.Drawing.Size(352, 209);
             this.panelconnectionError.TabIndex = 2;
             this.panelconnectionError.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.label1.Location = new System.Drawing.Point(61, 125);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Check your connection";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(85, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(180, 115);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // panelloading
             // 
@@ -641,24 +608,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer_fadding
-            // 
-            this.timer_fadding.Interval = 20;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this.panelSchedule;
-            // 
-            // timerScheduleRef
-            // 
-            this.timerScheduleRef.Enabled = true;
-            this.timerScheduleRef.Interval = 60000;
-            // 
-            // timer_fadding2
-            // 
-            this.timer_fadding2.Interval = 15;
             // 
             // panelconnectionerrorclass
             // 
@@ -857,9 +806,9 @@
             this.label63.Location = new System.Drawing.Point(99, 619);
             this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(165, 44);
+            this.label63.Size = new System.Drawing.Size(144, 44);
             this.label63.TabIndex = 33;
-            this.label63.Text = "Monthes";
+            this.label63.Text = "Months";
             // 
             // panelPackage
             // 
@@ -887,11 +836,8 @@
             this.panelSchedule.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panelschdata.ResumeLayout(false);
-            this.panelschdata.PerformLayout();
-            this.panelconnectionError.ResumeLayout(false);
-            this.panelconnectionError.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.schedulePanel.ResumeLayout(false);
+            this.schedulePanel.PerformLayout();
             this.panelloading.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -916,7 +862,7 @@
         private System.Windows.Forms.Panel panelMonth;
         private System.Windows.Forms.Panel panelSchedule;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panelschdata;
+        private System.Windows.Forms.Panel schedulePanel;
         private System.Windows.Forms.Label labeld7c1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
@@ -947,19 +893,8 @@
         private System.Windows.Forms.Label labeld5c1;
         private System.Windows.Forms.Label labelsh;
         private System.Windows.Forms.Panel panelconnectionError;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelloading;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer_fadding;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerclassSch;
-        private System.Windows.Forms.Timer timerScheduleRef;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerpackages;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerMonth;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerClsss;
-        private System.ComponentModel.BackgroundWorker backgroundWorkertrainer;
-        private System.Windows.Forms.Timer timer_fadding2;
         private System.Windows.Forms.Panel panelconnectionerrorclass;
         private System.Windows.Forms.Panel panelconnectionerrortrainer;
         private System.Windows.Forms.Label label2;
@@ -979,5 +914,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Panel panelPackage;
+        private System.ComponentModel.BackgroundWorker bgWorkerPackage;
+        private System.ComponentModel.BackgroundWorker bgWorkerMonths;
+        private System.ComponentModel.BackgroundWorker bgWorkerCls;
+        private System.ComponentModel.BackgroundWorker bgWorkerTrainer;
+        private System.ComponentModel.BackgroundWorker bgWorkerSchedule;
     }
 }
