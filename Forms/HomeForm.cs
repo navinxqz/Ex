@@ -78,6 +78,14 @@ namespace AdminSystem.Forms
             DoubleBuffered = true;
         }
 
+        private void RemovePanelControls(Panel p)
+        {
+            foreach(Control control in p.Controls)
+            {
+                control.Dispose();
+            }p.Controls.Clear();
+        }
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
 
@@ -87,12 +95,18 @@ namespace AdminSystem.Forms
 
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void faddingtimer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
-
-            }catch (Exception ex) { }
+            if(home.Opacity > 0.86) { home.Opacity -= 0.01; }
+            else { faddingtimer1.Stop(); }
         }
+        private void faddingtimer2_Tick(object sender, EventArgs e)
+        {
+            if (home.Opacity < 1) { home.Opacity += 0.01; }
+            else { faddingtimer2.Stop(); }
+        }
+
+        //private void CustomPanel(int x,int y,)
+
     }
 }

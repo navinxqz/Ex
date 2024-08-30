@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -93,6 +94,8 @@
             this.bgWorkerCls = new System.ComponentModel.BackgroundWorker();
             this.bgWorkerTrainer = new System.ComponentModel.BackgroundWorker();
             this.bgWorkerSchedule = new System.ComponentModel.BackgroundWorker();
+            this.faddingtimer1 = new System.Windows.Forms.Timer(this.components);
+            this.faddingtimer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSchedule.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -821,6 +824,15 @@
             this.panelPackage.Size = new System.Drawing.Size(1172, 191);
             this.panelPackage.TabIndex = 31;
             // 
+            // faddingtimer1
+            // 
+            this.faddingtimer1.Interval = 20;
+            this.faddingtimer1.Tick += new System.EventHandler(this.faddingtimer1_Tick);
+            // 
+            // faddingtimer2
+            // 
+            this.faddingtimer2.Tick += new System.EventHandler(this.faddingtimer2_Tick);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -919,5 +931,7 @@
         private System.ComponentModel.BackgroundWorker bgWorkerCls;
         private System.ComponentModel.BackgroundWorker bgWorkerTrainer;
         private System.ComponentModel.BackgroundWorker bgWorkerSchedule;
+        private System.Windows.Forms.Timer faddingtimer1;
+        private System.Windows.Forms.Timer faddingtimer2;
     }
 }
