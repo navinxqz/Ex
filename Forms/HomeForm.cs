@@ -58,11 +58,31 @@ namespace AdminSystem.Forms
             this.empbase = empbase;
             home = h;
         }
+
+        public void MaxScheduleResize()
+        {
+            int x = panel4.Location.X + 21;
+            int y = panel4.Location.Y;
+            DoubleBuffered = true;
+
+            panel4.Location = new Point(x, y);
+            DoubleBuffered = true;
+        }
+        public void MinScheduleResize()
+        {
+            int x = panel4.Location.X - 21;
+            int y = panel4.Location.Y;
+            DoubleBuffered = true;
+
+            panel4.Location = new Point(x, y);
+            DoubleBuffered = true;
+        }
+
         private void HomeForm_Load(object sender, EventArgs e)
         {
 
         }
-        public void Load()
+        public void Loads()
         {
 
         }
@@ -72,7 +92,7 @@ namespace AdminSystem.Forms
             try
             {
 
-            }
+            }catch (Exception ex) { }
         }
     }
 }

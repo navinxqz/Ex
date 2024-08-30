@@ -194,7 +194,7 @@
             this.panel4.Location = new System.Drawing.Point(-1, 8);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1145, 246);
+            this.panel4.Size = new System.Drawing.Size(1190, 246);
             this.panel4.TabIndex = 44;
             // 
             // schedulePanel
