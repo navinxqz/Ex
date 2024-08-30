@@ -22,7 +22,7 @@ namespace AdminSystem.Classes
         {
             int year = (DateTime.Now.Year % 100) + 3;
             int baseId = year * 1000000; // Create a base ID with the prefix.
-            int newId;
+            int newId = 0;
 
             /*int lastId = StaticClass.trainerService.getLastId();
             if (lastId == -1)
