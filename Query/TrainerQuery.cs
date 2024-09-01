@@ -39,7 +39,8 @@ namespace AdminSystem.Query
                 {
                     while (read.Read())
                     {
-
+                        Trainer t = new Trainer();
+                        if (incPic) {id: Convert.ToInt32(read["ID"]), firstname: read["FIRSTNAME"].ToString(), lastname:read}
                     }
                 }
             }
