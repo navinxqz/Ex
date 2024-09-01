@@ -30,25 +30,25 @@ namespace AdminSystem.Classes
             Trainer = trainer;
         }
 
-        public Trainer TrainerDate()
-        {
-            if(Trainer == null)
+        /*    public Trainer TrainerDate()
             {
-                Console.WriteLine("Error! No trainer found");
-                return null;
-            }
+                if(Trainer == null)
+                {
+                    Console.WriteLine("Error! No trainer found");
+                    return null;
+                }
 
-            List<Trainer> trainers;         //under staticCls in future...
-            if(trainers.Count > 0)
-            {
-                Trainer = trainers[0];
-                return TrainerDate();
-            }
-            else
-            {
-                Console.WriteLine("Error! No trainer found");
-                return null;
-            }
-        }
+                List<Trainer> trainers;         //under staticCls in future...
+                if(trainers.Count > 0)
+                {
+                    Trainer = trainers[0];
+                    return TrainerDate();
+                }
+                else
+                {
+                    Console.WriteLine("Error! No trainer found");
+                    return null;
+                }
+            }*/
     }
 }
