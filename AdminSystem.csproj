@@ -163,6 +163,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\EmpQuery.cs" />
+    <Compile Include="Query\TrainerQuery.cs" />
     <EmbeddedResource Include="Forms\AddPeople.resx">
       <DependentUpon>AddPeople.cs</DependentUpon>
     </EmbeddedResource>

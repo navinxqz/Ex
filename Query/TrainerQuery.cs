@@ -11,6 +11,11 @@ namespace AdminSystem.Query
 {
     public class TrainerQuery
     {
+        private string GetCol(bool incPic)
+        {
+            if (incPic) { return "*"; }
+            else { return "ID,FIRSTNAME,LASTNAME,BIRTHDAY,GENDER,EMAIL,PHONE,SPECIALIZED,LESSON_COST,STATUS"; }
+        }
         public List<Trainer> Search(string search, bool incPic, bool byId = false, bool byFulName = false) {
             try
             {
