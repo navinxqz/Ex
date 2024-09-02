@@ -44,12 +44,24 @@ namespace AdminSystem.Query
                 {
                     while (read.Read())
                     {
-                        Trainer t = new Trainer();
-                        if (incPic) {id: Convert.ToInt32(read["ID"]), firstname: read["FIRSTNAME"].ToString(), lastname:read}
-                    }
+                        Trainer t = new Trainer(id: Convert.ToInt32(read["ID"]), firstname: read["FIRSTNAME"].ToString(), lastname: read["LASTNAME"].ToString(), gender: read["GENDER"].ToString(), email: read["EMAIL"].ToString(), phone: read["PHONE"].ToString(), birthday: Convert.ToDateTime(read["BIRTHDAY"]), specialized: read["SPECIALIZED"].ToString(), lessonPrice: Convert.ToInt32(read["LESSON_COST"]), status: Convert.ToBoolean(read["STATUS"]));
+                        if (incPic) {
+                            t.Pic = StaticClass.imgManager.ImgbaseToImg(read["PICTURE"].ToString());
+                            t.ImgBase = read["PICTURE"].ToString();
+                        }
+                        trainers.Add(t);
+                    }return trainers;
+                }
+                else
+                {
+                    Console.WriteLine($"Error! No records found for ID or username '{search}'");
+                    return null;
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                Console.WriteLine($"Error! {ex.Message}");
+                return null;
+            }
         } 
     }
 }
