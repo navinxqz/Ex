@@ -62,6 +62,28 @@ namespace AdminSystem.Query
                 Console.WriteLine($"Error! {ex.Message}");
                 return null;
             }
-        } 
+        }
+
+        public Trainer AddTrainer( Trainer trainer )
+        {
+            try
+            {
+                string query = $"INSERT INTO ADMINSYSTEM.TRAINER (ID, FIRSTNAME, LASTNAME, GENDER, PICTURE, EMAIL, PHONE, BIRTHDAY, SPECIALIZED, LESSON_COST, STATUS) VALUES (@id, @firstname, @lastname, @birthday, @gender, @picture, @email, @phone, @specialized, @lesson_cost, @status)";
+
+                int rows = StaticClass.sql.MySqlNonQ(query);
+                if (rows > 0)
+                {
+                    Console.WriteLine("Trainer created successfully");
+                    return trainer;
+                }
+                else
+                {
+                    Console.WriteLine("Error while adding trainer");
+                    return null;
+                }
+            }catch (Exception ex) { Console.WriteLine($"Error while adding in MySQL. {ex.Message}");
+                return null;
+            }
+        }
     }
 }
