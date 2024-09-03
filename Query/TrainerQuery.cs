@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AdminSystem.Classes;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
 
 namespace AdminSystem.Query
 {
@@ -38,10 +34,7 @@ namespace AdminSystem.Query
                     return null;
                 }
 
-                //using(MySqlConnection con = new MySqlConnection())
-
                 MySqlDataReader read = StaticClass.sql.MySqlSelect(query);
-
                 if (read.HasRows)
                 {
                     while (read.Read())
@@ -74,7 +67,6 @@ namespace AdminSystem.Query
             try
             {
                 string query = $"INSERT INTO ADMINSYSTEM.TRAINER (ID, FIRSTNAME, LASTNAME, GENDER, PICTURE, EMAIL, PHONE, BIRTHDAY, SPECIALIZED, LESSON_COST, STATUS) VALUES (@id, @firstname, @lastname, @birthday, @gender, @picture, @email, @phone, @specialized, @lesson_cost, @status)";
-
                 int rows = StaticClass.sql.MySqlNonQ(query);
                 if (rows > 0)
                 {
@@ -130,7 +122,6 @@ namespace AdminSystem.Query
                     Console.WriteLine($"Error while updating trainer ID: {trainer.Id}");
                     return false;
                 }
-
             }
             catch (Exception ex)
             {
@@ -144,8 +135,7 @@ namespace AdminSystem.Query
             try
             {
                 List<Trainer> trainer = new List<Trainer>();
-                string query = status
-                    ? $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER WHERE status = 1" : $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER";
+                string query = status ? $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER WHERE status = 1" : $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER";
 
                 MySqlDataReader read = StaticClass.sql.MySqlSelect(query);
                 if(read.HasRows)
@@ -167,7 +157,8 @@ namespace AdminSystem.Query
                     return null;
                 }
             }
-            catch (Exception ex) { Console.WriteLine($"Error while getting data from MySQL! {ex.Message}");
+            catch (Exception ex) { 
+                Console.WriteLine($"Error while getting data from MySQL! {ex.Message}");
                 return null;
             }
         }
