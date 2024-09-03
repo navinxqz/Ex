@@ -30,25 +30,24 @@ namespace AdminSystem.Classes
             Trainer = trainer;
         }
 
-        /*    public Trainer TrainerDate()
+        public Trainer TrainerDate()
+        {
+            if (Trainer == null)
             {
-                if(Trainer == null)
-                {
-                    Console.WriteLine("Error! No trainer found");
-                    return null;
-                }
+                Console.WriteLine("Error! No trainer found");
+                return null;
+            }
 
-                List<Trainer> trainers;         //under staticCls in future...
-                if(trainers.Count > 0)
-                {
-                    Trainer = trainers[0];
-                    return TrainerDate();
-                }
-                else
-                {
-                    Console.WriteLine("Error! No trainer found");
-                    return null;
-                }
-            }*/
+            List<Trainer> trainers = StaticClass.tQuery.Search(Trainer.Id.ToString(), false, byId: false);         //under staticCls in future...
+            if (trainers != null && trainers.Count > 0)
+            {
+                return trainers[0];     //return first trainer from list
+            }
+            else
+            {
+                Console.WriteLine("Error! No trainer found");
+                return null;
+            }
+        }
     }
 }

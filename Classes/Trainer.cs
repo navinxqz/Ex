@@ -22,7 +22,6 @@ namespace AdminSystem.Classes
         {
             int year = (DateTime.Now.Year % 100) + 3;
             int baseId = year * 1000000; // Create a base ID with the prefix.
-            int newId = 0;
 
             int lastId = StaticClass.tQuery.LastID();
             if (lastId == -1)
@@ -32,9 +31,12 @@ namespace AdminSystem.Classes
             }
 
             // Determine new ID based on last ID
-            int newId = (lastId == 0 || (lastId / 1000000) != (baseId / 1000000)) ? baseId + 1 : lastId + 1;
+            int newId;
+            if (lastId == 0 || (lastId / 1000000) != (baseId / 1000000))
+            { newId = baseId + 1; }
+            else{ newId = lastId + 1; }
 
-            this.id = newId;
+            this.Id = newId;    //for trainer instances
             return newId;
         }
     }
