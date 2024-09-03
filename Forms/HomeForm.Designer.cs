@@ -235,6 +235,7 @@
             this.schedulePanel.Name = "schedulePanel";
             this.schedulePanel.Size = new System.Drawing.Size(1126, 157);
             this.schedulePanel.TabIndex = 1;
+            this.schedulePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.schedulePanel_Paint);
             // 
             // labeld7c1
             // 

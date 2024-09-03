@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,11 +50,20 @@ namespace AdminSystem.Forms
             image.Add(Image.FromFile("assets/bg2.png"));
             image.Add(Image.FromFile("assets/bg3.png"));
             image.Add(Image.FromFile("assets/bg4.png"));
-
-            image[0].Tag = "assets/bg1.png";
-            image[1].Tag = "assets/bg2.png";
-            image[2].Tag = "assets/bg3.png";
-            image[3].Tag = "assets/bg4.png";
+            /*    image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg1.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg2.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg3.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg4.png"));*/
+            try
+            {
+                image[0].Tag = "assets/bg1.png";
+                image[1].Tag = "assets/bg2.png";
+                image[2].Tag = "assets/bg3.png";
+                image[3].Tag = "assets/bg4.png";
+            }catch(FileNotFoundException ex)
+            {
+                MessageBox.Show($"File not found: {ex.FileName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             this.empbase = empbase;
             home = h;
@@ -104,6 +114,11 @@ namespace AdminSystem.Forms
         {
             if (home.Opacity < 1) { home.Opacity += 0.01; }
             else { faddingtimer2.Stop(); }
+        }
+
+        private void schedulePanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void CustomPanel(int x,int y,)
