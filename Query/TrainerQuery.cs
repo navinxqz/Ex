@@ -171,5 +171,29 @@ namespace AdminSystem.Query
                 return null;
             }
         }
+        public int LastID()
+        {
+            try
+            {
+                int lastID = 0;
+                string query = "SELECT id FROM ADMINSYSTEM.TRAINER ORDER BY id DESC LIMIT 1";
+                MySqlDataReader read = StaticClass.sql.MySqlSelect(query);
+
+                if (read.HasRows)
+                {
+                    read.Read();
+                    lastID = Convert.ToInt32(read["ID"]);
+                    return lastID;
+                }
+                else
+                {
+                    Console.WriteLine("Error! No last id found");
+                    return lastID;
+                }
+            }catch (Exception ex) {
+                Console.WriteLine($"Error while getting last trainer id! {ex.Message}");
+                return 0;
+            }
+        }
     }
 }
