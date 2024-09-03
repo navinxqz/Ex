@@ -96,11 +96,35 @@ namespace AdminSystem.Query
                 if(email) { query += $"EMAIL = '{trainer.Email}',"; }
                 if(phone) { query += $"PHONE = '{trainer.Phone}',"; }
                 if(pic) { query += $"PICTURE = '{trainer.Pic}',"; }
-                if(specialized) { query += $"SPECIALIZED = '{trainer.Specialized}',"; }
 
+                if(specialized) { query += $"SPECIALIZED = '{trainer.Specialized}',"; }
                 if (lessoncost) { query += $"LESSON_COST = '{trainer.LessonPrice}',"; }
                 if(status) { query += $"STATUS = '{trainer.Status}',"; }
-            }catch (Exception ex) { Console.WriteLine(); }
+
+                if(query == $"UPDATE ADMINSYSTEM.TRAINER SET")
+                {
+                    Console.WriteLine($"Error while updating! Nothing to update");
+                    return false;
+                }
+                query = query.Substring(0,query.Length-1);
+                query += $"WHERE id = {trainer.Id}";
+                int row = StaticClass.sql.MySqlNonQ(query);
+
+                if(row > 0) {
+                    Console.WriteLine($"Trainer attributes updated successfully for ID: {trainer.Id}");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"Error while updating trainer ID: {trainer.Id}");
+                    return false;
+                }
+
+            }
+            catch (Exception ex) { 
+                Console.WriteLine($"Error while updating trainer! {ex.Message}");
+                return false;
+            }
         }
     }
 }
