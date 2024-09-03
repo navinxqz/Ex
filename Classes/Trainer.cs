@@ -24,15 +24,15 @@ namespace AdminSystem.Classes
             int baseId = year * 1000000; // Create a base ID with the prefix.
             int newId = 0;
 
-            /*int lastId = StaticClass.trainerService.getLastId();
+            int lastId = StaticClass.tQuery.LastID();
             if (lastId == -1)
             {
-                Console.WriteLine("Error: Unable to get last ID.");
+                Console.WriteLine("Error! Unable to get last ID.");
                 return -1;
             }
 
             // Determine new ID based on last ID
-            int newId = (lastId == 0 || (lastId / 1000000) != (baseId / 1000000)) ? baseId + 1 : lastId + 1;    */
+            int newId = (lastId == 0 || (lastId / 1000000) != (baseId / 1000000)) ? baseId + 1 : lastId + 1;
 
             this.id = newId;
             return newId;

@@ -21,11 +21,11 @@ namespace AdminSystem.Query
 
                 if (byId && int.TryParse(search, out int id))
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER WHERE ID = {id}";
+                    query = $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER WHERE ID = @id";
                 }
                 else if (byFulName)
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER CONCAT(FIRSTNAME, ' ', LASTNAME) = '{search}'";
+                    query = $"SELECT {GetCol(incPic)} FROM ADMINSYSTEM.TRAINER WHERE CONCAT(FIRSTNAME, ' ', LASTNAME) = '{search}'";
                 }
 
                 if (string.IsNullOrEmpty(query))
@@ -183,7 +183,7 @@ namespace AdminSystem.Query
                 }
             }catch (Exception ex) {
                 Console.WriteLine($"Error while getting last trainer id! {ex.Message}");
-                return 0;
+                return -1;
             }
         }
     }
