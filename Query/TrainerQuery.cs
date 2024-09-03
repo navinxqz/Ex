@@ -85,5 +85,22 @@ namespace AdminSystem.Query
                 return null;
             }
         }
+        public bool UpdateTrainer( Trainer trainer,bool firstname = false, bool lastname = false, bool gender = false, bool birthday = false, bool email = false, bool phone = false, bool pic = false, bool specialized = false, bool lessoncost = false, bool status = false ) {
+            try {
+                string query = "UPDATE ADMINSYSTEM.TRAINER SET";
+                if (firstname) { query += $"FIRSTNAME = '{trainer.FirstName}',"; }
+                if (lastname) { query += $"LASTNAME = '{trainer.LastName}',"; }
+                if(gender) { query += $"GENDER = '{trainer.Gender}',"; }
+                if (birthday) { query += $"BIRTHDAY = '{trainer.Birthday}',"; }
+
+                if(email) { query += $"EMAIL = '{trainer.Email}',"; }
+                if(phone) { query += $"PHONE = '{trainer.Phone}',"; }
+                if(pic) { query += $"PICTURE = '{trainer.Pic}',"; }
+                if(specialized) { query += $"SPECIALIZED = '{trainer.Specialized}',"; }
+
+                if (lessoncost) { query += $"LESSON_COST = '{trainer.LessonPrice}',"; }
+                if(status) { query += $"STATUS = '{trainer.Status}',"; }
+            }catch (Exception ex) { Console.WriteLine(); }
+        }
     }
 }
