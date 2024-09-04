@@ -23,6 +23,11 @@ namespace AdminSystem.Forms
         private bool getData = false;
         private Home home;
 
+        public class DoubleBufferedPanel : Panel
+        {
+            public DoubleBufferedPanel() { DoubleBuffered = true; }
+        }
+
         public HomeForm()
         {
             InitializeComponent();
