@@ -15,6 +15,7 @@ namespace AdminSystem.Forms
     public partial class HomeForm : Form
     {
         private List<Image> image = new List<Image>();
+        private List<RoleCls> roles;
         private EmployeeBase empbase;
         private bool getData = false;
         private Home home;
