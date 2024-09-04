@@ -15,11 +15,13 @@ namespace AdminSystem.Forms
     public partial class HomeForm : Form
     {
         private List<Image> image = new List<Image>();
+        private List<PackageManager> pm;
+        private List<MonthOffer> mo;
         private List<RoleCls> roles;
         private EmployeeBase empbase;
+        private List<Trainer> trainers;
         private bool getData = false;
         private Home home;
-        // future implement...
 
         public HomeForm()
         {
@@ -31,10 +33,12 @@ namespace AdminSystem.Forms
             bgWorkerCls.RunWorkerAsync();
             bgWorkerTrainer.RunWorkerAsync();
 
-            image.Add(Image.FromFile("assets/bg1.png"));
-            image.Add(Image.FromFile("assets/bg2.png"));
-            image.Add(Image.FromFile("assets/bg3.png"));
-            image.Add(Image.FromFile("assets/bg4.png"));
+            string basePath = Path.Combine(Environment.CurrentDirectory, @"..\..\assets");
+
+            image.Add(Image.FromFile(Path.Combine(basePath, "bg1.png")));
+            image.Add(Image.FromFile(Path.Combine(basePath, "bg2.png")));
+            image.Add(Image.FromFile(Path.Combine(basePath, "bg3.png")));
+            image.Add(Image.FromFile(Path.Combine(basePath, "bg4.png")));
         }
 
         public HomeForm(EmployeeBase empbase, Home h)
