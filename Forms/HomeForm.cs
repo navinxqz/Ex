@@ -46,16 +46,21 @@ namespace AdminSystem.Forms
             bgWorkerCls.RunWorkerAsync();
             bgWorkerTrainer.RunWorkerAsync();
 
-            image.Add(Image.FromFile("assets/bg1.png"));
-            image.Add(Image.FromFile("assets/bg2.png"));
-            image.Add(Image.FromFile("assets/bg3.png"));
-            image.Add(Image.FromFile("assets/bg4.png"));
-            /*    image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg1.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg2.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg3.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg4.png"));*/
+            /*   image.Add(Image.FromFile("assets/bg1.png"));
+               image.Add(Image.FromFile("assets/bg2.png"));
+               image.Add(Image.FromFile("assets/bg3.png"));
+               image.Add(Image.FromFile("assets/bg4.png"));*/
+            
             try
             {
+                MessageBox.Show($"Current Directory: {Environment.CurrentDirectory}");
+                //current working dir
+
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg1.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg2.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg3.png"));
+                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg4.png"));
+
                 image[0].Tag = "assets/bg1.png";
                 image[1].Tag = "assets/bg2.png";
                 image[2].Tag = "assets/bg3.png";
