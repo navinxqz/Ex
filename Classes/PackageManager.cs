@@ -63,9 +63,9 @@ namespace AdminSystem.Classes
         public PackageManager(int id = 0, int numofCls = 0, int invitaionNum = 0, int discount = 0, string name = "", string status = "", MonthOffer mo = null)
         {
             Id = id;
-            NumOfClasses = numofCls;
-            NumOfInvitations = invitaionNum;
-            DiscountPercentage = discount;
+            NumOfCls = numofCls;
+            InvitationNum = invitaionNum;
+            Discount = discount;
             Name = name ?? string.Empty;    //not-nullable
             Status = status ?? string.Empty;
             MonthOffer = mo;
@@ -75,57 +75,57 @@ namespace AdminSystem.Classes
             get => id;
             set
             {
-                if (value < 0) throw new ArgumentOutOfRangeException(nameof(Id), "ID cannot be negative.");
+                if (value < 0) throw new ArgumentOutOfRangeException(nameof(Id), "ID can't be negative.");
                 id = value;
             }
         }
 
-        public int NumOfClasses
+        public int NumOfCls
         {
-            get => numOfClasses;
+            get => numofCls;
             set
             {
-                if (value < 0) throw new ArgumentOutOfRangeException(nameof(NumOfClasses), "Number of classes cannot be negative.");
-                numOfClasses = value;
+                if (value < 0) throw new ArgumentOutOfRangeException(nameof(NumOfCls), "Number of classes cannot be negative.");
+                numofCls = value;
             }
         }
 
-        public int NumOfInvitations
+        public int InvitationNum
         {
-            get => numOfInvitations;
+            get => invitaionNum;
             set
             {
-                if (value < 0) throw new ArgumentOutOfRangeException(nameof(NumOfInvitations), "Number of invitations cannot be negative.");
-                numOfInvitations = value;
+                if (value < 0) throw new ArgumentOutOfRangeException(nameof(InvitationNum), "Number of invitations cannot be negative.");
+                invitaionNum = value;
             }
         }
 
-        public int DiscountPercentage
+        public int Discount
         {
-            get => discountPercentage;
+            get => discount;
             set
             {
-                if (value < 0 || value > 100) throw new ArgumentOutOfRangeException(nameof(DiscountPercentage), "Discount percentage must be between 0 and 100.");
-                discountPercentage = value;
+                if (value < 0 || value > 100) throw new ArgumentOutOfRangeException(nameof(Discount), "Discount percentage must be between 0 and 100.");
+                discount = value;
             }
         }
 
         public string Name
         {
             get => name;
-            set => name = value ?? string.Empty; // Ensuring name is never null.
+            set => name = value ?? string.Empty; // Ensuring name is never null bu not-nullable op
         }
 
         public string Status
         {
             get => status;
-            set => status = value ?? string.Empty; // Ensuring status is never null.
+            set => status = value ?? string.Empty;
         }
 
         public MonthOffer MonthOffer
         {
-            get => monthOffer;
-            set => monthOffer = value;
+            get => mo;
+            set => mo = value;
         }
     }
 }
