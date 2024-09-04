@@ -825,6 +825,7 @@
             this.panelPackage.Name = "panelPackage";
             this.panelPackage.Size = new System.Drawing.Size(1172, 191);
             this.panelPackage.TabIndex = 31;
+            this.panelPackage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPackage_Paint);
             // 
             // faddingtimer1
             // 

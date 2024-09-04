@@ -216,5 +216,30 @@ namespace AdminSystem.Forms
             Discount.Click += new System.EventHandler(panalPackge_Click);
         }
 
+        private void panalPackge_Click(object sender, System.EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                if ((control.Parent is DoubleBufferedPanel panel && panel.Tag is PackageManager pm))
+                {
+                    //subscribe subscribe = new subscribe(packgeModel, Image.FromFile(panel.BackgroundImage.Tag.ToString()), employeeModel);
+                    faddingtimer1.Start();
+                    //subscribe.ShowDialog();
+                    faddingtimer2.Start();
+                    return;
+                }
+                if (control.Tag is PackageManager p)
+                {
+                    //subscribe subscribe = new subscribe(packgeModel1, Image.FromFile(control.BackgroundImage.Tag.ToString()), employeeModel);
+                    faddingtimer1.Start();
+                    //subscribe.ShowDialog();
+                    faddingtimer2.Start();
+                }
+            }
+        }
+        private void panelPackage_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
