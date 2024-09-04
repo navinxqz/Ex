@@ -45,26 +45,29 @@ namespace AdminSystem.Forms
             bgWorkerMonths.RunWorkerAsync();
             bgWorkerCls.RunWorkerAsync();
             bgWorkerTrainer.RunWorkerAsync();
-
-            /*   image.Add(Image.FromFile("assets/bg1.png"));
-               image.Add(Image.FromFile("assets/bg2.png"));
-               image.Add(Image.FromFile("assets/bg3.png"));
-               image.Add(Image.FromFile("assets/bg4.png"));*/
             
             try
             {
                 MessageBox.Show($"Current Directory: {Environment.CurrentDirectory}");
                 //current working dir
 
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg1.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg2.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg3.png"));
-                image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg4.png"));
+                string basePath = Path.Combine(Environment.CurrentDirectory, @"..\..\assets");
 
-                image[0].Tag = "assets/bg1.png";
-                image[1].Tag = "assets/bg2.png";
-                image[2].Tag = "assets/bg3.png";
-                image[3].Tag = "assets/bg4.png";
+                image.Add(Image.FromFile(Path.Combine(basePath, "bg1.png")));
+                image.Add(Image.FromFile(Path.Combine(basePath, "bg2.png")));
+                image.Add(Image.FromFile(Path.Combine(basePath, "bg3.png")));
+                image.Add(Image.FromFile(Path.Combine(basePath, "bg4.png")));
+
+                /*   image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg1.png"));
+                   image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg2.png"));
+                   image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg3.png"));
+                   image.Add(Image.FromFile(@"D:\versity space\NewTask\AdminSystem\assets\bg4.png"));  */
+
+                image[0].Tag = Path.Combine(basePath, "bg1.png");
+                image[1].Tag = Path.Combine(basePath, "bg2.png");
+                image[2].Tag = Path.Combine(basePath, "bg3.png");
+                image[3].Tag = Path.Combine(basePath, "bg4.png");
+
             }catch(FileNotFoundException ex)
             {
                 MessageBox.Show($"File not found: {ex.FileName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
