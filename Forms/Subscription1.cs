@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminSystem.Classes;
+using Humanizer;
+//using static System.Net.Mime.MediaTypeNames;
+using static AdminSystem.Forms.HomeForm;
 
 namespace AdminSystem.Forms
 {
@@ -99,6 +102,62 @@ namespace AdminSystem.Forms
             Subscribebtn.Enabled = false;
             labelprice.Text = disc + "BDT";
             panelPackgeSub.Visible = true;
+        }
+
+        public Subscription1(MonthOffer mo, Image img, EmployeeBase employee)
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            m = true;
+            emp = employee;
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cancelbtn.Focus();
+
+            subscriptionLbl.Text = "Month Subscribtion";
+            panelData.Visible = false;
+            subscriptionLbl.Focus();
+            monthOffer = mo;
+            price = monthOffer.Price;
+
+            panelMonth.BackgroundImage = img;
+            panelMonth.BackgroundImageLayout = ImageLayout.Stretch;
+            labelnumMonth.Text = monthOffer.NumOfMonths + " Month";
+            labelfrezeNum.Text = monthOffer.MaxNum + " Freze day";
+
+            labelmonthprice.Text = price + "BDT";
+            labelprice.Text = price + "BDT";
+            Subscribebtn.Enabled = false;
+            panelMonthSubscription.Visible = true;
+        }
+
+        public Subscription1(RoleCls r, Image img, EmployeeBase employee) 
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            cs = true;
+            emp = employee;
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cancelbtn.Focus();
+
+            roleCls = r;
+            price = roleCls.Pricing;
+            panelClass.BackgroundImage = img;
+            panelClass.BackgroundImageLayout = ImageLayout.Stretch;
+            labelclassname.Text = roleCls.Name;
+            labelclassDay1.Text = roleCls.SessionDay1;
+            labelclassDay2.Text = roleCls.SessionDay2;
+            labelclassTrainer.Text = roleCls.Trainer.Name;
+
+            labelclassPrice.Text = roleCls.Pricing + "BDT";
+            labelprice.Text = price + "BDT";
+            Subscribebtn.Enabled = false;
+            panelClassSup.Visible = true;
         }
     }
 }
