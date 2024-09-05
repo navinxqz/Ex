@@ -81,7 +81,7 @@
             this.panelclassesDataP = new System.Windows.Forms.Panel();
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.Subscribebtn = new CuoreUI.Controls.cuiButton();
-            this.labelprice = new System.Windows.Forms.Label();
+            this.pricelbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.faddingTime1 = new System.Windows.Forms.Timer(this.components);
             this.faddingTimer2 = new System.Windows.Forms.Timer(this.components);
@@ -807,18 +807,18 @@
             this.Subscribebtn.TabIndex = 52;
             this.Subscribebtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
-            // labelprice
+            // pricelbl
             // 
-            this.labelprice.AutoSize = true;
-            this.labelprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelprice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(205)))));
-            this.labelprice.Location = new System.Drawing.Point(961, 521);
-            this.labelprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelprice.Name = "labelprice";
-            this.labelprice.Size = new System.Drawing.Size(44, 31);
-            this.labelprice.TabIndex = 55;
-            this.labelprice.Text = "0$";
-            this.labelprice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pricelbl.AutoSize = true;
+            this.pricelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pricelbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(205)))));
+            this.pricelbl.Location = new System.Drawing.Point(961, 521);
+            this.pricelbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pricelbl.Name = "pricelbl";
+            this.pricelbl.Size = new System.Drawing.Size(44, 31);
+            this.pricelbl.TabIndex = 55;
+            this.pricelbl.Text = "0$";
+            this.pricelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
@@ -848,7 +848,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1140, 680);
-            this.Controls.Add(this.labelprice);
+            this.Controls.Add(this.pricelbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.Subscribebtn);
@@ -945,7 +945,7 @@
         private System.Windows.Forms.Panel panelclassesDataP;
         private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton Subscribebtn;
-        private System.Windows.Forms.Label labelprice;
+        private System.Windows.Forms.Label pricelbl;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer faddingTime1;
         private System.Windows.Forms.Timer faddingTimer2;

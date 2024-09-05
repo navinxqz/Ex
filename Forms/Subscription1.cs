@@ -118,7 +118,7 @@ namespace AdminSystem.Forms
             labelDiscount.Text = packageManager.Discount + "% Discount";
 
             Subscribebtn.Enabled = false;
-            labelprice.Text = disc + "BDT";
+            pricelbl.Text = disc + "BDT";
             panelPackgeSub.Visible = true;
         }
 
@@ -146,7 +146,7 @@ namespace AdminSystem.Forms
             labelfrezeNum.Text = monthOffer.MaxNum + " Freze day";
 
             labelmonthprice.Text = price + "BDT";
-            labelprice.Text = price + "BDT";
+            pricelbl.Text = price + "BDT";
             Subscribebtn.Enabled = false;
             panelMonthSubscription.Visible = true;
         }
@@ -173,7 +173,7 @@ namespace AdminSystem.Forms
             labelclassTrainer.Text = roleCls.Trainer.Name;
 
             labelclassPrice.Text = roleCls.Pricing + "BDT";
-            labelprice.Text = price + "BDT";
+            pricelbl.Text = price + "BDT";
             Subscribebtn.Enabled = false;
             panelClassSup.Visible = true;
         }
@@ -200,11 +200,36 @@ namespace AdminSystem.Forms
             panelPriv.BackgroundImageLayout = ImageLayout.Stretch;
             labelPrivateSpetialize.Text = trainer.Specialized;
             labelPrivatPrice.Text = trainer.LessonPrice + "BDT";
-            labelprice.Text = price + "BDT";
+            pricelbl.Text = price + "BDT";
             Subscribebtn.Enabled = false;
             panelPrivSup.Visible = true;
             lessonCost = price;
             LessonNumTxt.KeyPress += LessonNumTxt_KeyPress;
+        }
+
+        private void CheckBox_Checked(object sender, EventArgs e)
+        {
+            if(sender is CheckBox cb) {
+                if(cb.Checked)
+                {
+                    if(cb.Tag is RoleCls r)
+                    {
+                        clsList.Add(r);
+                        price += r.Pricing;
+                        disc = price - (price * ((packageManager.Discount) / 100));
+                        pricelbl.Text = disc + "BDT";
+                        checkers++;
+                    }
+                    if(checkers == packageManager.NumOfCls)
+                    {
+                        if (!sub) { Subscribebtn.Enabled = true; }
+                    }
+                    foreach(CheckBox c in panelclassesDataP.Controls.OfType<CheckBox>())
+                    {
+                        if(!c.Checked) { c.Enabled = false; }
+                    }
+                }
+            }
         }
 
         private void CustomCheckerBox(int x, int y, RoleCls r, Panel p)
@@ -218,7 +243,7 @@ namespace AdminSystem.Forms
             checkBox.Text = r.Name;
             checkBox.Tag = r;
             p.Controls.Add(checkBox);
-            //checkBox.CheckedChanged += new EventHandler(checkBox_Checked);
+            checkBox.CheckedChanged += new EventHandler(CheckBox_Checked);
         }
 
         //private void 
