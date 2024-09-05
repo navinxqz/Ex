@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdminSystem.Classes;
 
 namespace AdminSystem.Forms
 {
@@ -15,6 +16,9 @@ namespace AdminSystem.Forms
         public Subscription1()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cancelbtn.Focus();
         }
 
         private void panelnoDataclasesP_Paint(object sender, PaintEventArgs e)
