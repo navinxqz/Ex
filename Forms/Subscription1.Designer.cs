@@ -83,6 +83,8 @@
             this.Subscribebtn = new CuoreUI.Controls.cuiButton();
             this.labelprice = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.faddingTime1 = new System.Windows.Forms.Timer(this.components);
+            this.faddingTimer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             this.memberinfoPanel.SuspendLayout();
             this.panelData.SuspendLayout();
@@ -826,6 +828,16 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Price";
             // 
+            // faddingTime1
+            // 
+            this.faddingTime1.Interval = 20;
+            this.faddingTime1.Tick += new System.EventHandler(this.faddingTime1_Tick);
+            // 
+            // faddingTimer2
+            // 
+            this.faddingTimer2.Interval = 15;
+            this.faddingTimer2.Tick += new System.EventHandler(this.faddingTimer2_Tick);
+            // 
             // Subscription1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -931,5 +943,7 @@
         private CuoreUI.Controls.cuiButton Subscribebtn;
         private System.Windows.Forms.Label labelprice;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Timer faddingTime1;
+        private System.Windows.Forms.Timer faddingTimer2;
     }
 }
