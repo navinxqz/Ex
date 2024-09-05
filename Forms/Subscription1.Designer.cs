@@ -49,7 +49,7 @@
             this.labelBrithday = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panelPrivSup = new System.Windows.Forms.Panel();
-            this.textNumlesson = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.LessonNumTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panelPriv = new System.Windows.Forms.Panel();
             this.labelprivatTrainerName = new System.Windows.Forms.Label();
             this.labelPrivateSpetialize = new System.Windows.Forms.Label();
@@ -348,7 +348,7 @@
             // 
             // panelPrivSup
             // 
-            this.panelPrivSup.Controls.Add(this.textNumlesson);
+            this.panelPrivSup.Controls.Add(this.LessonNumTxt);
             this.panelPrivSup.Controls.Add(this.panelPriv);
             this.panelPrivSup.Location = new System.Drawing.Point(83, 448);
             this.panelPrivSup.Margin = new System.Windows.Forms.Padding(2);
@@ -357,36 +357,40 @@
             this.panelPrivSup.TabIndex = 51;
             this.panelPrivSup.Visible = false;
             // 
-            // textNumlesson
+            // LessonNumTxt
             // 
-            this.textNumlesson.Location = new System.Drawing.Point(355, 79);
-            this.textNumlesson.Margin = new System.Windows.Forms.Padding(2);
-            this.textNumlesson.Name = "textNumlesson";
-            this.textNumlesson.Size = new System.Drawing.Size(224, 54);
-            this.textNumlesson.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.textNumlesson.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.textNumlesson.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.textNumlesson.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.LessonNumTxt.Location = new System.Drawing.Point(355, 79);
+            this.LessonNumTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.LessonNumTxt.Name = "LessonNumTxt";
+            this.LessonNumTxt.Size = new System.Drawing.Size(224, 54);
+            this.LessonNumTxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonNumTxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonNumTxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonNumTxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textNumlesson.StateActive.Border.Width = -2;
-            this.textNumlesson.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.textNumlesson.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNumlesson.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textNumlesson.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.textNumlesson.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.textNumlesson.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.textNumlesson.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.LessonNumTxt.StateActive.Border.Width = -2;
+            this.LessonNumTxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonNumTxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LessonNumTxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonNumTxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonNumTxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonNumTxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonNumTxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textNumlesson.StateDisabled.Border.Width = -2;
-            this.textNumlesson.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.textNumlesson.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.textNumlesson.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textNumlesson.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.textNumlesson.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.textNumlesson.TabIndex = 33;
-            this.textNumlesson.Text = "Lesson Number";
+            this.LessonNumTxt.StateDisabled.Border.Width = -2;
+            this.LessonNumTxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonNumTxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.LessonNumTxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonNumTxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonNumTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonNumTxt.TabIndex = 33;
+            this.LessonNumTxt.Text = "Lesson Number";
+            this.LessonNumTxt.TextChanged += new System.EventHandler(this.LessonNumTxt_TextChanged);
+            this.LessonNumTxt.Enter += new System.EventHandler(this.LessonNumTxt_Enter);
+            this.LessonNumTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LessonNumTxt_KeyPress);
+            this.LessonNumTxt.Leave += new System.EventHandler(this.LessonNumTxt_Leave);
             // 
             // panelPriv
             // 
@@ -909,7 +913,7 @@
         private System.Windows.Forms.Label labelBrithday;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelPrivSup;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textNumlesson;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox LessonNumTxt;
         private System.Windows.Forms.Panel panelPriv;
         private System.Windows.Forms.Label labelprivatTrainerName;
         private System.Windows.Forms.Label labelPrivateSpetialize;

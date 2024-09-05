@@ -4,12 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdminSystem.Classes;
-using Humanizer;
-//using static System.Net.Mime.MediaTypeNames;
 using static AdminSystem.Forms.HomeForm;
 
 namespace AdminSystem.Forms
@@ -49,6 +45,28 @@ namespace AdminSystem.Forms
             }panel.Controls.Clear();
         }
         private void panelnoDataclasesP_Paint(object sender, PaintEventArgs e){}
+
+        private void LessonNumTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LessonNumTxt_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LessonNumTxt_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LessonNumTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) { e.Handled = true; }
+
+            if(LessonNumTxt.Text.Length >= 1 && !char.IsControl(e.KeyChar)) { e.Handled=true; }
+        }
 
         private void faddingTime1_Tick(object sender, EventArgs e)
         {
@@ -159,5 +177,51 @@ namespace AdminSystem.Forms
             Subscribebtn.Enabled = false;
             panelClassSup.Visible = true;
         }
+
+        public Subscription1(Trainer t, Image img, EmployeeBase employee) 
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            p = true;
+            emp = employee;
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cancelbtn.Focus();
+
+            subscriptionLbl.Text = "Private Subscribtion";
+            panelData.Visible = false;
+            subscriptionLbl.Focus();
+            trainer = t;
+            price = trainer.LessonPrice;
+
+            panelPriv.BackgroundImage = img;
+            panelPriv.BackgroundImageLayout = ImageLayout.Stretch;
+            labelPrivateSpetialize.Text = trainer.Specialized;
+            labelPrivatPrice.Text = trainer.LessonPrice + "BDT";
+            labelprice.Text = price + "BDT";
+            Subscribebtn.Enabled = false;
+            panelPrivSup.Visible = true;
+            lessonCost = price;
+            LessonNumTxt.KeyPress += LessonNumTxt_KeyPress;
+        }
+
+        private void CustomCheckerBox(int x, int y, RoleCls r, Panel p)
+        {
+            CheckBox checkBox = new CheckBox();
+            checkBox.ForeColor = Color.FromArgb(70, 71, 78);
+            Font checkFontNP = new Font(new FontFamily("Gilroy-SemiBold"), 28, FontStyle.Bold, GraphicsUnit.Pixel);
+            checkBox.Font = checkFontNP;
+            checkBox.Size = new Size(159, 48);
+            checkBox.Location = new Point(x, y);
+            checkBox.Text = r.Name;
+            checkBox.Tag = r;
+            p.Controls.Add(checkBox);
+            //checkBox.CheckedChanged += new EventHandler(checkBox_Checked);
+        }
+
+        //private void 
+
     }
 }
