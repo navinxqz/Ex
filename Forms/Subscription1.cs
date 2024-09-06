@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using AdminSystem.Classes;
+using ComponentFactory.Krypton.Toolkit;
+using Humanizer;
 using static AdminSystem.Forms.HomeForm;
 
 namespace AdminSystem.Forms
@@ -88,6 +90,78 @@ namespace AdminSystem.Forms
                 faddingTimer2.Stop();
                 this.Close();
             }
+        }
+
+        private void Subscription1_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            faddingTime1.Start();
+        }
+
+        private void cancelbtn_Click(object sender, EventArgs e)
+        {
+            faddingTimer2.Start();
+        }
+
+        private void bgWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            /*if (searchtxt.Text != "Search")
+            {
+                if (int.TryParse(searchtxt.Text, out int id))
+                {
+                    memberModels = Global.memberService.Search(searchtxt.Text, true, byId: true);
+                    if (memberModels != null)
+                    {
+                        if (pac)
+                        {
+                            can_sub = Global.PackgeSupscribtionService.CheckMemberInPackageSubscription(memberModels[0].Id);
+                            classes = Global.classService.GetUnsubscribedClasses(memberModels[0].Id, true, true);
+
+                        }
+                        else if (mon)
+                        {
+                            can_sub = Global.monthSubscriptionService.CheckMemberInMonthSubscription(memberModels[0].Id);
+                        }
+                        else if (cla)
+                        {
+                            can_sub = Global.classSubscriptionService.CheckMemberInClassSubscription(memberModels[0].Id, classModel.Id);
+                        }
+                        else if (pri)
+                        {
+                            can_sub = Global.PrivateSubscriptionService.CheckMemberPrivateSubscription(memberModels[0].Id);
+                        }
+                    }
+                }
+                else
+                {
+                    lab_search_err.Text = "Please enter id as a number";
+                }
+            }*/
+        }
+
+        private void bgWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
+
+        private void searchtxt_Enter(object sender, EventArgs e)
+        {
+            //if(e.KeyChar == (char)Keys.Return) { searchBtn_Click(sender, e); }
+        }
+
+        private void Searchtxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Searchtxt_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+
         }
 
         public Subscription1(PackageManager pm, Image img, EmployeeBase employee)
@@ -220,13 +294,33 @@ namespace AdminSystem.Forms
                         pricelbl.Text = disc + "BDT";
                         checkers++;
                     }
-                    if(checkers == packageManager.NumOfCls)
+                    if (checkers == packageManager.NumOfCls)
                     {
                         if (!sub) { Subscribebtn.Enabled = true; }
+
+                        foreach (CheckBox c in panelclassesDataP.Controls.OfType<CheckBox>())
+                        {
+                            if (!c.Checked) { c.Enabled = false; }
+                        }
                     }
-                    foreach(CheckBox c in panelclassesDataP.Controls.OfType<CheckBox>())
+                }
+                else
+                {
+                    if(cb.Tag is RoleCls role)
                     {
-                        if(!c.Checked) { c.Enabled = false; }
+                        clsList.Remove(role);
+                        price -= role.Pricing;
+                        disc = price - (price * ((packageManager.Discount) / 100));
+                        pricelbl.Text = disc + "BDT";
+                        checkers--;
+                    }
+                    if(checkers == packageManager.NumOfCls - 1)
+                    {
+                        if (!sub) { Subscribebtn.Enabled = false; }
+                        foreach (CheckBox c in panelclassesDataP.Controls.OfType<CheckBox>())
+                        {
+                            if(!c.Checked) { c.Enabled = true;}
+                        }
                     }
                 }
             }

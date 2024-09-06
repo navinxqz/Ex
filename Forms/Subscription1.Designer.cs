@@ -34,7 +34,7 @@
             this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.searchtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.show_pass_btn = new System.Windows.Forms.PictureBox();
+            this.searchBtn = new System.Windows.Forms.PictureBox();
             this.memberinfoPanel = new System.Windows.Forms.Panel();
             this.panelData = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
@@ -85,7 +85,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.faddingTime1 = new System.Windows.Forms.Timer(this.components);
             this.faddingTimer2 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
+            this.bgWorker1 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             this.memberinfoPanel.SuspendLayout();
             this.panelData.SuspendLayout();
             this.panelPrivSup.SuspendLayout();
@@ -159,25 +160,29 @@
             this.searchtxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.searchtxt.TabIndex = 3;
             this.searchtxt.Text = "Search";
+            this.searchtxt.Enter += new System.EventHandler(this.searchtxt_Enter);
+            this.searchtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Searchtxt_KeyPress);
+            this.searchtxt.Leave += new System.EventHandler(this.Searchtxt_Leave);
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this.searchtxt;
             // 
-            // show_pass_btn
+            // searchBtn
             // 
-            this.show_pass_btn.BackColor = System.Drawing.Color.Transparent;
-            this.show_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
-            this.show_pass_btn.Location = new System.Drawing.Point(1042, 68);
-            this.show_pass_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.show_pass_btn.Name = "show_pass_btn";
-            this.show_pass_btn.Size = new System.Drawing.Size(50, 42);
-            this.show_pass_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.show_pass_btn.TabIndex = 45;
-            this.show_pass_btn.TabStop = false;
-            this.show_pass_btn.Visible = false;
+            this.searchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
+            this.searchBtn.Location = new System.Drawing.Point(1042, 68);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(50, 42);
+            this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.searchBtn.TabIndex = 45;
+            this.searchBtn.TabStop = false;
+            this.searchBtn.Visible = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // memberinfoPanel
             // 
@@ -775,6 +780,7 @@
             this.cancelbtn.Size = new System.Drawing.Size(147, 54);
             this.cancelbtn.TabIndex = 53;
             this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // Subscribebtn
             // 
@@ -842,6 +848,11 @@
             this.faddingTimer2.Interval = 15;
             this.faddingTimer2.Tick += new System.EventHandler(this.faddingTimer2_Tick);
             // 
+            // bgWorker1
+            // 
+            this.bgWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorker1_DoWork);
+            this.bgWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorker1_RunWorkerCompleted);
+            // 
             // Subscription1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -856,7 +867,7 @@
             this.Controls.Add(this.panelClassSup);
             this.Controls.Add(this.memberinfoPanel);
             this.Controls.Add(this.panelMonthSubscription);
-            this.Controls.Add(this.show_pass_btn);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.panelPackgeSub);
             this.Controls.Add(this.searchtxt);
             this.Controls.Add(this.cuiPictureBox1);
@@ -865,7 +876,8 @@
             this.Name = "Subscription1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subscription1";
-            ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).EndInit();
+            this.Load += new System.EventHandler(this.Subscription1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             this.memberinfoPanel.ResumeLayout(false);
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
@@ -898,7 +910,7 @@
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox searchtxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.PictureBox show_pass_btn;
+        private System.Windows.Forms.PictureBox searchBtn;
         private System.Windows.Forms.Panel memberinfoPanel;
         private System.Windows.Forms.Panel panelData;
         private System.Windows.Forms.Label labelName;
@@ -949,5 +961,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer faddingTime1;
         private System.Windows.Forms.Timer faddingTimer2;
+        private System.ComponentModel.BackgroundWorker bgWorker1;
     }
 }

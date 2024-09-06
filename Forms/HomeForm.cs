@@ -222,24 +222,95 @@ namespace AdminSystem.Forms
             {
                 if ((control.Parent is DoubleBufferedPanel panel && panel.Tag is PackageManager pm))
                 {
-                    //subscribe subscribe = new subscribe(packgeModel, Image.FromFile(panel.BackgroundImage.Tag.ToString()), employeeModel);
+                    Subscription1 sub = new Subscription1(pm, Image.FromFile(panel.BackgroundImage.Tag.ToString()), empbase);
                     faddingtimer1.Start();
-                    //subscribe.ShowDialog();
+                    sub.ShowDialog();
                     faddingtimer2.Start();
                     return;
                 }
                 if (control.Tag is PackageManager p)
                 {
-                    //subscribe subscribe = new subscribe(packgeModel1, Image.FromFile(control.BackgroundImage.Tag.ToString()), employeeModel);
+                    Subscription1 sub = new Subscription1(p, Image.FromFile(control.BackgroundImage.Tag.ToString()), empbase);
                     faddingtimer1.Start();
-                    //subscribe.ShowDialog();
+                    sub.ShowDialog();
                     faddingtimer2.Start();
                 }
             }
         }
+
         private void panelPackage_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void panelMonth_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                if ((control.Parent is DoubleBufferedPanel panel && panel.Tag is MonthOffer monthOffer1))
+                {
+                    Subscription1 sub = new Subscription1(monthOffer1, Image.FromFile(panel.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                    return;
+                }
+                if (control.Tag is MonthOffer monthOffer2)
+                {
+                    Subscription1 sub = new Subscription1(monthOffer2, Image.FromFile(control.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                }
+            }
+        }
+
+        private void panelClass_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                if ((control.Parent is DoubleBufferedPanel panel && panel.Tag is RoleCls rc1))
+                {
+                    Subscription1 sub = new Subscription1(rc1, Image.FromFile(panel.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                    return;
+                }
+                if (control.Tag is RoleCls rc2)
+                {
+                    Subscription1 sub = new Subscription1(rc2, Image.FromFile(control.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                }
+            }
+        }
+
+        private void panelTrainer_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                if ((control.Parent is DoubleBufferedPanel panel && panel.Tag is Trainer t1))
+                {
+                    Subscription1 sub = new Subscription1(t1, Image.FromFile(panel.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                    return;
+                }
+                if (control.Tag is Trainer t2)
+                {
+                    Subscription1 sub = new Subscription1(t2, Image.FromFile(control.BackgroundImage.Tag.ToString()), empbase);
+                    faddingtimer1.Start();
+                    sub.ShowDialog();
+                    faddingtimer2.Start();
+                }
+            }
+        }
+
+        //public void LoadCls() { roles = StaticClass.roleCls.}
+        //in future implements...
+        public void LoadTrainer() { trainers = StaticClass.tQuery.AllTrainers(true, false); }
     }
 }

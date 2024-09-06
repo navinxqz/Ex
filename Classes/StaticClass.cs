@@ -16,5 +16,6 @@ namespace AdminSystem.Classes
 
         public static ImgManager imgManager = new ImgManager();
         public static PassManager passManager = new PassManager();
+        public static RoleCls roleCls = new RoleCls();
     }
 }

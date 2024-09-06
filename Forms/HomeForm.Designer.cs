@@ -153,6 +153,7 @@
             this.panelClass.Name = "panelClass";
             this.panelClass.Size = new System.Drawing.Size(1172, 191);
             this.panelClass.TabIndex = 37;
+            this.panelClass.Click += new System.EventHandler(this.panelClass_Click);
             // 
             // label92
             // 
@@ -176,6 +177,8 @@
             this.panelMonth.Name = "panelMonth";
             this.panelMonth.Size = new System.Drawing.Size(1172, 191);
             this.panelMonth.TabIndex = 34;
+            this.panelMonth.Click += new System.EventHandler(this.panelMonth_Click);
+            this.panelMonth.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPackage_Paint);
             // 
             // panelSchedule
             // 
@@ -743,6 +746,7 @@
             this.panelTrainer.Name = "panelTrainer";
             this.panelTrainer.Size = new System.Drawing.Size(1172, 191);
             this.panelTrainer.TabIndex = 41;
+            this.panelTrainer.Click += new System.EventHandler(this.panelTrainer_Click);
             // 
             // label
             // 
