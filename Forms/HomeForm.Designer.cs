@@ -672,6 +672,11 @@
             this.bgWorkerCls.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerCls_DoWork);
             this.bgWorkerCls.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerCls_RunWorkerCompleted);
             // 
+            // bgWorkerTrainer
+            // 
+            this.bgWorkerTrainer.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerTrainer_DoWork);
+            this.bgWorkerTrainer.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerTrainer_RunWorkerCompleted);
+            // 
             // faddingtimer1
             // 
             this.faddingtimer1.Interval = 20;

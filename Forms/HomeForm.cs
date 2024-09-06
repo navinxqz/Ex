@@ -216,6 +216,62 @@ namespace AdminSystem.Forms
             Discount.Click += new System.EventHandler(panalPackge_Click);
         }
 
+        private void CustomTrainer(int x, int y, Trainer t, Image image)
+        {
+            DoubleBufferedPanel panel = new DoubleBufferedPanel();
+            Label Lname = new Label();
+            Label Ls = new Label();
+            Label LPD = new Label();
+
+            SuspendLayout();
+
+            BunifuElipse b = new BunifuElipse();
+            b.TargetControl = panel;
+            b.ElipseRadius = 50;
+
+            panel.Controls.Add(Lname);
+            panel.Controls.Add(Ls);
+            panel.Controls.Add(LPD);
+            Font labelFontNP = new Font(new FontFamily("Gilroy-SemiBold"), 34, FontStyle.Bold, GraphicsUnit.Pixel);
+            Font labelFont = new Font(new FontFamily("Gilroy-SemiBold"), 12, FontStyle.Bold, GraphicsUnit.Point);
+
+            panel.Size = new Size(390, 230);
+            panel.Location = new Point(x, y);
+            panel.ForeColor = Color.White;
+            panel.BackColor = Color.Transparent;
+            panel.Tag = t;
+            panel.Cursor = Cursors.Hand;
+            Lname.Font = labelFontNP;
+            Lname.Text = t.Name;
+
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
+            panel.BackgroundImage = image;
+            panel.BackgroundImage.Tag = image.Tag;
+            Lname.Location = new Point(2, 68);
+            Lname.Size = new Size(293, 49);
+            Lname.Tag = t;
+            Ls.Font = labelFont;
+            Ls.Text = t.Specialized;
+            Ls.Location = new Point(8, 117);
+            Ls.Size = new Size(280, 29);
+            Ls.Tag = t;
+
+            LPD.Font = labelFont;
+            LPD.Text = t.LessonPrice + "BDT";
+            LPD.Location = new Point(8, 146);
+            LPD.Size = new Size(280, 29);
+            LPD.Tag = t;
+            panelTrainer.Controls.Add(panel);
+
+            ResumeLayout();
+
+
+            panel.Click += new EventHandler(panelTrainer_Click);
+            Lname.Click += new EventHandler(panelTrainer_Click);
+            Ls.Click += new EventHandler(panelTrainer_Click);
+            LPD.Click += new EventHandler(panelTrainer_Click);
+        }
+
         private void CustomMonth(int x, int y, MonthOffer m, Image img)
         {
             DoubleBufferedPanel panel = new DoubleBufferedPanel();
@@ -556,6 +612,37 @@ namespace AdminSystem.Forms
                 panelClass.Visible = true;
             }
             else { panelClass.Visible = false; }
+        }
+
+        private void bgWorkerTrainer_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try { LoadTrainer(); }
+            catch (AggregateException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+        }
+
+        private void bgWorkerTrainer_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            int x = 10;
+            if (trainers != null)
+            {
+                RemovePanelControls(panelTrainer);
+                int count = 0;
+                foreach (Trainer i in trainers)
+                {
+                    CustomTrainer(x, 32, i, image[count % 4]);
+                    x += 414;
+                    count++;
+                }
+                panelTrainer.Visible = true;
+            }
+            else { panelTrainer.Visible = false; }
         }
     }
 }
