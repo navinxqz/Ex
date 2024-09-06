@@ -394,10 +394,7 @@ namespace AdminSystem.Forms
 
         private void bgWorkerPackage_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                LoadPackage();
-            }
+            try { LoadPackage(); }
             catch (AggregateException ex)
             {
                 Console.WriteLine($"Error! from connection: {ex.Message}");
@@ -429,10 +426,8 @@ namespace AdminSystem.Forms
 
         private void bgWorkerMonths_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                LoadMonth();
-            }
+            try { LoadMonth(); }
+
             catch (AggregateException ex)
             {
                 Console.WriteLine($"Error! {ex.Message}");
@@ -459,6 +454,34 @@ namespace AdminSystem.Forms
                 panelMonth.Visible = true;
             }
             else { panelMonth.Visible = false; }
+        }
+
+        private void bgWorkerCls_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try { LoadCls(); }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+        }
+
+        private void bgWorkerCls_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            int x = 10;
+            if (roles != null)
+            {
+                RemovePanelControls(panelClass);
+                int count = 0;
+                foreach (RoleCls i in roles)
+                {
+                    CustomClass(x, 32, i, image[count % 4]);
+                    x += 414;
+                    count++;
+                }
+                panelClass.Visible = true;
+            }
+            else { panelClass.Visible = false; }
         }
     }
 }
