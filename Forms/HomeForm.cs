@@ -272,6 +272,80 @@ namespace AdminSystem.Forms
             Lp.Click += new System.EventHandler(panelMonth_Click);
         }
 
+        private void CustomClass(int x, int y, RoleCls r, Image image)
+        {
+            DoubleBufferedPanel panel = new DoubleBufferedPanel();
+            Label Lname = new Label();
+            Label Ls1 = new Label();
+            Label Ls2 = new Label();
+            Label Lt = new Label();
+            Label Lp = new Label();
+
+            SuspendLayout();
+
+            BunifuElipse b = new BunifuElipse();
+            b.TargetControl = panel;
+            b.ElipseRadius = 50;
+
+
+            panel.Controls.Add(Lname);
+            panel.Controls.Add(Ls1);
+            panel.Controls.Add(Ls2);
+            panel.Controls.Add(Lt);
+            panel.Controls.Add(Lp);
+            Font labelFontNP = new Font(new FontFamily("Gilroy-SemiBold"), 34, FontStyle.Bold, GraphicsUnit.Pixel);
+            Font labelFont = new Font(new FontFamily("Gilroy-SemiBold"), 12, FontStyle.Bold, GraphicsUnit.Point);
+
+            panel.Size = new Size(390, 230);
+            panel.Location = new Point(x, y);
+            panel.Tag = r;
+            panel.Cursor = Cursors.Hand;
+            panel.ForeColor = Color.White;
+            panel.BackColor = Color.Transparent;
+            panel.BackgroundImage = image;
+            panel.BackgroundImage.Tag = image.Tag;
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
+
+            Lname.Font = labelFontNP;
+            Lname.Text = r.Name;
+            Lname.Location = new Point(2, 33);
+            Lname.Size = new Size(293, 49);
+            Lname.Tag = r;
+
+            Ls1.Font = labelFont;
+            Ls1.Text = r.SessionDay1;
+            Ls1.Location = new Point(8, 82);
+            Ls1.Size = new Size(280, 29);
+            Ls1.Tag = r;
+
+            Ls2.Font = labelFont;
+            Ls2.Text = r.SessionDay2;
+            Ls2.Location = new Point(8, 111);
+            Ls2.Size = new Size(280, 29);
+            Ls2.Tag = r;
+            Lt.Font = labelFont;
+            Lt.Text = r.Trainer.Name;
+            Lt.Location = new System.Drawing.Point(8, 140);
+            Lt.Size = new Size(280, 29);
+            Lt.Tag = r;
+
+            Lp.Font = labelFont;
+            Lp.Text = r.Pricing + "BDT";
+            Lp.Location = new System.Drawing.Point(8, 169);
+            Lp.Size = new Size(280, 29);
+            Lp.Tag = r;
+
+            panelClass.Controls.Add(panel);
+            ResumeLayout();
+
+            panel.Click += new EventHandler(panelClass_Click);
+            Lname.Click += new EventHandler(panelClass_Click);
+            Ls1.Click += new EventHandler(panelClass_Click);
+            Ls2.Click += new EventHandler(panelClass_Click);
+            Lt.Click += new EventHandler(panelClass_Click);
+            Lp.Click += new EventHandler(panelClass_Click);
+        }
+
         private void panalPackge_Click(object sender, System.EventArgs e)
         {
             if (sender is Control control)
