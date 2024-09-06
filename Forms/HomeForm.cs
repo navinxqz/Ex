@@ -309,8 +309,72 @@ namespace AdminSystem.Forms
             }
         }
 
-        //public void LoadCls() { roles = StaticClass.roleCls.}
+        public void LoadCls() { }
+        public void LoadPackage() { }
+        public void LoadMonth() { }
         //in future implements...
         public void LoadTrainer() { trainers = StaticClass.tQuery.AllTrainers(true, false); }
+
+        private void UpdateLabel(Label p, string text)
+        {
+            if (labeld1c1.InvokeRequired)
+            {
+                labeld1c1.Invoke((MethodInvoker)delegate { p.Text = text; });
+            }
+            else{ p.Text = text; }
+        }
+
+        private void ScheduleTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                bgWorkerSchedule.RunWorkerAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error! from background worker: {ex.Message}");
+            }
+        }
+
+        private void bgWorkerPackage_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                LoadPackage();
+            }
+            catch (AggregateException ex)
+            {
+                Console.WriteLine($"Error! from connection: {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error! from connection: {ex.Message}");
+            }
+        }
+
+        private void bgWorkerPackage_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            int x = 10;
+            if (pm != null)
+            {
+                RemovePanelControls(panelPackage);
+                int count = 0;
+                foreach (PackageManager i in pm)
+                {
+                    CustomPackage(x, 32, i, image[count % 4]);
+                    x += 414;
+                    count++;
+                }
+                panelloadingpackge.Visible = false;
+                panelPackage.Visible = true;
+                panelconnectionerrorpackage.Visible = false;
+            }
+            else
+            {
+                panelloadingpackge.Visible = false;
+                panelPackage.Visible = false;
+                panelconnectionerrorpackage.Visible = true;
+            }
+        }
     }
 }

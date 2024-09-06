@@ -97,6 +97,7 @@
             this.faddingtimer1 = new System.Windows.Forms.Timer(this.components);
             this.faddingtimer2 = new System.Windows.Forms.Timer(this.components);
             this.bunifuSchedulePanel = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.ScheduleTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSchedule.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -831,6 +832,11 @@
             this.panelPackage.TabIndex = 31;
             this.panelPackage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPackage_Paint);
             // 
+            // bgWorkerPackage
+            // 
+            this.bgWorkerPackage.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerPackage_DoWork);
+            this.bgWorkerPackage.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerPackage_RunWorkerCompleted);
+            // 
             // faddingtimer1
             // 
             this.faddingtimer1.Interval = 20;
@@ -844,6 +850,12 @@
             // 
             this.bunifuSchedulePanel.ElipseRadius = 50;
             this.bunifuSchedulePanel.TargetControl = this.panelSchedule;
+            // 
+            // ScheduleTimer
+            // 
+            this.ScheduleTimer.Enabled = true;
+            this.ScheduleTimer.Interval = 60000;
+            this.ScheduleTimer.Tick += new System.EventHandler(this.ScheduleTimer_Tick);
             // 
             // HomeForm
             // 
@@ -946,5 +958,6 @@
         private System.Windows.Forms.Timer faddingtimer1;
         private System.Windows.Forms.Timer faddingtimer2;
         private Bunifu.Framework.UI.BunifuElipse bunifuSchedulePanel;
+        private System.Windows.Forms.Timer ScheduleTimer;
     }
 }
