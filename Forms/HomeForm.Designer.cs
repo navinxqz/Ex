@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelClass = new System.Windows.Forms.Panel();
@@ -67,25 +66,11 @@
             this.labeld1c1 = new System.Windows.Forms.Label();
             this.labeld5c1 = new System.Windows.Forms.Label();
             this.labelsh = new System.Windows.Forms.Label();
-            this.panelconnectionError = new System.Windows.Forms.Panel();
-            this.panelloading = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelconnectionerrorclass = new System.Windows.Forms.Panel();
-            this.panelconnectionerrortrainer = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelloadingtrainer = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panelloadingclass = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panelconnectionerrormonth = new System.Windows.Forms.Panel();
             this.panelTrainer = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
-            this.panelloadingmonth = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panelconnectionerrorpackage = new System.Windows.Forms.Panel();
-            this.panelloadingpackge = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label63 = new System.Windows.Forms.Label();
             this.panelPackage = new System.Windows.Forms.Panel();
@@ -98,31 +83,11 @@
             this.faddingtimer2 = new System.Windows.Forms.Timer(this.components);
             this.bunifuSchedulePanel = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ScheduleTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSchedule.SuspendLayout();
             this.panel4.SuspendLayout();
             this.schedulePanel.SuspendLayout();
-            this.panelloading.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panelloadingtrainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panelloadingclass.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panelloadingmonth.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panelloadingpackge.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(38, -20);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(418, 235);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // panel5
             // 
@@ -197,8 +162,6 @@
             // 
             this.panel4.Controls.Add(this.schedulePanel);
             this.panel4.Controls.Add(this.labelsh);
-            this.panel4.Controls.Add(this.panelconnectionError);
-            this.panel4.Controls.Add(this.panelloading);
             this.panel4.Location = new System.Drawing.Point(-1, 8);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
@@ -590,52 +553,6 @@
             this.labelsh.TabIndex = 0;
             this.labelsh.Text = "Schedule";
             // 
-            // panelconnectionError
-            // 
-            this.panelconnectionError.Location = new System.Drawing.Point(414, 39);
-            this.panelconnectionError.Margin = new System.Windows.Forms.Padding(2);
-            this.panelconnectionError.Name = "panelconnectionError";
-            this.panelconnectionError.Size = new System.Drawing.Size(352, 209);
-            this.panelconnectionError.TabIndex = 2;
-            this.panelconnectionError.Visible = false;
-            // 
-            // panelloading
-            // 
-            this.panelloading.Controls.Add(this.pictureBox1);
-            this.panelloading.Location = new System.Drawing.Point(335, 41);
-            this.panelloading.Margin = new System.Windows.Forms.Padding(2);
-            this.panelloading.Name = "panelloading";
-            this.panelloading.Size = new System.Drawing.Size(487, 215);
-            this.panelloading.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(38, -20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(418, 235);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panelconnectionerrorclass
-            // 
-            this.panelconnectionerrorclass.Location = new System.Drawing.Point(451, 958);
-            this.panelconnectionerrorclass.Margin = new System.Windows.Forms.Padding(2);
-            this.panelconnectionerrorclass.Name = "panelconnectionerrorclass";
-            this.panelconnectionerrorclass.Size = new System.Drawing.Size(396, 209);
-            this.panelconnectionerrorclass.TabIndex = 38;
-            this.panelconnectionerrorclass.Visible = false;
-            // 
-            // panelconnectionerrortrainer
-            // 
-            this.panelconnectionerrortrainer.Location = new System.Drawing.Point(451, 1233);
-            this.panelconnectionerrortrainer.Margin = new System.Windows.Forms.Padding(2);
-            this.panelconnectionerrortrainer.Name = "panelconnectionerrortrainer";
-            this.panelconnectionerrortrainer.Size = new System.Drawing.Size(396, 209);
-            this.panelconnectionerrortrainer.TabIndex = 42;
-            this.panelconnectionerrortrainer.Visible = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -653,17 +570,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.panelconnectionerrortrainer);
-            this.panel1.Controls.Add(this.panelconnectionerrorclass);
-            this.panel1.Controls.Add(this.panelloadingtrainer);
-            this.panel1.Controls.Add(this.panelloadingclass);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panelconnectionerrormonth);
             this.panel1.Controls.Add(this.panelTrainer);
             this.panel1.Controls.Add(this.label);
-            this.panel1.Controls.Add(this.panelloadingmonth);
-            this.panel1.Controls.Add(this.panelconnectionerrorpackage);
-            this.panel1.Controls.Add(this.panelloadingpackge);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.panelClass);
@@ -680,44 +589,6 @@
             this.panel1.Size = new System.Drawing.Size(1349, 767);
             this.panel1.TabIndex = 1;
             // 
-            // panelloadingtrainer
-            // 
-            this.panelloadingtrainer.Controls.Add(this.pictureBox10);
-            this.panelloadingtrainer.Location = new System.Drawing.Point(405, 1223);
-            this.panelloadingtrainer.Margin = new System.Windows.Forms.Padding(2);
-            this.panelloadingtrainer.Name = "panelloadingtrainer";
-            this.panelloadingtrainer.Size = new System.Drawing.Size(487, 215);
-            this.panelloadingtrainer.TabIndex = 39;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Location = new System.Drawing.Point(38, -20);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(418, 235);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 0;
-            this.pictureBox10.TabStop = false;
-            // 
-            // panelloadingclass
-            // 
-            this.panelloadingclass.Controls.Add(this.pictureBox7);
-            this.panelloadingclass.Location = new System.Drawing.Point(405, 948);
-            this.panelloadingclass.Margin = new System.Windows.Forms.Padding(2);
-            this.panelloadingclass.Name = "panelloadingclass";
-            this.panelloadingclass.Size = new System.Drawing.Size(487, 215);
-            this.panelloadingclass.TabIndex = 4;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(38, -20);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(418, 235);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -727,15 +598,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1200, 32);
             this.panel7.TabIndex = 43;
-            // 
-            // panelconnectionerrormonth
-            // 
-            this.panelconnectionerrormonth.Location = new System.Drawing.Point(451, 685);
-            this.panelconnectionerrormonth.Margin = new System.Windows.Forms.Padding(2);
-            this.panelconnectionerrormonth.Name = "panelconnectionerrormonth";
-            this.panelconnectionerrormonth.Size = new System.Drawing.Size(396, 209);
-            this.panelconnectionerrormonth.TabIndex = 37;
-            this.panelconnectionerrormonth.Visible = false;
             // 
             // panelTrainer
             // 
@@ -760,43 +622,6 @@
             this.label.Size = new System.Drawing.Size(265, 44);
             this.label.TabIndex = 40;
             this.label.Text = "private Trainer";
-            // 
-            // panelloadingmonth
-            // 
-            this.panelloadingmonth.Controls.Add(this.pictureBox5);
-            this.panelloadingmonth.Location = new System.Drawing.Point(405, 663);
-            this.panelloadingmonth.Margin = new System.Windows.Forms.Padding(2);
-            this.panelloadingmonth.Name = "panelloadingmonth";
-            this.panelloadingmonth.Size = new System.Drawing.Size(487, 215);
-            this.panelloadingmonth.TabIndex = 3;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(38, -20);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(418, 235);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // panelconnectionerrorpackage
-            // 
-            this.panelconnectionerrorpackage.Location = new System.Drawing.Point(451, 412);
-            this.panelconnectionerrorpackage.Margin = new System.Windows.Forms.Padding(2);
-            this.panelconnectionerrorpackage.Name = "panelconnectionerrorpackage";
-            this.panelconnectionerrorpackage.Size = new System.Drawing.Size(396, 209);
-            this.panelconnectionerrorpackage.TabIndex = 36;
-            this.panelconnectionerrorpackage.Visible = false;
-            // 
-            // panelloadingpackge
-            // 
-            this.panelloadingpackge.Controls.Add(this.pictureBox3);
-            this.panelloadingpackge.Location = new System.Drawing.Point(403, 387);
-            this.panelloadingpackge.Margin = new System.Windows.Forms.Padding(2);
-            this.panelloadingpackge.Name = "panelloadingpackge";
-            this.panelloadingpackge.Size = new System.Drawing.Size(487, 215);
-            this.panelloadingpackge.TabIndex = 2;
             // 
             // panel3
             // 
@@ -837,6 +662,11 @@
             this.bgWorkerPackage.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerPackage_DoWork);
             this.bgWorkerPackage.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerPackage_RunWorkerCompleted);
             // 
+            // bgWorkerMonths
+            // 
+            this.bgWorkerMonths.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerMonths_DoWork);
+            this.bgWorkerMonths.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerMonths_RunWorkerCompleted);
+            // 
             // faddingtimer1
             // 
             this.faddingtimer1.Interval = 20;
@@ -868,29 +698,18 @@
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             this.Load += new System.EventHandler(this.HomeForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelSchedule.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.schedulePanel.ResumeLayout(false);
             this.schedulePanel.PerformLayout();
-            this.panelloading.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelloadingtrainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panelloadingclass.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panelloadingmonth.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panelloadingpackge.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelClass;
@@ -928,25 +747,11 @@
         private System.Windows.Forms.Label labeld1c1;
         private System.Windows.Forms.Label labeld5c1;
         private System.Windows.Forms.Label labelsh;
-        private System.Windows.Forms.Panel panelconnectionError;
-        private System.Windows.Forms.Panel panelloading;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelconnectionerrorclass;
-        private System.Windows.Forms.Panel panelconnectionerrortrainer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelloadingtrainer;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Panel panelloadingclass;
-        private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panelconnectionerrormonth;
         private System.Windows.Forms.Panel panelTrainer;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Panel panelloadingmonth;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panelconnectionerrorpackage;
-        private System.Windows.Forms.Panel panelloadingpackge;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Panel panelPackage;

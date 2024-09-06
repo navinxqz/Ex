@@ -216,6 +216,62 @@ namespace AdminSystem.Forms
             Discount.Click += new System.EventHandler(panalPackge_Click);
         }
 
+        private void CustomMonth(int x, int y, MonthOffer m, Image img)
+        {
+            DoubleBufferedPanel panel = new DoubleBufferedPanel();
+            Label Lname = new Label();
+            Label Lf = new Label();
+            Label Lp = new Label();
+
+            SuspendLayout();
+            BunifuElipse b = new BunifuElipse();
+            b.TargetControl = panel;
+            b.ElipseRadius = 50;
+
+            panel.Controls.Add(Lname);
+            panel.Controls.Add(Lf);
+            panel.Controls.Add(Lp);
+
+            Font labelFontNP = new Font(new FontFamily("Gilroy-SemiBold"), 34, FontStyle.Bold, GraphicsUnit.Pixel);
+            Font labelFont = new Font(new FontFamily("Gilroy-SemiBold"), 12, FontStyle.Bold, GraphicsUnit.Point);
+            panel.Size = new System.Drawing.Size(390, 230);
+            panel.Location = new Point(x, y);
+
+            panel.Tag = m;
+            panel.Cursor = Cursors.Hand;
+            panel.ForeColor = Color.White;
+            panel.BackColor = Color.Transparent;
+            panel.BackgroundImage = img;
+            panel.BackgroundImage.Tag = img.Tag;
+            panel.BackgroundImageLayout = ImageLayout.Stretch;
+
+            Lname.Font = labelFontNP;
+            Lname.Text = m.NumOfMonths + " Month";
+            Lname.Location = new Point(2, 53);
+            Lname.Size = new Size(293, 49);
+            Lname.Tag = m;
+
+            Lf.Font = labelFont;
+            Lf.Text = m.MaxNum + " Freeze Number";
+            Lf.Location = new Point(8, 102);
+            Lf.Size = new Size(280, 29);
+            Lf.Tag = m;
+
+            Lp.Font = labelFont;
+            Lp.Text = m.Price + "BDT";
+            Lp.Location = new Point(8, 131);
+            Lp.Size = new Size(280, 29);
+            Lp.Tag = m;
+
+            ResumeLayout();
+
+            panelMonth.Controls.Add(panel);
+            panel.Click += new System.EventHandler(panelMonth_Click);
+            Lname.Click += new System.EventHandler(panelMonth_Click);
+            Lf.Click += new System.EventHandler(panelMonth_Click);
+            Lp.Click += new System.EventHandler(panelMonth_Click);
+        }
+
         private void panalPackge_Click(object sender, System.EventArgs e)
         {
             if (sender is Control control)
@@ -365,16 +421,44 @@ namespace AdminSystem.Forms
                     x += 414;
                     count++;
                 }
-                panelloadingpackge.Visible = false;
+
                 panelPackage.Visible = true;
-                panelconnectionerrorpackage.Visible = false;
             }
-            else
+            else { panelPackage.Visible = false; }
+        }
+
+        private void bgWorkerMonths_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
             {
-                panelloadingpackge.Visible = false;
-                panelPackage.Visible = false;
-                panelconnectionerrorpackage.Visible = true;
+                LoadMonth();
             }
+            catch (AggregateException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+        }
+
+        private void bgWorkerMonths_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            int x = 10;
+            if (mo != null)
+            {
+                RemovePanelControls(panelMonth);
+                int count = 0;
+                foreach (MonthOffer i in mo)
+                {
+                    CustomMonth(x, 32, i, image[count % 4]);
+                    x += 414;
+                    count++;
+                }
+                panelMonth.Visible = true;
+            }
+            else { panelMonth.Visible = false; }
         }
     }
 }
