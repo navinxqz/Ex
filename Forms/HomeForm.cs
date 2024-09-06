@@ -644,5 +644,22 @@ namespace AdminSystem.Forms
             }
             else { panelTrainer.Visible = false; }
         }
+
+        public void DataRef()
+        {
+            try
+            {
+                bgWorkerTrainer.RunWorkerAsync();
+                panelTrainer.Visible = false;
+            }
+            catch (AggregateException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Error! {ex.Message}");
+            }
+        }
     }
 }
