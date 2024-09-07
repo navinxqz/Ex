@@ -112,16 +112,23 @@ namespace AdminSystem.Forms
         {
             if(slidePanel.Size.Width > 70)
             {
-                int x = slidePanel.Size.Width - 21;
+                int targetWidth = 70;
+                int i = 50;
+
+                if (slidePanel.Size.Width - i > targetWidth)
+                {
+                    i = slidePanel.Size.Width - targetWidth;
+                }
+                int x = slidePanel.Size.Width - i;  //decrement dynamically
                 int y = slidePanel.Size.Height;
                 slidePanel.Size = new Size(x, y);
 
-                int a = mainpanel.Size.Width + 21;
+                int a = mainpanel.Size.Width + i;
                 int b = mainpanel.Size.Height;
                 mainpanel.Size = new Size(a, b);
 
                 int ly = mainpanel.Location.Y;
-                int lx = mainpanel.Location.X - 21;
+                int lx = mainpanel.Location.X - i;
                 mainpanel.Location = new Point(lx, ly);
             }
             else
@@ -132,17 +139,24 @@ namespace AdminSystem.Forms
 
         private void sliderShowTimer_Tick(object sender, EventArgs e)
         {
-            if (slidePanel.Size.Width < 220)
+            if (slidePanel.Size.Width < 222)
             {
-                int x = slidePanel.Size.Width + 21;
+                int targetWidth = 230;
+                int i = 50;
+
+                if(slidePanel.Size.Width + i > targetWidth)
+                {
+                    i = targetWidth - slidePanel.Size.Width;
+                }
+                int x = slidePanel.Size.Width + i;  ////increment dynamically
                 int y = slidePanel.Size.Height;
                 slidePanel.Size = new Size(x, y);
 
-                int a = mainpanel.Size.Width - 21;
+                int a = mainpanel.Size.Width - i;
                 int b = mainpanel.Size.Height;
                 mainpanel.Size = new Size(a, b);
 
-                int lx = mainpanel.Location.X + 21;
+                int lx = mainpanel.Location.X + i;
                 int ly = mainpanel.Location.Y;
                 mainpanel.Location = new Point(lx, ly);
             }
@@ -195,7 +209,7 @@ namespace AdminSystem.Forms
         {
             if(!sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
             {
-                if(slidePanel.Size.Width == 220)
+                if(slidePanel.Size.Width == 230)
                 {
                     sliderHideTimer.Start();
                 }
