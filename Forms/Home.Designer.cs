@@ -137,7 +137,7 @@
             this.slidePanel.Location = new System.Drawing.Point(0, 0);
             this.slidePanel.Margin = new System.Windows.Forms.Padding(1);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(68, 740);
+            this.slidePanel.Size = new System.Drawing.Size(70, 740);
             this.slidePanel.TabIndex = 2;
             // 
             // kryptonPanel1
@@ -154,7 +154,7 @@
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.TabLowProfile;
-            this.kryptonPanel1.Size = new System.Drawing.Size(269, 367);
+            this.kryptonPanel1.Size = new System.Drawing.Size(66, 367);
             this.kryptonPanel1.TabIndex = 36;
             // 
             // btnHome
@@ -168,7 +168,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnHome.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.Size = new System.Drawing.Size(263, 53);
+            this.btnHome.Size = new System.Drawing.Size(60, 53);
             this.btnHome.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnHome.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnHome.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -260,7 +260,7 @@
             this.btnSubscriptions.Name = "btnSubscriptions";
             this.btnSubscriptions.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnSubscriptions.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnSubscriptions.Size = new System.Drawing.Size(263, 53);
+            this.btnSubscriptions.Size = new System.Drawing.Size(60, 53);
             this.btnSubscriptions.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnSubscriptions.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnSubscriptions.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -352,7 +352,7 @@
             this.btnTrainer.Name = "btnTrainer";
             this.btnTrainer.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnTrainer.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnTrainer.Size = new System.Drawing.Size(263, 53);
+            this.btnTrainer.Size = new System.Drawing.Size(60, 53);
             this.btnTrainer.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnTrainer.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnTrainer.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -444,7 +444,7 @@
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnPayment.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnPayment.Size = new System.Drawing.Size(263, 53);
+            this.btnPayment.Size = new System.Drawing.Size(60, 53);
             this.btnPayment.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnPayment.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnPayment.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -536,7 +536,7 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnEmployees.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnEmployees.Size = new System.Drawing.Size(263, 53);
+            this.btnEmployees.Size = new System.Drawing.Size(60, 53);
             this.btnEmployees.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnEmployees.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnEmployees.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -628,7 +628,7 @@
             this.btnMembers.Name = "btnMembers";
             this.btnMembers.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnMembers.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnMembers.Size = new System.Drawing.Size(263, 53);
+            this.btnMembers.Size = new System.Drawing.Size(60, 53);
             this.btnMembers.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnMembers.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnMembers.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -781,7 +781,7 @@
             this.mainpanel.Margin = new System.Windows.Forms.Padding(1);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainpanel.Size = new System.Drawing.Size(1219, 675);
+            this.mainpanel.Size = new System.Drawing.Size(1248, 717);
             this.mainpanel.TabIndex = 4;
             // 
             // bunifuElipse2
@@ -810,9 +810,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1300, 740);
-            this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.cuiButton1);
+            this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

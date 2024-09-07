@@ -14,6 +14,7 @@ namespace AdminSystem.Forms
         private HomeForm home = new HomeForm();
         private Employee emp = new Employee();
         private EmployeeBase employee = new EmployeeBase();
+        //private Trainer trainer;
         
         public Home()
         {
@@ -45,8 +46,9 @@ namespace AdminSystem.Forms
 
             if (employee != null)
             {
-                //home = new HomeForm(e, this);
+                home = new HomeForm(e, this);
                 emp = new Employee(e, this);
+                //trainer = new Trainer(e, home, this);
                 //further options will b added
 
                 if (!employee.Admin)
@@ -58,6 +60,10 @@ namespace AdminSystem.Forms
 
                 if(employee.Pic != null) { cuiButton3.Image = employee.Pic; }
                 else { Console.WriteLine("Error! No profile Image loaded."); }
+            }
+            else
+            {
+                Console.WriteLine("Error! No employee data to load");
             }
 
         }
@@ -114,8 +120,8 @@ namespace AdminSystem.Forms
                 int b = mainpanel.Size.Height;
                 mainpanel.Size = new Size(a, b);
 
-                int lx = mainpanel.Location.X - 21;
                 int ly = mainpanel.Location.Y;
+                int lx = mainpanel.Location.X - 21;
                 mainpanel.Location = new Point(lx, ly);
             }
             else
@@ -187,12 +193,13 @@ namespace AdminSystem.Forms
 
         private void cuiButton2_Click(object sender, EventArgs e)
         {
-            if(sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
+            if(!sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
             {
-                if(slidePanel.Size.Width == 333)
+                if(slidePanel.Size.Width == 228)
                 {
                     sliderHideTimer.Start();
-                }else if(slidePanel.Size.Width == 102)
+                }
+                else if(slidePanel.Size.Width == 70)
                 {
                     sliderShowTimer.Start();
                 }

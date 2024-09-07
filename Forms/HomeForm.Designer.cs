@@ -96,7 +96,7 @@
             this.panel5.Location = new System.Drawing.Point(77, 1119);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1200, 32);
+            this.panel5.Size = new System.Drawing.Size(1270, 32);
             this.panel5.TabIndex = 38;
             // 
             // panel2
@@ -106,7 +106,7 @@
             this.panel2.Location = new System.Drawing.Point(77, 846);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 32);
+            this.panel2.Size = new System.Drawing.Size(1270, 32);
             this.panel2.TabIndex = 35;
             // 
             // panelClass
@@ -117,7 +117,7 @@
             this.panelClass.Location = new System.Drawing.Point(104, 950);
             this.panelClass.Margin = new System.Windows.Forms.Padding(2);
             this.panelClass.Name = "panelClass";
-            this.panelClass.Size = new System.Drawing.Size(1172, 191);
+            this.panelClass.Size = new System.Drawing.Size(1242, 191);
             this.panelClass.TabIndex = 37;
             this.panelClass.Click += new System.EventHandler(this.panelClass_Click);
             // 
@@ -141,7 +141,7 @@
             this.panelMonth.Location = new System.Drawing.Point(104, 681);
             this.panelMonth.Margin = new System.Windows.Forms.Padding(2);
             this.panelMonth.Name = "panelMonth";
-            this.panelMonth.Size = new System.Drawing.Size(1172, 191);
+            this.panelMonth.Size = new System.Drawing.Size(1242, 191);
             this.panelMonth.TabIndex = 34;
             this.panelMonth.Click += new System.EventHandler(this.panelMonth_Click);
             this.panelMonth.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPackage_Paint);
@@ -155,7 +155,7 @@
             this.panelSchedule.Location = new System.Drawing.Point(78, 33);
             this.panelSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.panelSchedule.Name = "panelSchedule";
-            this.panelSchedule.Size = new System.Drawing.Size(1198, 262);
+            this.panelSchedule.Size = new System.Drawing.Size(1268, 262);
             this.panelSchedule.TabIndex = 1;
             // 
             // panel4
@@ -165,7 +165,7 @@
             this.panel4.Location = new System.Drawing.Point(-1, 8);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1190, 246);
+            this.panel4.Size = new System.Drawing.Size(1237, 246);
             this.panel4.TabIndex = 44;
             // 
             // schedulePanel
@@ -201,7 +201,7 @@
             this.schedulePanel.Location = new System.Drawing.Point(17, 75);
             this.schedulePanel.Margin = new System.Windows.Forms.Padding(2);
             this.schedulePanel.Name = "schedulePanel";
-            this.schedulePanel.Size = new System.Drawing.Size(1126, 157);
+            this.schedulePanel.Size = new System.Drawing.Size(1195, 157);
             this.schedulePanel.TabIndex = 1;
             this.schedulePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.schedulePanel_Paint);
             // 
@@ -586,7 +586,7 @@
             this.panel1.Location = new System.Drawing.Point(-67, -26);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1349, 767);
+            this.panel1.Size = new System.Drawing.Size(1419, 767);
             this.panel1.TabIndex = 1;
             // 
             // panel7
@@ -596,7 +596,7 @@
             this.panel7.Location = new System.Drawing.Point(77, 1394);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1200, 32);
+            this.panel7.Size = new System.Drawing.Size(1270, 32);
             this.panel7.TabIndex = 43;
             // 
             // panelTrainer
@@ -607,7 +607,7 @@
             this.panelTrainer.Location = new System.Drawing.Point(104, 1225);
             this.panelTrainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelTrainer.Name = "panelTrainer";
-            this.panelTrainer.Size = new System.Drawing.Size(1172, 191);
+            this.panelTrainer.Size = new System.Drawing.Size(1242, 191);
             this.panelTrainer.TabIndex = 41;
             this.panelTrainer.Click += new System.EventHandler(this.panelTrainer_Click);
             // 
@@ -630,7 +630,7 @@
             this.panel3.Location = new System.Drawing.Point(89, 586);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1188, 32);
+            this.panel3.Size = new System.Drawing.Size(1258, 32);
             this.panel3.TabIndex = 32;
             // 
             // label63
@@ -653,7 +653,7 @@
             this.panelPackage.Location = new System.Drawing.Point(95, 412);
             this.panelPackage.Margin = new System.Windows.Forms.Padding(2);
             this.panelPackage.Name = "panelPackage";
-            this.panelPackage.Size = new System.Drawing.Size(1172, 191);
+            this.panelPackage.Size = new System.Drawing.Size(1242, 191);
             this.panelPackage.TabIndex = 31;
             this.panelPackage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPackage_Paint);
             // 
