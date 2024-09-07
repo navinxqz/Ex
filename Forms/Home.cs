@@ -110,7 +110,7 @@ namespace AdminSystem.Forms
 
         private void sliderHideTimer_Tick(object sender, EventArgs e)
         {
-            if(slidePanel.Size.Width > 102)
+            if(slidePanel.Size.Width > 70)
             {
                 int x = slidePanel.Size.Width - 21;
                 int y = slidePanel.Size.Height;
@@ -132,7 +132,7 @@ namespace AdminSystem.Forms
 
         private void sliderShowTimer_Tick(object sender, EventArgs e)
         {
-            if (slidePanel.Size.Width < 333)
+            if (slidePanel.Size.Width < 220)
             {
                 int x = slidePanel.Size.Width + 21;
                 int y = slidePanel.Size.Height;
@@ -195,7 +195,7 @@ namespace AdminSystem.Forms
         {
             if(!sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
             {
-                if(slidePanel.Size.Width == 228)
+                if(slidePanel.Size.Width == 220)
                 {
                     sliderHideTimer.Start();
                 }
