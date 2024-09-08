@@ -31,6 +31,7 @@ namespace AdminSystem.Forms
                     imageList1.Images[0],
                 });
             }*/
+
         }
         public Employee(EmployeeBase e, Home home)
         {
@@ -93,7 +94,7 @@ namespace AdminSystem.Forms
 
         private void bgWorkerGetEmp_DoWork(object sender, DoWorkEventArgs e)
         {
-            //employee = StaticClass.empQuery
+            employee = StaticClass.empQuery.AllEmp(false);  //only incPic perameter sent for admin and status will be constructed...
         }
 
         private void bgWorkerGetEmp_RunWorker(object sender, RunWorkerCompletedEventArgs e)
@@ -125,7 +126,12 @@ namespace AdminSystem.Forms
 
         private void bgWorkerList_DoWork(object sender, DoWorkEventArgs e)
         {
-            list = employee.Where(employee => employee.Name.ToLower().Contains(searchtxtbox.Text) || employee.Name.Contains(searchtxtbox.Text) || employee.Name.ToUpper().Contains(searchtxtbox.Text) || employee.Id.ToString().Contains(searchtxtbox.Text) || employee.Username.ToUpper().Contains(searchtxtbox.Text) || employee.Username.ToLower().Contains(searchtxtbox.Text)).ToList();
+            list = employee.Where(employee => employee.Name.ToLower().Contains(searchtxtbox.Text) ||
+                employee.Name.Contains(searchtxtbox.Text) || 
+                employee.Name.ToUpper().Contains(searchtxtbox.Text) || 
+                employee.Id.ToString().Contains(searchtxtbox.Text) || 
+                employee.Username.ToUpper().Contains(searchtxtbox.Text) || 
+                employee.Username.ToLower().Contains(searchtxtbox.Text)).ToList();
         }
 
         private void bgrWorkerList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
