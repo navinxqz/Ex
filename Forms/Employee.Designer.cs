@@ -173,6 +173,7 @@
             this.searchBtn.Size = new System.Drawing.Size(48, 51);
             this.searchBtn.TabIndex = 8;
             this.searchBtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // EmpData
             // 

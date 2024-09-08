@@ -100,7 +100,6 @@
             this.label1.Size = new System.Drawing.Size(183, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -142,6 +141,8 @@
             this.txtUsername.TabIndex = 3;
             this.txtUsername.Text = "Username";
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPassword
             // 
@@ -330,7 +331,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.LogPanel.ResumeLayout(false);
             this.LogPanel.PerformLayout();

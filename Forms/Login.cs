@@ -25,7 +25,7 @@ namespace AdminSystem
 
         private void txtUsername_Leave(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "")
+            if (txtUsername.Text == "")
             {
                 txtUsername.Text = "Username";
                 txtUsername.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
@@ -33,17 +33,7 @@ namespace AdminSystem
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
         {
 
         }
@@ -57,26 +47,26 @@ namespace AdminSystem
 
         private void HidePassBtn_Click(object sender, EventArgs e)
         {
-            HidePassBtn.Visible=false;
+            HidePassBtn.Visible = false;
             showPassBtn.Visible = true;
             txtPassword.PasswordChar = '*';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text != "Username" && txtPassword.Text != "Password" && !string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
+            if (txtUsername.Text != "Username" && txtPassword.Text != "Password" && !string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 txtUsername.Enabled = false;
                 txtPassword.Enabled = false;
             }
             else
             {
-                if(txtUsername.Text != "Username")
+                if (txtUsername.Text != "Username")
                 {
                     txtUsername.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
                     errorLabel.Text = "Username Required!";
                 }
-                if(txtPassword.Text != "Password")
+                if (txtPassword.Text != "Password")
                 {
                     txtPassword.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
                     errorLabel.Text = "Password Required!";
@@ -110,6 +100,17 @@ namespace AdminSystem
             txtPassword.Enabled = true;
 
             //if () { }
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = string.Empty;
+                txtUsername.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+
+                if (txtUsername.TabStop == false) { txtUsername.TabStop = true; }
+            }
         }
     }
 }
