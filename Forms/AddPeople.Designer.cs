@@ -40,6 +40,7 @@
             this.checkpanel = new System.Windows.Forms.Panel();
             this.radioButtonA = new System.Windows.Forms.RadioButton();
             this.radioButtonU = new System.Windows.Forms.RadioButton();
+            this.phntxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.genderPanel = new System.Windows.Forms.Panel();
             this.radioButtonM = new System.Windows.Forms.RadioButton();
             this.radioButtonF = new System.Windows.Forms.RadioButton();
@@ -49,7 +50,6 @@
             this.unametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lnametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.mailtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.phntxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.dobtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
@@ -64,6 +64,7 @@
             this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
+            this.DateSelect = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).BeginInit();
@@ -103,6 +104,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.panel1.Controls.Add(this.DateSelect);
             this.panel1.Controls.Add(this.show_pass_btn2);
             this.panel1.Controls.Add(this.hide_pass_btn2);
             this.panel1.Controls.Add(this.show_pass_btn);
@@ -215,6 +217,37 @@
             this.radioButtonU.TabStop = true;
             this.radioButtonU.Text = "Employee";
             this.radioButtonU.UseVisualStyleBackColor = true;
+            // 
+            // phntxt
+            // 
+            this.phntxt.Location = new System.Drawing.Point(369, 171);
+            this.phntxt.Margin = new System.Windows.Forms.Padding(2);
+            this.phntxt.Name = "phntxt";
+            this.phntxt.Size = new System.Drawing.Size(307, 54);
+            this.phntxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.phntxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.phntxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.phntxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.phntxt.StateActive.Border.Width = -2;
+            this.phntxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.phntxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phntxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.phntxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.phntxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.phntxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.phntxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.phntxt.StateDisabled.Border.Width = -2;
+            this.phntxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.phntxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.phntxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.phntxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.phntxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.phntxt.TabIndex = 3;
+            this.phntxt.Text = "Phone";
             // 
             // genderPanel
             // 
@@ -443,37 +476,6 @@
             this.mailtxt.TabIndex = 4;
             this.mailtxt.Text = "Email";
             // 
-            // phntxt
-            // 
-            this.phntxt.Location = new System.Drawing.Point(369, 171);
-            this.phntxt.Margin = new System.Windows.Forms.Padding(2);
-            this.phntxt.Name = "phntxt";
-            this.phntxt.Size = new System.Drawing.Size(307, 54);
-            this.phntxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.phntxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.phntxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.phntxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.phntxt.StateActive.Border.Width = -2;
-            this.phntxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.phntxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phntxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.phntxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.phntxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.phntxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.phntxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.phntxt.StateDisabled.Border.Width = -2;
-            this.phntxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.phntxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.phntxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.phntxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.phntxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.phntxt.TabIndex = 3;
-            this.phntxt.Text = "Phone";
-            // 
             // dobtxt
             // 
             this.dobtxt.Location = new System.Drawing.Point(28, 101);
@@ -622,6 +624,18 @@
             // 
             this.bgWorkerAdd.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerAdd_DoWork);
             // 
+            // DateSelect
+            // 
+            this.DateSelect.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateSelect.Location = new System.Drawing.Point(302, 117);
+            this.DateSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.DateSelect.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DateSelect.MinDate = new System.DateTime(1971, 12, 1, 0, 0, 0, 0);
+            this.DateSelect.Name = "DateSelect";
+            this.DateSelect.Size = new System.Drawing.Size(18, 20);
+            this.DateSelect.TabIndex = 48;
+            this.DateSelect.ValueChanged += new System.EventHandler(this.DateSelect_ValueChanged);
+            // 
             // AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -689,5 +703,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
         private System.ComponentModel.BackgroundWorker bgWorkerAdd;
+        private System.Windows.Forms.DateTimePicker DateSelect;
     }
 }

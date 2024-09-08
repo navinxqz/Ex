@@ -73,7 +73,7 @@
             // 
             // searchtxtbox
             // 
-            this.searchtxtbox.Location = new System.Drawing.Point(876, 9);
+            this.searchtxtbox.Location = new System.Drawing.Point(473, 11);
             this.searchtxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.Size = new System.Drawing.Size(307, 54);
@@ -123,7 +123,7 @@
             this.btnAdd.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageTint = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(713, 9);
+            this.btnAdd.Location = new System.Drawing.Point(310, 11);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnAdd.NormalOutline = System.Drawing.Color.Transparent;
@@ -161,7 +161,7 @@
             this.searchBtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.searchBtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.searchBtn.ImageTint = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(1198, 9);
+            this.searchBtn.Location = new System.Drawing.Point(795, 11);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.searchBtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -225,7 +225,7 @@
             this.EmpData.RowHeadersWidth = 80;
             this.EmpData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.EmpData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmpData.Size = new System.Drawing.Size(1224, 651);
+            this.EmpData.Size = new System.Drawing.Size(1253, 651);
             this.EmpData.TabIndex = 9;
             this.EmpData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -353,7 +353,7 @@
             this.panelView.Location = new System.Drawing.Point(0, 73);
             this.panelView.Margin = new System.Windows.Forms.Padding(2);
             this.panelView.Name = "panelView";
-            this.panelView.Size = new System.Drawing.Size(1297, 658);
+            this.panelView.Size = new System.Drawing.Size(1326, 658);
             this.panelView.TabIndex = 10;
             this.panelView.Visible = false;
             // 
@@ -367,7 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(1293, 715);
+            this.ClientSize = new System.Drawing.Size(1322, 715);
             this.Controls.Add(this.EmpData);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.btnAdd);

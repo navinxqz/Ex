@@ -43,6 +43,12 @@ namespace AdminSystem.Forms
 
         }
 
+        private void DateSelect_ValueChanged(object sender, EventArgs e)
+        {
+            dobtxt.ForeColor = Color.FromArgb(70, 71, 78);
+            dobtxt.Text = DateSelect.Value.ToString("yyyy-MM-dd");
+        }
+
         private void show_pass_btn_Click(object sender, EventArgs e)
         {
 

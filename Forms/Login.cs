@@ -111,6 +111,6 @@ namespace AdminSystem
 
                 if (txtUsername.TabStop == false) { txtUsername.TabStop = true; }
             }
-        }
+        }   //for txtPassword.text its better for now to dryrun. will implement in future...
     }
 }
