@@ -25,12 +25,12 @@ namespace AdminSystem.Forms
             bgWorkerGetEmp.RunWorkerAsync();
 
 
-            for(int i = 0; i < 3; i++)
+        /*    for(int i = 0; i < 3; i++)
             {
                 EmpData.Rows.Add(new object[] {
                     imageList1.Images[0],
                 });
-            }
+            }*/
         }
         public Employee(EmployeeBase e, Home home)
         {
@@ -158,6 +158,11 @@ namespace AdminSystem.Forms
                     searchtxtbox.TabStop = true;
                 }
             }
+        }
+
+        private void Employee_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

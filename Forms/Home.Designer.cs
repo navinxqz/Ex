@@ -781,7 +781,7 @@
             this.mainpanel.Margin = new System.Windows.Forms.Padding(1);
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.mainpanel.Size = new System.Drawing.Size(1248, 717);
+            this.mainpanel.Size = new System.Drawing.Size(1258, 727);
             this.mainpanel.TabIndex = 4;
             // 
             // bunifuElipse2
@@ -796,7 +796,7 @@
             // 
             // sliderHideTimer
             // 
-            this.sliderHideTimer.Interval = 1;
+            this.sliderHideTimer.Interval = 2;
             this.sliderHideTimer.Tick += new System.EventHandler(this.sliderHideTimer_Tick);
             // 
             // sliderShowTimer
