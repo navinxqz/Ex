@@ -14,18 +14,22 @@ namespace AdminSystem.Forms
     public partial class AddPeople : Form
     {
         private Image img = null;
-        private string src = null;
-        private bool E = false, T = false, M = false;
+        private string imgbase = null;
+        private bool MemberAdd = false, EmpAdd = false, TrainerAdd = false;
+        bool R, pass = false, Status;
         public string Gender;
-        private EmployeeBase empbase;
-        private EmployeeBase ebase;
+        private EmployeeBase empbase1;
+        private EmployeeBase empbase2;
+        private Trainer trainer;
+        //for member will be added...
+
         public AddPeople()
         {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
         }
-        public AddPeople(EmployeeBase b = null,bool M = false, bool E =false, bool T = false) {
+        public AddPeople(EmployeeBase eb = null,bool MemberAdd = false, bool EmpAdd =false, bool TrainerAdd = false) {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
@@ -46,7 +50,7 @@ namespace AdminSystem.Forms
         private void DateSelect_ValueChanged(object sender, EventArgs e)
         {
             dobtxt.ForeColor = Color.FromArgb(70, 71, 78);
-            dobtxt.Text = DateSelect.Value.ToString("yyyy-MM-dd");
+            dobtxt.Text = DateSelect.Value.ToString("dd-MM-yyyy");
         }
 
         private void show_pass_btn_Click(object sender, EventArgs e)
