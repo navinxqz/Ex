@@ -33,14 +33,15 @@
             this.labelName = new System.Windows.Forms.Label();
             this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.DateSelect = new System.Windows.Forms.DateTimePicker();
             this.show_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn = new System.Windows.Forms.PictureBox();
             this.checkpanel = new System.Windows.Forms.Panel();
-            this.radioButtonA = new System.Windows.Forms.RadioButton();
-            this.radioButtonU = new System.Windows.Forms.RadioButton();
+            this.AdminRB = new System.Windows.Forms.RadioButton();
+            this.UserRB = new System.Windows.Forms.RadioButton();
             this.phntxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.genderPanel = new System.Windows.Forms.Panel();
             this.MaleRB = new System.Windows.Forms.RadioButton();
@@ -65,7 +66,6 @@
             this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
-            this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
@@ -127,6 +127,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 489);
             this.panel1.TabIndex = 40;
+            // 
+            // LessonCostTxt
+            // 
+            this.LessonCostTxt.Location = new System.Drawing.Point(369, 306);
+            this.LessonCostTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.LessonCostTxt.Name = "LessonCostTxt";
+            this.LessonCostTxt.Size = new System.Drawing.Size(307, 54);
+            this.LessonCostTxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.LessonCostTxt.StateActive.Border.Width = -2;
+            this.LessonCostTxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonCostTxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LessonCostTxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.LessonCostTxt.StateDisabled.Border.Width = -2;
+            this.LessonCostTxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonCostTxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.LessonCostTxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.TabIndex = 49;
+            this.LessonCostTxt.Text = "Lesson Cost";
             // 
             // DateSelect
             // 
@@ -198,8 +229,8 @@
             // checkpanel
             // 
             this.checkpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.checkpanel.Controls.Add(this.radioButtonA);
-            this.checkpanel.Controls.Add(this.radioButtonU);
+            this.checkpanel.Controls.Add(this.AdminRB);
+            this.checkpanel.Controls.Add(this.UserRB);
             this.checkpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkpanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
             this.checkpanel.Location = new System.Drawing.Point(369, 239);
@@ -209,29 +240,29 @@
             this.checkpanel.TabIndex = 43;
             this.checkpanel.Visible = false;
             // 
-            // radioButtonA
+            // AdminRB
             // 
-            this.radioButtonA.AutoSize = true;
-            this.radioButtonA.Location = new System.Drawing.Point(15, 8);
-            this.radioButtonA.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonA.Name = "radioButtonA";
-            this.radioButtonA.Size = new System.Drawing.Size(99, 33);
-            this.radioButtonA.TabIndex = 0;
-            this.radioButtonA.TabStop = true;
-            this.radioButtonA.Text = "Admin";
-            this.radioButtonA.UseVisualStyleBackColor = true;
+            this.AdminRB.AutoSize = true;
+            this.AdminRB.Location = new System.Drawing.Point(15, 8);
+            this.AdminRB.Margin = new System.Windows.Forms.Padding(2);
+            this.AdminRB.Name = "AdminRB";
+            this.AdminRB.Size = new System.Drawing.Size(99, 33);
+            this.AdminRB.TabIndex = 0;
+            this.AdminRB.TabStop = true;
+            this.AdminRB.Text = "Admin";
+            this.AdminRB.UseVisualStyleBackColor = true;
             // 
-            // radioButtonU
+            // UserRB
             // 
-            this.radioButtonU.AutoSize = true;
-            this.radioButtonU.Location = new System.Drawing.Point(137, 8);
-            this.radioButtonU.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonU.Name = "radioButtonU";
-            this.radioButtonU.Size = new System.Drawing.Size(140, 33);
-            this.radioButtonU.TabIndex = 1;
-            this.radioButtonU.TabStop = true;
-            this.radioButtonU.Text = "Employee";
-            this.radioButtonU.UseVisualStyleBackColor = true;
+            this.UserRB.AutoSize = true;
+            this.UserRB.Location = new System.Drawing.Point(137, 8);
+            this.UserRB.Margin = new System.Windows.Forms.Padding(2);
+            this.UserRB.Name = "UserRB";
+            this.UserRB.Size = new System.Drawing.Size(82, 33);
+            this.UserRB.TabIndex = 1;
+            this.UserRB.TabStop = true;
+            this.UserRB.Text = "User";
+            this.UserRB.UseVisualStyleBackColor = true;
             // 
             // phntxt
             // 
@@ -640,37 +671,6 @@
             // 
             this.bgWorkerAdd.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerAdd_DoWork);
             // 
-            // LessonCostTxt
-            // 
-            this.LessonCostTxt.Location = new System.Drawing.Point(369, 306);
-            this.LessonCostTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.LessonCostTxt.Name = "LessonCostTxt";
-            this.LessonCostTxt.Size = new System.Drawing.Size(307, 54);
-            this.LessonCostTxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.LessonCostTxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.LessonCostTxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.LessonCostTxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.LessonCostTxt.StateActive.Border.Width = -2;
-            this.LessonCostTxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.LessonCostTxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LessonCostTxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.LessonCostTxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.LessonCostTxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.LessonCostTxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.LessonCostTxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.LessonCostTxt.StateDisabled.Border.Width = -2;
-            this.LessonCostTxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.LessonCostTxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.LessonCostTxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.LessonCostTxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.LessonCostTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.LessonCostTxt.TabIndex = 49;
-            this.LessonCostTxt.Text = "Lesson Cost";
-            // 
             // bunifuElipse11
             // 
             this.bunifuElipse11.ElipseRadius = 40;
@@ -717,8 +717,8 @@
         private System.Windows.Forms.PictureBox show_pass_btn;
         private System.Windows.Forms.PictureBox hide_pass_btn;
         private System.Windows.Forms.Panel checkpanel;
-        private System.Windows.Forms.RadioButton radioButtonA;
-        private System.Windows.Forms.RadioButton radioButtonU;
+        private System.Windows.Forms.RadioButton AdminRB;
+        private System.Windows.Forms.RadioButton UserRB;
         private System.Windows.Forms.Panel genderPanel;
         private System.Windows.Forms.RadioButton MaleRB;
         private System.Windows.Forms.RadioButton FemaleRB;

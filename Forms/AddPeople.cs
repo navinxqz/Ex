@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AdminSystem.Classes;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace AdminSystem.Forms
 {
@@ -16,7 +17,7 @@ namespace AdminSystem.Forms
         private Image img = null;
         private string imgbase = null;
         private bool MemberAdd = false, EmpAdd = false, TrainerAdd = false;
-        bool R, pass = false, Status;
+        bool Role, pass = false, Status;
         public string Gender;
         private EmployeeBase empbase1;
         private EmployeeBase empbase2;
@@ -64,6 +65,20 @@ namespace AdminSystem.Forms
         {
             if (MaleRB.Checked) { Gender = "Male"; }
             else if(FemaleRB.Checked) { Gender = "Female"; }
+        }
+
+        private void 
+
+        private void GetRole()
+        {
+            if(AdminRB.Checked) { Role = true; }
+            else if(UserRB.Checked) { Role = false; }
+        }
+
+        private bool EmailValid(string email)
+        {
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
