@@ -60,6 +60,12 @@ namespace AdminSystem.Forms
             }empbase2 = eb;
         }
 
+        private void GetGender()
+        {
+            if (MaleRB.Checked) { Gender = "Male"; }
+            else if(FemaleRB.Checked) { Gender = "Female"; }
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
 

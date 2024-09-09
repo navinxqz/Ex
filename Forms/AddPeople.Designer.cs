@@ -43,8 +43,8 @@
             this.radioButtonU = new System.Windows.Forms.RadioButton();
             this.phntxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.genderPanel = new System.Windows.Forms.Panel();
-            this.radioButtonM = new System.Windows.Forms.RadioButton();
-            this.radioButtonF = new System.Windows.Forms.RadioButton();
+            this.MaleRB = new System.Windows.Forms.RadioButton();
+            this.FemaleRB = new System.Windows.Forms.RadioButton();
             this.passtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.passconfirmtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.fnametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -267,8 +267,8 @@
             // genderPanel
             // 
             this.genderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.genderPanel.Controls.Add(this.radioButtonM);
-            this.genderPanel.Controls.Add(this.radioButtonF);
+            this.genderPanel.Controls.Add(this.MaleRB);
+            this.genderPanel.Controls.Add(this.FemaleRB);
             this.genderPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
             this.genderPanel.Location = new System.Drawing.Point(369, 101);
@@ -277,29 +277,29 @@
             this.genderPanel.Size = new System.Drawing.Size(307, 54);
             this.genderPanel.TabIndex = 5;
             // 
-            // radioButtonM
+            // MaleRB
             // 
-            this.radioButtonM.AutoSize = true;
-            this.radioButtonM.Location = new System.Drawing.Point(15, 8);
-            this.radioButtonM.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonM.Name = "radioButtonM";
-            this.radioButtonM.Size = new System.Drawing.Size(84, 33);
-            this.radioButtonM.TabIndex = 0;
-            this.radioButtonM.TabStop = true;
-            this.radioButtonM.Text = "Male";
-            this.radioButtonM.UseVisualStyleBackColor = true;
+            this.MaleRB.AutoSize = true;
+            this.MaleRB.Location = new System.Drawing.Point(15, 8);
+            this.MaleRB.Margin = new System.Windows.Forms.Padding(2);
+            this.MaleRB.Name = "MaleRB";
+            this.MaleRB.Size = new System.Drawing.Size(84, 33);
+            this.MaleRB.TabIndex = 0;
+            this.MaleRB.TabStop = true;
+            this.MaleRB.Text = "Male";
+            this.MaleRB.UseVisualStyleBackColor = true;
             // 
-            // radioButtonF
+            // FemaleRB
             // 
-            this.radioButtonF.AutoSize = true;
-            this.radioButtonF.Location = new System.Drawing.Point(137, 8);
-            this.radioButtonF.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButtonF.Name = "radioButtonF";
-            this.radioButtonF.Size = new System.Drawing.Size(113, 33);
-            this.radioButtonF.TabIndex = 1;
-            this.radioButtonF.TabStop = true;
-            this.radioButtonF.Text = "Female";
-            this.radioButtonF.UseVisualStyleBackColor = true;
+            this.FemaleRB.AutoSize = true;
+            this.FemaleRB.Location = new System.Drawing.Point(137, 8);
+            this.FemaleRB.Margin = new System.Windows.Forms.Padding(2);
+            this.FemaleRB.Name = "FemaleRB";
+            this.FemaleRB.Size = new System.Drawing.Size(113, 33);
+            this.FemaleRB.TabIndex = 1;
+            this.FemaleRB.TabStop = true;
+            this.FemaleRB.Text = "Female";
+            this.FemaleRB.UseVisualStyleBackColor = true;
             // 
             // passtxt
             // 
@@ -720,8 +720,8 @@
         private System.Windows.Forms.RadioButton radioButtonA;
         private System.Windows.Forms.RadioButton radioButtonU;
         private System.Windows.Forms.Panel genderPanel;
-        private System.Windows.Forms.RadioButton radioButtonM;
-        private System.Windows.Forms.RadioButton radioButtonF;
+        private System.Windows.Forms.RadioButton MaleRB;
+        private System.Windows.Forms.RadioButton FemaleRB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox passtxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox passconfirmtxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox fnametxt;
