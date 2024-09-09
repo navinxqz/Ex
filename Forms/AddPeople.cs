@@ -35,11 +35,34 @@ namespace AdminSystem.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
             btnAdd.Enabled = false;
 
-            if (M)
+            if (MemberAdd)
             {
-                this.M = true;
+                this.MemberAdd = true;
+                //for member...
+                labelName.Text = "Add Member";
+            }else if (EmpAdd)
+            {
+                this. EmpAdd = true;
+                empbase1 = new EmployeeBase();
+                unametxt.Visible = true;
+                passtxt.Visible = true;
+                passconfirmtxt.Visible = true;
+                checkpanel.Visible = true;
+                unametxt.Text = "Username";
+                labelName.Text = "Add Employee";
+            }else if(TrainerAdd)
+            {
+                this.TrainerAdd = true;
+                trainer = new Trainer();
+                LessonCostTxt.Visible = true;
+                unametxt.Text = "Specialized";
+                labelName.Text = "Add Trainer";
+            }empbase2 = eb;
+        }
 
-            }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void passconfirmtxt_TextChanged(object sender, EventArgs e)

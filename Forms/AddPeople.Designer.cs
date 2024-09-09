@@ -33,6 +33,7 @@
             this.labelName = new System.Windows.Forms.Label();
             this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DateSelect = new System.Windows.Forms.DateTimePicker();
             this.show_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
@@ -64,7 +65,8 @@
             this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
-            this.DateSelect = new System.Windows.Forms.DateTimePicker();
+            this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).BeginInit();
@@ -104,6 +106,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.panel1.Controls.Add(this.LessonCostTxt);
             this.panel1.Controls.Add(this.DateSelect);
             this.panel1.Controls.Add(this.show_pass_btn2);
             this.panel1.Controls.Add(this.hide_pass_btn2);
@@ -125,12 +128,24 @@
             this.panel1.Size = new System.Drawing.Size(707, 489);
             this.panel1.TabIndex = 40;
             // 
+            // DateSelect
+            // 
+            this.DateSelect.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateSelect.Location = new System.Drawing.Point(302, 117);
+            this.DateSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.DateSelect.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
+            this.DateSelect.MinDate = new System.DateTime(1971, 12, 1, 0, 0, 0, 0);
+            this.DateSelect.Name = "DateSelect";
+            this.DateSelect.Size = new System.Drawing.Size(18, 20);
+            this.DateSelect.TabIndex = 48;
+            this.DateSelect.ValueChanged += new System.EventHandler(this.DateSelect_ValueChanged);
+            // 
             // show_pass_btn2
             // 
             this.show_pass_btn2.BackColor = System.Drawing.Color.Transparent;
             this.show_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_pass_btn2.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn2.Image")));
-            this.show_pass_btn2.Location = new System.Drawing.Point(339, 382);
+            this.show_pass_btn2.Location = new System.Drawing.Point(275, 381);
             this.show_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
             this.show_pass_btn2.Name = "show_pass_btn2";
             this.show_pass_btn2.Size = new System.Drawing.Size(45, 28);
@@ -143,7 +158,7 @@
             // 
             this.hide_pass_btn2.BackColor = System.Drawing.Color.Transparent;
             this.hide_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hide_pass_btn2.Location = new System.Drawing.Point(339, 382);
+            this.hide_pass_btn2.Location = new System.Drawing.Point(275, 381);
             this.hide_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
             this.hide_pass_btn2.Name = "hide_pass_btn2";
             this.hide_pass_btn2.Size = new System.Drawing.Size(45, 28);
@@ -157,7 +172,7 @@
             this.show_pass_btn.BackColor = System.Drawing.Color.Transparent;
             this.show_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
-            this.show_pass_btn.Location = new System.Drawing.Point(339, 318);
+            this.show_pass_btn.Location = new System.Drawing.Point(275, 315);
             this.show_pass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.show_pass_btn.Name = "show_pass_btn";
             this.show_pass_btn.Size = new System.Drawing.Size(45, 28);
@@ -171,7 +186,7 @@
             // 
             this.hide_pass_btn.BackColor = System.Drawing.Color.Transparent;
             this.hide_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hide_pass_btn.Location = new System.Drawing.Point(339, 317);
+            this.hide_pass_btn.Location = new System.Drawing.Point(275, 314);
             this.hide_pass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.hide_pass_btn.Name = "hide_pass_btn";
             this.hide_pass_btn.Size = new System.Drawing.Size(45, 28);
@@ -538,6 +553,7 @@
             this.btnAdd.Size = new System.Drawing.Size(137, 54);
             this.btnAdd.TabIndex = 41;
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cancelbtn
             // 
@@ -624,17 +640,41 @@
             // 
             this.bgWorkerAdd.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerAdd_DoWork);
             // 
-            // DateSelect
+            // LessonCostTxt
             // 
-            this.DateSelect.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateSelect.Location = new System.Drawing.Point(302, 117);
-            this.DateSelect.Margin = new System.Windows.Forms.Padding(2);
-            this.DateSelect.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
-            this.DateSelect.MinDate = new System.DateTime(1971, 12, 1, 0, 0, 0, 0);
-            this.DateSelect.Name = "DateSelect";
-            this.DateSelect.Size = new System.Drawing.Size(18, 20);
-            this.DateSelect.TabIndex = 48;
-            this.DateSelect.ValueChanged += new System.EventHandler(this.DateSelect_ValueChanged);
+            this.LessonCostTxt.Location = new System.Drawing.Point(369, 306);
+            this.LessonCostTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.LessonCostTxt.Name = "LessonCostTxt";
+            this.LessonCostTxt.Size = new System.Drawing.Size(307, 54);
+            this.LessonCostTxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.LessonCostTxt.StateActive.Border.Width = -2;
+            this.LessonCostTxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonCostTxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LessonCostTxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.LessonCostTxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.LessonCostTxt.StateDisabled.Border.Width = -2;
+            this.LessonCostTxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.LessonCostTxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.LessonCostTxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.LessonCostTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.LessonCostTxt.TabIndex = 49;
+            this.LessonCostTxt.Text = "Lesson Cost";
+            // 
+            // bunifuElipse11
+            // 
+            this.bunifuElipse11.ElipseRadius = 40;
+            this.bunifuElipse11.TargetControl = this.LessonCostTxt;
             // 
             // AddPeople
             // 
@@ -704,5 +744,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
         private System.ComponentModel.BackgroundWorker bgWorkerAdd;
         private System.Windows.Forms.DateTimePicker DateSelect;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox LessonCostTxt;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse11;
     }
 }

@@ -121,7 +121,7 @@
   <data name="cuiPictureBox1.Content" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAOyBJREFUeF7tfQ/k/WuVda4rV67kuq4kuZIkSUbyemUkIyNJxjWSkWQkGRkjYyTD
+        wQAADsEBuJFr7QAAOyBJREFUeF7tfQ/k/WuVda4rV67kuq4kuZIkSUbyemUkIyNJxjWSkWQkGRkjYyTD
         Kxl5vZIxRpIxxmuMMTKSjJFkZCRjJEmSjCTJnSRJkvfd+8yzzqyzztrP85zvn3vv9/fdi+XZe+21n8+f
         83k+v/M9v/PneY1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqN
         RqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDQajUaj0Wg0Go1Go9Fo
@@ -432,5 +432,8 @@
   </metadata>
   <metadata name="bgWorkerAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 54</value>
+  </metadata>
+  <metadata name="bunifuElipse11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>145, 54</value>
   </metadata>
 </root>
