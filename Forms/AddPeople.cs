@@ -67,7 +67,7 @@ namespace AdminSystem.Forms
             else if(FemaleRB.Checked) { Gender = "Female"; }
         }
 
-        private void 
+        //private void 
 
         private void GetRole()
         {
@@ -84,6 +84,29 @@ namespace AdminSystem.Forms
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void fnametxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fnametxt_Enter(object sender, EventArgs e)
+        {
+            if(fnametxt.Text == "First Name")
+            {
+                fnametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                fnametxt.Text = String.Empty;
+            }
+        }
+
+        private void fnametxt_Leave(object sender, EventArgs e)
+        {
+            if (fnametxt.Text == "")
+            {
+                fnametxt.Text = "First Name";
+                fnametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
         }
 
         private void passconfirmtxt_TextChanged(object sender, EventArgs e)

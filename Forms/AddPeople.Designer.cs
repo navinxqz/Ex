@@ -427,6 +427,9 @@
             this.fnametxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.fnametxt.TabIndex = 1;
             this.fnametxt.Text = "First Name";
+            this.fnametxt.TextChanged += new System.EventHandler(this.fnametxt_TextChanged);
+            this.fnametxt.Enter += new System.EventHandler(this.fnametxt_Enter);
+            this.fnametxt.Leave += new System.EventHandler(this.fnametxt_Leave);
             // 
             // unametxt
             // 
