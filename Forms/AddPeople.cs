@@ -109,6 +109,47 @@ namespace AdminSystem.Forms
             }
         }
 
+        private void lnametxt_Enter(object sender, EventArgs e)
+        {
+            if (lnametxt.Text == "Last Name")
+            {
+                lnametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                lnametxt.Text = String.Empty;
+            }
+        }
+
+        private void lnametxt_Leave(object sender, EventArgs e)
+        {
+            if (lnametxt.Text == "")
+            {
+                lnametxt.Text = "Last Name";
+                lnametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+
+        private void mailtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mailtxt_Enter(object sender, EventArgs e)
+        {
+            if (mailtxt.Text == "Email")
+            {
+                mailtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                mailtxt.Text = String.Empty;
+            }
+        }
+
+        private void mailtxt_Leave(object sender, EventArgs e)
+        {
+            if (mailtxt.Text == "")
+            {
+                mailtxt.Text = "Email";
+                mailtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+
         private void passconfirmtxt_TextChanged(object sender, EventArgs e)
         {
 
@@ -127,7 +168,7 @@ namespace AdminSystem.Forms
 
         private void bgWorkerAdd_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (E)
+            /*if (E)
             {
                 if(unametxt.Text == "USERNAME")
                 {
@@ -140,7 +181,7 @@ namespace AdminSystem.Forms
                 {
 
                 }
-            }
+            }*/
         }
     }
 }

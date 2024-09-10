@@ -493,6 +493,8 @@
             this.lnametxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.lnametxt.TabIndex = 2;
             this.lnametxt.Text = "Last Name";
+            this.lnametxt.Enter += new System.EventHandler(this.lnametxt_Enter);
+            this.lnametxt.Leave += new System.EventHandler(this.lnametxt_Leave);
             // 
             // mailtxt
             // 
@@ -524,6 +526,9 @@
             this.mailtxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.mailtxt.TabIndex = 4;
             this.mailtxt.Text = "Email";
+            this.mailtxt.TextChanged += new System.EventHandler(this.mailtxt_TextChanged);
+            this.mailtxt.Enter += new System.EventHandler(this.mailtxt_Enter);
+            this.mailtxt.Leave += new System.EventHandler(this.mailtxt_Leave);
             // 
             // dobtxt
             // 
