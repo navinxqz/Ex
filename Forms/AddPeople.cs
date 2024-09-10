@@ -47,7 +47,6 @@ namespace AdminSystem.Forms
                 empbase1 = new EmployeeBase();
                 unametxt.Visible = true;
                 passtxt.Visible = true;
-                passconfirmtxt.Visible = true;
                 checkpanel.Visible = true;
                 unametxt.Text = "Username";
                 labelName.Text = "Add Employee";
@@ -150,11 +149,83 @@ namespace AdminSystem.Forms
             }
         }
 
-        private void passconfirmtxt_TextChanged(object sender, EventArgs e)
+        private void phntxt_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void phntxt_Enter(object sender, EventArgs e)
+        {
+            if (phntxt.Text == "Phone")
+            {
+                phntxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                phntxt.Text = String.Empty;
+            }
+        }
+
+        private void phntxt_Leave(object sender, EventArgs e)
+        {
+            if (phntxt.Text == "")
+            {
+                phntxt.Text = "Phone";
+                phntxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+
+        private void unametxt_Enter(object sender, EventArgs e)
+        {
+            if (unametxt.Text == "Username")
+            {
+                unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                unametxt.Text = String.Empty;
+            }
+        }
+
+        private void unametxt_Leave(object sender, EventArgs e)
+        {
+            if (unametxt.Text == "")
+            {
+                unametxt.Text = "Username";
+                unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+
+        private void passtxt_Enter(object sender, EventArgs e)
+        {
+            if (passtxt.Text == "Password")
+            {
+                passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                passtxt.Text = String.Empty;
+            }
+        }
+
+        private void passtxt_Leave(object sender, EventArgs e)
+        {
+            if (passtxt.Text == "")
+            {
+                passtxt.Text = "Password";
+                passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+
+        private void LessonCostTxt_Enter(object sender, EventArgs e)
+        {
+            if (LessonCostTxt.Text == "Lesson Cost")
+            {
+                LessonCostTxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                LessonCostTxt.Text = String.Empty;
+            }
+        }
+
+        private void LessonCostTxt_Leave(object sender, EventArgs e)
+        {
+            if (LessonCostTxt.Text == "")
+            {
+                LessonCostTxt.Text = "Lesson Cost";
+                LessonCostTxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+        }
+       
         private void DateSelect_ValueChanged(object sender, EventArgs e)
         {
             dobtxt.ForeColor = Color.FromArgb(70, 71, 78);

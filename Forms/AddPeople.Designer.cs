@@ -35,8 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.DateSelect = new System.Windows.Forms.DateTimePicker();
-            this.show_pass_btn2 = new System.Windows.Forms.PictureBox();
-            this.hide_pass_btn2 = new System.Windows.Forms.PictureBox();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
             this.hide_pass_btn = new System.Windows.Forms.PictureBox();
             this.checkpanel = new System.Windows.Forms.Panel();
@@ -47,7 +45,6 @@
             this.MaleRB = new System.Windows.Forms.RadioButton();
             this.FemaleRB = new System.Windows.Forms.RadioButton();
             this.passtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.passconfirmtxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.fnametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.unametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lnametxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -68,8 +65,6 @@
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
             this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
             this.checkpanel.SuspendLayout();
@@ -108,24 +103,21 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.panel1.Controls.Add(this.LessonCostTxt);
             this.panel1.Controls.Add(this.DateSelect);
-            this.panel1.Controls.Add(this.show_pass_btn2);
-            this.panel1.Controls.Add(this.hide_pass_btn2);
             this.panel1.Controls.Add(this.show_pass_btn);
             this.panel1.Controls.Add(this.hide_pass_btn);
             this.panel1.Controls.Add(this.checkpanel);
             this.panel1.Controls.Add(this.phntxt);
             this.panel1.Controls.Add(this.genderPanel);
             this.panel1.Controls.Add(this.passtxt);
-            this.panel1.Controls.Add(this.passconfirmtxt);
             this.panel1.Controls.Add(this.fnametxt);
             this.panel1.Controls.Add(this.unametxt);
             this.panel1.Controls.Add(this.lnametxt);
             this.panel1.Controls.Add(this.mailtxt);
             this.panel1.Controls.Add(this.dobtxt);
-            this.panel1.Location = new System.Drawing.Point(375, 61);
+            this.panel1.Location = new System.Drawing.Point(383, 115);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 489);
+            this.panel1.Size = new System.Drawing.Size(707, 386);
             this.panel1.TabIndex = 40;
             // 
             // LessonCostTxt
@@ -158,6 +150,8 @@
             this.LessonCostTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.LessonCostTxt.TabIndex = 49;
             this.LessonCostTxt.Text = "Lesson Cost";
+            this.LessonCostTxt.Enter += new System.EventHandler(this.LessonCostTxt_Enter);
+            this.LessonCostTxt.Leave += new System.EventHandler(this.LessonCostTxt_Leave);
             // 
             // DateSelect
             // 
@@ -170,33 +164,6 @@
             this.DateSelect.Size = new System.Drawing.Size(18, 20);
             this.DateSelect.TabIndex = 48;
             this.DateSelect.ValueChanged += new System.EventHandler(this.DateSelect_ValueChanged);
-            // 
-            // show_pass_btn2
-            // 
-            this.show_pass_btn2.BackColor = System.Drawing.Color.Transparent;
-            this.show_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.show_pass_btn2.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn2.Image")));
-            this.show_pass_btn2.Location = new System.Drawing.Point(275, 381);
-            this.show_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
-            this.show_pass_btn2.Name = "show_pass_btn2";
-            this.show_pass_btn2.Size = new System.Drawing.Size(45, 28);
-            this.show_pass_btn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.show_pass_btn2.TabIndex = 46;
-            this.show_pass_btn2.TabStop = false;
-            this.show_pass_btn2.Visible = false;
-            // 
-            // hide_pass_btn2
-            // 
-            this.hide_pass_btn2.BackColor = System.Drawing.Color.Transparent;
-            this.hide_pass_btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hide_pass_btn2.Location = new System.Drawing.Point(275, 381);
-            this.hide_pass_btn2.Margin = new System.Windows.Forms.Padding(2);
-            this.hide_pass_btn2.Name = "hide_pass_btn2";
-            this.hide_pass_btn2.Size = new System.Drawing.Size(45, 28);
-            this.hide_pass_btn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hide_pass_btn2.TabIndex = 47;
-            this.hide_pass_btn2.TabStop = false;
-            this.hide_pass_btn2.Visible = false;
             // 
             // show_pass_btn
             // 
@@ -294,6 +261,9 @@
             this.phntxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.phntxt.TabIndex = 3;
             this.phntxt.Text = "Phone";
+            this.phntxt.TextChanged += new System.EventHandler(this.phntxt_TextChanged);
+            this.phntxt.Enter += new System.EventHandler(this.phntxt_Enter);
+            this.phntxt.Leave += new System.EventHandler(this.phntxt_Leave);
             // 
             // genderPanel
             // 
@@ -363,39 +333,8 @@
             this.passtxt.TabIndex = 8;
             this.passtxt.Text = "Password";
             this.passtxt.Visible = false;
-            // 
-            // passconfirmtxt
-            // 
-            this.passconfirmtxt.Location = new System.Drawing.Point(28, 369);
-            this.passconfirmtxt.Margin = new System.Windows.Forms.Padding(2);
-            this.passconfirmtxt.Name = "passconfirmtxt";
-            this.passconfirmtxt.Size = new System.Drawing.Size(307, 54);
-            this.passconfirmtxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.passconfirmtxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.passconfirmtxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.passconfirmtxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.passconfirmtxt.StateActive.Border.Width = -2;
-            this.passconfirmtxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.passconfirmtxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passconfirmtxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.passconfirmtxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.passconfirmtxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.passconfirmtxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.passconfirmtxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.passconfirmtxt.StateDisabled.Border.Width = -2;
-            this.passconfirmtxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.passconfirmtxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.passconfirmtxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.passconfirmtxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.passconfirmtxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.passconfirmtxt.TabIndex = 10;
-            this.passconfirmtxt.Text = "Confirm Password";
-            this.passconfirmtxt.Visible = false;
-            this.passconfirmtxt.TextChanged += new System.EventHandler(this.passconfirmtxt_TextChanged);
+            this.passtxt.Enter += new System.EventHandler(this.passtxt_Enter);
+            this.passtxt.Leave += new System.EventHandler(this.passtxt_Leave);
             // 
             // fnametxt
             // 
@@ -462,6 +401,8 @@
             this.unametxt.TabIndex = 9;
             this.unametxt.Text = "Username";
             this.unametxt.Visible = false;
+            this.unametxt.Enter += new System.EventHandler(this.unametxt_Enter);
+            this.unametxt.Leave += new System.EventHandler(this.unametxt_Leave);
             // 
             // lnametxt
             // 
@@ -673,7 +614,6 @@
             // bunifuElipse10
             // 
             this.bunifuElipse10.ElipseRadius = 40;
-            this.bunifuElipse10.TargetControl = this.passconfirmtxt;
             // 
             // bgWorkerAdd
             // 
@@ -702,8 +642,6 @@
             this.Text = "AddPeople";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).EndInit();
             this.checkpanel.ResumeLayout(false);
@@ -720,8 +658,6 @@
         private System.Windows.Forms.Label labelName;
         private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox show_pass_btn2;
-        private System.Windows.Forms.PictureBox hide_pass_btn2;
         private System.Windows.Forms.PictureBox show_pass_btn;
         private System.Windows.Forms.PictureBox hide_pass_btn;
         private System.Windows.Forms.Panel checkpanel;
@@ -731,7 +667,6 @@
         private System.Windows.Forms.RadioButton MaleRB;
         private System.Windows.Forms.RadioButton FemaleRB;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox passtxt;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox passconfirmtxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox fnametxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox unametxt;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox lnametxt;
