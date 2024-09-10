@@ -215,18 +215,30 @@ namespace AdminSystem.Forms
         {
             if (passtxt.Text == "Password")
             {
-                passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
-                passtxt.Text = String.Empty;
+                if(passtxt.Text == "Password")
+                {
+                    passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                    passtxt.Text = String.Empty;
+                }
+                passtxt.PasswordChar = '*';
             }
+            hide_pass_btn.Visible = true;
         }
 
         private void passtxt_Leave(object sender, EventArgs e)
         {
             if (passtxt.Text == "")
             {
-                passtxt.Text = "Password";
+                passtxt.PasswordChar = '\0';
                 passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                passtxt.Text = "Password";
             }
+            if(passtxt.Text != "Password")
+            {
+                passtxt.PasswordChar = '*';
+            }
+            show_pass_btn.Visible = false;
+            hide_pass_btn.Visible= false;
         }
 
         private void LessonCostTxt_Enter(object sender, EventArgs e)
