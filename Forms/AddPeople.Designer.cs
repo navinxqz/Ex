@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddPeople));
             this.labelName = new System.Windows.Forms.Label();
-            this.cuiPictureBox1 = new CuoreUI.Controls.cuiPictureBox();
+            this.ProfilePic = new CuoreUI.Controls.cuiPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.DateSelect = new System.Windows.Forms.DateTimePicker();
@@ -83,20 +83,21 @@
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Add Person";
             // 
-            // cuiPictureBox1
+            // ProfilePic
             // 
-            this.cuiPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cuiPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.cuiPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cuiPictureBox1.Content = ((System.Drawing.Image)(resources.GetObject("cuiPictureBox1.Content")));
-            this.cuiPictureBox1.CornerRadius = 0;
-            this.cuiPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cuiPictureBox1.ImageTint = System.Drawing.Color.White;
-            this.cuiPictureBox1.Location = new System.Drawing.Point(55, 115);
-            this.cuiPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.cuiPictureBox1.Name = "cuiPictureBox1";
-            this.cuiPictureBox1.Size = new System.Drawing.Size(287, 287);
-            this.cuiPictureBox1.TabIndex = 1;
+            this.ProfilePic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ProfilePic.BackColor = System.Drawing.Color.Transparent;
+            this.ProfilePic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ProfilePic.Content = ((System.Drawing.Image)(resources.GetObject("ProfilePic.Content")));
+            this.ProfilePic.CornerRadius = 100;
+            this.ProfilePic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProfilePic.ImageTint = System.Drawing.Color.White;
+            this.ProfilePic.Location = new System.Drawing.Point(55, 115);
+            this.ProfilePic.Margin = new System.Windows.Forms.Padding(2);
+            this.ProfilePic.Name = "ProfilePic";
+            this.ProfilePic.Size = new System.Drawing.Size(287, 287);
+            this.ProfilePic.TabIndex = 1;
+            this.ProfilePic.Click += new System.EventHandler(this.ProfilePic_Click);
             // 
             // panel1
             // 
@@ -633,7 +634,7 @@
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.cuiPictureBox1);
+            this.Controls.Add(this.ProfilePic);
             this.Controls.Add(this.labelName);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -656,7 +657,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelName;
-        private CuoreUI.Controls.cuiPictureBox cuiPictureBox1;
+        private CuoreUI.Controls.cuiPictureBox ProfilePic;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox show_pass_btn;
         private System.Windows.Forms.PictureBox hide_pass_btn;

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using AdminSystem.Classes;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using ComponentFactory.Krypton.Toolkit;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AdminSystem.Forms
 {
@@ -247,6 +249,31 @@ namespace AdminSystem.Forms
             {
                 LessonCostTxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
                 LessonCostTxt.Text = String.Empty;
+            }
+        }
+
+        private void ProfilePic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog of = new OpenFileDialog();
+            of.Title = "Choose an image";
+            of.Filter = "Images|*.jpg;*.png;*.bmp";
+            of.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+
+            if (of.ShowDialog() == DialogResult.OK)
+            {
+                if (StaticClass.imgManager.GetFileSize(of.FileName) > 1000)
+                {
+                    //labelimageError.Text = "This image is Big in Size";
+                    return;
+                }
+                img = StaticClass.imgManager.CompressImg(Image.FromFile(of.FileName));
+                if (img == null)
+                {
+                    //labelimageError.Text = "This image is Big in Size";
+                    return;
+                }
+                ProfilePic.Image = img;
+                imgbase = StaticClass.imgManager.ImgSizeCompresser(Image.FromFile(of.FileName));
             }
         }
 
