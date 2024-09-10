@@ -174,19 +174,40 @@ namespace AdminSystem.Forms
 
         private void unametxt_Enter(object sender, EventArgs e)
         {
-            if (unametxt.Text == "Username")
+            if (EmpAdd)
             {
-                unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
-                unametxt.Text = String.Empty;
+                if (unametxt.Text == "Username")
+                {
+                    unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                    unametxt.Text = String.Empty;
+                }
+            }
+            else if (TrainerAdd)
+            {
+                if (unametxt.Text == "Specialized")
+                {
+                    unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                    unametxt.Text = string.Empty;
+                }
             }
         }
 
         private void unametxt_Leave(object sender, EventArgs e)
         {
-            if (unametxt.Text == "")
+            if (EmpAdd)
             {
-                unametxt.Text = "Username";
-                unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                if (unametxt.Text == "")
+                {
+                    unametxt.Text = "Username";
+                    unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                }
+            }else if (TrainerAdd)
+            {
+                if(unametxt.Text == "")
+                {
+                    unametxt.Text = "Specialized";
+                    unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                }
             }
         }
 
