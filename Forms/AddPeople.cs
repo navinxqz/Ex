@@ -10,7 +10,6 @@ using AdminSystem.Classes;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ComponentFactory.Krypton.Toolkit;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace AdminSystem.Forms
 {
@@ -52,14 +51,16 @@ namespace AdminSystem.Forms
                 checkpanel.Visible = true;
                 unametxt.Text = "Username";
                 labelName.Text = "Add Employee";
-            }else if(TrainerAdd)
+            }
+            else if(TrainerAdd)
             {
                 this.TrainerAdd = true;
                 trainer = new Trainer();
                 LessonCostTxt.Visible = true;
                 unametxt.Text = "Specialized";
                 labelName.Text = "Add Trainer";
-            }empbase2 = eb;
+            }
+            empbase2 = eb; //EmployeeBase assign after checks
         }
 
         private void GetGender()
@@ -272,7 +273,7 @@ namespace AdminSystem.Forms
                     //labelimageError.Text = "This image is Big in Size";
                     return;
                 }
-                ProfilePic.Image = img;
+                ProfilePic.Content = img;
                 imgbase = StaticClass.imgManager.ImgSizeCompresser(Image.FromFile(of.FileName));
             }
         }
@@ -285,7 +286,19 @@ namespace AdminSystem.Forms
                 LessonCostTxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
             }
         }
-       
+
+        private void ProfilePic_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hide_pass_btn_Click(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = false;
+            show_pass_btn.Visible = true;
+            passtxt.PasswordChar = '\0';
+        }
+
         private void DateSelect_ValueChanged(object sender, EventArgs e)
         {
             dobtxt.ForeColor = Color.FromArgb(70, 71, 78);
@@ -296,6 +309,7 @@ namespace AdminSystem.Forms
         {
 
         }
+
 
         private void bgWorkerAdd_DoWork(object sender, DoWorkEventArgs e)
         {
