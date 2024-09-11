@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AdminSystem.Classes;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ComponentFactory.Krypton.Toolkit;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using AdminSystem.DataAccess;
 
 namespace AdminSystem.Forms
 {
@@ -428,6 +424,54 @@ namespace AdminSystem.Forms
             faddingTimer.Start();
         }
 
+        private void faddingTimer2_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity > 0.0)
+            {
+                this.Opacity -= 0.05;
+            }
+            else
+            {
+                faddingTimer2.Stop();
+                this.Close();
+            }
+        }
+
+        private void cancelbtn_Click(object sender, EventArgs e)
+        {
+            faddingTimer2.Start();
+        }
+
+        private void LessonCostTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (fnametxt.Text != "First Name" && lnametxt.Text != "Second Name" && mailtxt.Text != "Email" && dobtxt.Text != "Date of Birth" && (MaleRB.Checked || FemaleRB.Checked))
+            {
+                if (EmpAdd)
+                {
+                    if (unametxt.Text != "Username" && passtxt.Text != "Password" && confirmpstxt.Text != "Confirm Password" && (AdminRB.Checked || UserRB.Checked) && pass)
+                    {
+                        btnAdd.Enabled = true;
+                    }
+                    else
+                    {
+                        btnAdd.Enabled = false;
+                    }
+                }
+                else if (MemberAdd)
+                {
+                    btnAdd.Enabled = true;
+                }
+                else if (TrainerAdd)
+                {
+                    if (unametxt.Text != "Specialization" && LessonCostTxt.Text != "Private Price")
+                    { 
+                        btnAdd.Enabled = true; 
+                    }
+                    else { btnAdd.Enabled = false; }
+                }
+            }
+        }
+
         private void hide_pass_btn_Click(object sender, EventArgs e)
         {
             hide_pass_btn.Visible = false;
@@ -451,20 +495,37 @@ namespace AdminSystem.Forms
 
         private void bgWorkerAdd_DoWork(object sender, DoWorkEventArgs e)
         {
-            /*if (E)
+            if (EmpAdd)
             {
-                if(unametxt.Text == "USERNAME")
-                {
-                    unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
-                    unametxt.Text = string.Empty;
-                }
-            }else if (T)
-            {
-                if(unametxt.Text == "")
-                {
+                //EmployeeEmailModel emailModel = new EmployeeEmailModel();
+                empbase1 = StaticClass.empQuery.AddEmp(empbase1);
+                //emailModel.EmployeeModel1 = employee;
+                //mailModel.EmployeeModel = employeemodel;
+                //emailModel.Subject = "Welcome " + employee.Name;
+                //emailModel.Body = emailModel.createEmployeeEmail();
+                //StaticClass.emailService.AddEmployeeEmail(emailModel);
 
+                if (empbase1 != null){ Status = true; }
+                else { Status = false; }
+            }
+            else if (TrainerAdd)
+            {
+                //TrainerEmailModel trainerEmailModel = new TrainerEmailModel();
+                trainer = StaticClass.tQuery.AddTrainer(trainer);
+                //trainerEmailModel.EmployeeModel = employeemodel;
+                //trainerEmailModel.TrainerModel = trainer;
+                //trainerEmailModel.Subject = "Welcome " + trainer.Name;
+                //trainerEmailModel.Body = trainerEmailModel.createTrainerEmail();
+                //Global.emailService.AddTrainerEmail(trainerEmailModel);
+                if (trainer != null)
+                {
+                    Status = true;
                 }
-            }*/
+                else
+                {
+                    Status = false;
+                }
+            }
         }
     }
 }

@@ -69,6 +69,7 @@
             this.confirmpstxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.faddingTimer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
@@ -162,6 +163,7 @@
             this.LessonCostTxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
             this.LessonCostTxt.TabIndex = 49;
             this.LessonCostTxt.Text = "Lesson Cost";
+            this.LessonCostTxt.TextChanged += new System.EventHandler(this.LessonCostTxt_TextChanged);
             this.LessonCostTxt.Enter += new System.EventHandler(this.LessonCostTxt_Enter);
             this.LessonCostTxt.Leave += new System.EventHandler(this.LessonCostTxt_Leave);
             // 
@@ -583,6 +585,7 @@
             this.cancelbtn.Size = new System.Drawing.Size(147, 54);
             this.cancelbtn.TabIndex = 42;
             this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // bunifuElipse1
             // 
@@ -717,6 +720,11 @@
             // 
             this.faddingTimer.Interval = 10;
             // 
+            // faddingTimer2
+            // 
+            this.faddingTimer2.Interval = 7;
+            this.faddingTimer2.Tick += new System.EventHandler(this.faddingTimer2_Tick);
+            // 
             // AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -790,5 +798,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox confirmpstxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse12;
         private System.Windows.Forms.Timer faddingTimer;
+        private System.Windows.Forms.Timer faddingTimer2;
     }
 }
