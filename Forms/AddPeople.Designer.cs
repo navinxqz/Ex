@@ -231,6 +231,7 @@
             this.AdminRB.TabStop = true;
             this.AdminRB.Text = "Admin";
             this.AdminRB.UseVisualStyleBackColor = true;
+            this.AdminRB.CheckedChanged += new System.EventHandler(this.AdminRB_CheckedChanged);
             // 
             // UserRB
             // 
@@ -243,6 +244,7 @@
             this.UserRB.TabStop = true;
             this.UserRB.Text = "User";
             this.UserRB.UseVisualStyleBackColor = true;
+            this.UserRB.CheckedChanged += new System.EventHandler(this.UserRB_CheckedChanged);
             // 
             // phntxt
             // 
@@ -302,6 +304,7 @@
             this.MaleRB.TabStop = true;
             this.MaleRB.Text = "Male";
             this.MaleRB.UseVisualStyleBackColor = true;
+            this.MaleRB.CheckedChanged += new System.EventHandler(this.MaleRB_CheckedChanged);
             // 
             // FemaleRB
             // 
@@ -314,6 +317,7 @@
             this.FemaleRB.TabStop = true;
             this.FemaleRB.Text = "Female";
             this.FemaleRB.UseVisualStyleBackColor = true;
+            this.FemaleRB.CheckedChanged += new System.EventHandler(this.FemaleRB_CheckedChanged);
             // 
             // passtxt
             // 

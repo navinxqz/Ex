@@ -10,6 +10,7 @@ using AdminSystem.Classes;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using ComponentFactory.Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace AdminSystem.Forms
 {
@@ -348,6 +349,34 @@ namespace AdminSystem.Forms
             }
             showbtn.Visible = false;
             hidebtn2.Visible = false;
+        }
+
+        private void AdminRB_CheckedChanged(object sender, EventArgs e)
+        {
+            AdminRB.ForeColor = Color.FromArgb(70, 71, 78);
+            UserRB.ForeColor = Color.FromArgb(70, 71, 78);
+            GetRole();
+        }
+
+        private void UserRB_CheckedChanged(object sender, EventArgs e)
+        {
+            AdminRB.ForeColor = Color.FromArgb(70, 71, 78);
+            UserRB.ForeColor = Color.FromArgb(70, 71, 78);
+            GetRole();
+        }
+
+        private void MaleRB_CheckedChanged(object sender, EventArgs e)
+        {
+            MaleRB.ForeColor = Color.FromArgb(70, 71, 78);
+            FemaleRB.ForeColor = Color.FromArgb(70, 71, 78);
+            GetGender();
+        }
+
+        private void FemaleRB_CheckedChanged(object sender, EventArgs e)
+        {
+            MaleRB.ForeColor = Color.FromArgb(70, 71, 78);
+            FemaleRB.ForeColor = Color.FromArgb(70, 71, 78);
+            GetGender();
         }
 
         private void hide_pass_btn_Click(object sender, EventArgs e)
