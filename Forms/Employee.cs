@@ -49,7 +49,7 @@ namespace AdminSystem.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddPeople ppl = new AddPeople(emp, E: true);
+            AddPeople ppl = new AddPeople(emp, EmpAdd: true);
             faddingTimer.Start();
             ppl.ShowDialog();
             faddingTime2.Start();

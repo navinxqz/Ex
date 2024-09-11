@@ -239,6 +239,11 @@ namespace AdminSystem.Forms
             if(passtxt.Text != "Password")
             {
                 passtxt.PasswordChar = '*';
+                if(confirmpstxt.Text != passtxt.Text && confirmpstxt.Text != "Confirm Password")
+                {
+                    confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                    pass = false;
+                }
             }
             show_pass_btn.Visible = false;
             hide_pass_btn.Visible= false;
