@@ -267,14 +267,14 @@ namespace AdminSystem.Forms
                     //labelimageError.Text = "This image is Big in Size";
                     return;
                 }
-                img = StaticClass.imgManager.CompressImg(Image.FromFile(of.FileName));
+                img = StaticClass.imgManager.ImgSizeCompresser(Image.FromFile(of.FileName));
                 if (img == null)
                 {
                     //labelimageError.Text = "This image is Big in Size";
                     return;
                 }
                 ProfilePic.Content = img;
-                imgbase = StaticClass.imgManager.ImgSizeCompresser(Image.FromFile(of.FileName));
+                imgbase = StaticClass.imgManager.ConvertImgToimgbase(Image.FromFile(of.FileName));
             }
         }
 
