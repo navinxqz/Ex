@@ -304,6 +304,52 @@ namespace AdminSystem.Forms
             confirmpstxt.PasswordChar = '*';
         }
 
+        private void hidebtn2_Click(object sender, EventArgs e)
+        {
+            hidebtn2.Visible = false;
+            showbtn.Visible = true;
+            passtxt.PasswordChar = '\0';
+        }
+
+        private void confirmpstxt_Enter(object sender, EventArgs e)
+        {
+            if(confirmpstxt.Text == "Confirm Password")
+            {
+                if(confirmpstxt.Text == "Confirm Password")
+                {
+                    confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                    confirmpstxt.Text = string.Empty;
+                }
+                confirmpstxt.PasswordChar = '*';
+            }hidebtn2.Visible = true;
+        }
+
+        private void confirmpstxt_Leave(object sender, EventArgs e)
+        {
+            if (confirmpstxt.Text == "")
+            {
+                confirmpstxt.PasswordChar = '\0';
+                confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                confirmpstxt.Text = "Confirm Password";
+            }
+            if (confirmpstxt.Text != "Confirm Password")
+            {
+                confirmpstxt.PasswordChar = '*';
+                if (confirmpstxt.Text != passtxt.Text && passtxt.Text != "Password")
+                {
+                    confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                    pass = false;
+                }
+                else
+                {
+                    confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                    pass = true;
+                }
+            }
+            showbtn.Visible = false;
+            hidebtn2.Visible = false;
+        }
+
         private void hide_pass_btn_Click(object sender, EventArgs e)
         {
             hide_pass_btn.Visible = false;

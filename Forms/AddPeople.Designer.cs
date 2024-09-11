@@ -666,6 +666,7 @@
             this.hidebtn2.TabIndex = 52;
             this.hidebtn2.TabStop = false;
             this.hidebtn2.Visible = false;
+            this.hidebtn2.Click += new System.EventHandler(this.hidebtn2_Click);
             // 
             // confirmpstxt
             // 
@@ -698,6 +699,8 @@
             this.confirmpstxt.TabIndex = 50;
             this.confirmpstxt.Text = "Confirm Password";
             this.confirmpstxt.Visible = false;
+            this.confirmpstxt.Enter += new System.EventHandler(this.confirmpstxt_Enter);
+            this.confirmpstxt.Leave += new System.EventHandler(this.confirmpstxt_Leave);
             // 
             // bunifuElipse12
             // 
