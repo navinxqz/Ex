@@ -103,7 +103,25 @@ namespace AdminSystem.Forms
                     empbase1.Pic = img;
                     empbase1.ImgBase = imgbase;
                 }
-            }catch (Exception ex) { }
+                else if (MemberAdd) { }
+
+                else if (TrainerAdd)
+                {
+                    trainer.FirstName = fnametxt.Text;
+                    trainer.LastName = lnametxt.Text;
+                    trainer.Birthday = DateSelect.Value;
+                    trainer.Gender = Gender;
+                    trainer.Email = mailtxt.Text;
+                    trainer.Phone = phntxt.Text == "Phone" ? null : phntxt.Text;
+                    trainer.Specialized = unametxt.Text;
+                    trainer.Status = true;
+                    trainer.Pic = img;
+                    trainer.ImgBase = imgbase;
+                    trainer.LessonPrice = Convert.ToInt32(LessonCostTxt.Text);
+                }
+                bgWorkerAdd.RunWorkerAsync();
+            }
+            catch (Exception ex) { Console.WriteLine($"Error! {ex.Message}"); }
         }
 
         private void fnametxt_TextChanged(object sender, EventArgs e)
@@ -394,6 +412,11 @@ namespace AdminSystem.Forms
             MaleRB.ForeColor = Color.FromArgb(70, 71, 78);
             FemaleRB.ForeColor = Color.FromArgb(70, 71, 78);
             GetGender();
+        }
+
+        private void bgWorkerAdd_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
         }
 
         private void hide_pass_btn_Click(object sender, EventArgs e)

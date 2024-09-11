@@ -636,6 +636,7 @@
             // bgWorkerAdd
             // 
             this.bgWorkerAdd.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerAdd_DoWork);
+            this.bgWorkerAdd.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerAdd_RunWorkerCompleted);
             // 
             // bunifuElipse11
             // 
