@@ -86,7 +86,24 @@ namespace AdminSystem.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (EmpAdd)
+                {
+                    empbase1.FirstName = fnametxt.Text;
+                    empbase1.LastName = lnametxt.Text;
+                    empbase1.Birthday = DateSelect.Value;
+                    empbase1.Gender = Gender;
+                    empbase1.Email = mailtxt.Text;
+                    empbase1.Phone = phntxt.Text == "Phone" ? null : phntxt.Text;
+                    empbase1.Username = unametxt.Text;
+                    empbase1.Admin = Role;
+                    empbase1.Status = true;
+                    empbase1.Password = passtxt.Text;
+                    empbase1.Pic = img;
+                    empbase1.ImgBase = imgbase;
+                }
+            }catch (Exception ex) { }
         }
 
         private void fnametxt_TextChanged(object sender, EventArgs e)
