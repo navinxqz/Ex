@@ -297,6 +297,13 @@ namespace AdminSystem.Forms
 
         }
 
+        private void showbtn_Click(object sender, EventArgs e)
+        {
+            hidebtn2.Visible = true;
+            showbtn.Visible = false;
+            confirmpstxt.PasswordChar = '*';
+        }
+
         private void hide_pass_btn_Click(object sender, EventArgs e)
         {
             hide_pass_btn.Visible = false;
@@ -312,7 +319,9 @@ namespace AdminSystem.Forms
 
         private void show_pass_btn_Click(object sender, EventArgs e)
         {
-
+            hide_pass_btn.Visible = true;
+            show_pass_btn.Visible = false;
+            passtxt.PasswordChar = '*';
         }
 
 

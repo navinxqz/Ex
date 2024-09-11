@@ -64,8 +64,8 @@
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
             this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.showbtn = new System.Windows.Forms.PictureBox();
+            this.hidebtn2 = new System.Windows.Forms.PictureBox();
             this.confirmpstxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
@@ -73,8 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
             this.checkpanel.SuspendLayout();
             this.genderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -109,8 +109,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.showbtn);
+            this.panel1.Controls.Add(this.hidebtn2);
             this.panel1.Controls.Add(this.confirmpstxt);
             this.panel1.Controls.Add(this.LessonCostTxt);
             this.panel1.Controls.Add(this.DateSelect);
@@ -195,6 +195,7 @@
             // 
             this.hide_pass_btn.BackColor = System.Drawing.Color.Transparent;
             this.hide_pass_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hide_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("hide_pass_btn.Image")));
             this.hide_pass_btn.Location = new System.Drawing.Point(275, 314);
             this.hide_pass_btn.Margin = new System.Windows.Forms.Padding(2);
             this.hide_pass_btn.Name = "hide_pass_btn";
@@ -637,32 +638,34 @@
             this.bunifuElipse11.ElipseRadius = 40;
             this.bunifuElipse11.TargetControl = this.LessonCostTxt;
             // 
-            // pictureBox1
+            // showbtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(275, 377);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.showbtn.BackColor = System.Drawing.Color.Transparent;
+            this.showbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showbtn.Image = ((System.Drawing.Image)(resources.GetObject("showbtn.Image")));
+            this.showbtn.Location = new System.Drawing.Point(275, 377);
+            this.showbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.showbtn.Name = "showbtn";
+            this.showbtn.Size = new System.Drawing.Size(45, 28);
+            this.showbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.showbtn.TabIndex = 51;
+            this.showbtn.TabStop = false;
+            this.showbtn.Visible = false;
+            this.showbtn.Click += new System.EventHandler(this.showbtn_Click);
             // 
-            // pictureBox2
+            // hidebtn2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(275, 377);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 52;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.hidebtn2.BackColor = System.Drawing.Color.Transparent;
+            this.hidebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hidebtn2.Image = ((System.Drawing.Image)(resources.GetObject("hidebtn2.Image")));
+            this.hidebtn2.Location = new System.Drawing.Point(275, 377);
+            this.hidebtn2.Margin = new System.Windows.Forms.Padding(2);
+            this.hidebtn2.Name = "hidebtn2";
+            this.hidebtn2.Size = new System.Drawing.Size(45, 28);
+            this.hidebtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hidebtn2.TabIndex = 52;
+            this.hidebtn2.TabStop = false;
+            this.hidebtn2.Visible = false;
             // 
             // confirmpstxt
             // 
@@ -725,8 +728,8 @@
             this.checkpanel.PerformLayout();
             this.genderPanel.ResumeLayout(false);
             this.genderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,8 +771,8 @@
         private System.Windows.Forms.DateTimePicker DateSelect;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox LessonCostTxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse11;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox showbtn;
+        private System.Windows.Forms.PictureBox hidebtn2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox confirmpstxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse12;
     }
