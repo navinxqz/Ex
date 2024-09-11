@@ -416,7 +416,16 @@ namespace AdminSystem.Forms
 
         private void bgWorkerAdd_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            if (Status)
+            {
+                this.Close();
+            }
+        }
 
+        private void AddPeople_Load(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            faddingTimer.Start();
         }
 
         private void hide_pass_btn_Click(object sender, EventArgs e)

@@ -68,6 +68,7 @@
             this.hidebtn2 = new System.Windows.Forms.PictureBox();
             this.confirmpstxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
@@ -712,6 +713,10 @@
             this.bunifuElipse12.ElipseRadius = 40;
             this.bunifuElipse12.TargetControl = this.confirmpstxt;
             // 
+            // faddingTimer
+            // 
+            this.faddingTimer.Interval = 10;
+            // 
             // AddPeople
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -728,6 +733,7 @@
             this.Name = "AddPeople";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPeople";
+            this.Load += new System.EventHandler(this.AddPeople_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).EndInit();
@@ -783,5 +789,6 @@
         private System.Windows.Forms.PictureBox hidebtn2;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox confirmpstxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse12;
+        private System.Windows.Forms.Timer faddingTimer;
     }
 }
