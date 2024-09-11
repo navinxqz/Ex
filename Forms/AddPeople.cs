@@ -209,40 +209,29 @@ namespace AdminSystem.Forms
 
         private void unametxt_Enter(object sender, EventArgs e)
         {
-            if (EmpAdd)
+            if (EmpAdd && unametxt.Text == "Username")
             {
-                if (unametxt.Text == "Username")
-                {
-                    unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
-                    unametxt.Text = String.Empty;
-                }
+                unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                unametxt.Text = String.Empty;
             }
-            else if (TrainerAdd)
+            else if (TrainerAdd && unametxt.Text == "Specialized")
             {
-                if (unametxt.Text == "Specialized")
-                {
-                    unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
-                    unametxt.Text = string.Empty;
-                }
+                 unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                 unametxt.Text = string.Empty;
             }
         }
 
         private void unametxt_Leave(object sender, EventArgs e)
         {
-            if (EmpAdd)
+            if (EmpAdd && string.IsNullOrEmpty(unametxt.Text))
             {
-                if (unametxt.Text == "")
-                {
-                    unametxt.Text = "Username";
-                    unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
-                }
-            }else if (TrainerAdd)
+                 unametxt.Text = "Username";
+                 unametxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+            }
+            else if (TrainerAdd && string.IsNullOrEmpty(unametxt.Text))
             {
-                if(unametxt.Text == "")
-                {
-                    unametxt.Text = "Specialized";
-                    unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
-                }
+                 unametxt.Text = "Specialized";
+                 unametxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
             }
         }
 
@@ -250,11 +239,8 @@ namespace AdminSystem.Forms
         {
             if (passtxt.Text == "Password")
             {
-                if(passtxt.Text == "Password")
-                {
-                    passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
-                    passtxt.Text = String.Empty;
-                }
+                passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                passtxt.Text = String.Empty;
                 passtxt.PasswordChar = '*';
             }
             hide_pass_btn.Visible = true;
@@ -268,7 +254,7 @@ namespace AdminSystem.Forms
                 passtxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
                 passtxt.Text = "Password";
             }
-            if(passtxt.Text != "Password")
+            else if(passtxt.Text != "Password")
             {
                 passtxt.PasswordChar = '*';
                 if(confirmpstxt.Text != passtxt.Text && confirmpstxt.Text != "Confirm Password")
@@ -294,7 +280,7 @@ namespace AdminSystem.Forms
         {
             OpenFileDialog of = new OpenFileDialog();
             of.Title = "Choose an image";
-            of.Filter = "Images|*.jpg;*.png;*.bmp";
+            of.Filter = "Image Files(*.jpeg;*.jpg;*.png)|*.jpeg;*.jpg;*.png";
             of.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
 
             if (of.ShowDialog() == DialogResult.OK)
@@ -311,8 +297,21 @@ namespace AdminSystem.Forms
                     return;
                 }
                 ProfilePic.Content = img;
-                imgbase = StaticClass.imgManager.ConvertImgToimgbase(Image.FromFile(of.FileName));
+                imgbase = StaticClass.imgManager.ConvertImgToimgbase(Image.FromFile(of.FileName));  
             }
+            /*using (OpenFileDialog of = new OpenFileDialog())
+            {
+                of.Title = "Choose an image";
+                of.Filter = "Image Files(*.jpeg;*.jpg;*.png)|*.jpeg;*.jpg;*.png";
+
+                if (of.ShowDialog() == DialogResult.OK)
+                {
+                    img = new Bitmap(of.FileName);
+                    imgbase = ImgManager.ConvertToBase64(img);
+                    ProfilePic.Content = img;
+                    btnAdd.Enabled = true;
+                }
+            }   */
         }
 
         private void LessonCostTxt_Leave(object sender, EventArgs e)
@@ -322,11 +321,6 @@ namespace AdminSystem.Forms
                 LessonCostTxt.Text = "Lesson Cost";
                 LessonCostTxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
             }
-        }
-
-        private void ProfilePic_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void showbtn_Click(object sender, EventArgs e)
@@ -420,7 +414,7 @@ namespace AdminSystem.Forms
 
         private void AddPeople_Load(object sender, EventArgs e)
         {
-            this.Opacity = 0;
+            //this.Opacity = 0;
             faddingTimer.Start();
         }
 
@@ -494,7 +488,7 @@ namespace AdminSystem.Forms
 
 
         private void bgWorkerAdd_DoWork(object sender, DoWorkEventArgs e)
-        {
+        { try {
             if (EmpAdd)
             {
                 //EmployeeEmailModel emailModel = new EmployeeEmailModel();
@@ -505,7 +499,7 @@ namespace AdminSystem.Forms
                 //emailModel.Body = emailModel.createEmployeeEmail();
                 //StaticClass.emailService.AddEmployeeEmail(emailModel);
 
-                if (empbase1 != null){ Status = true; }
+                if (empbase1 != null) { Status = true; }
                 else { Status = false; }
             }
             else if (TrainerAdd)
@@ -525,6 +519,9 @@ namespace AdminSystem.Forms
                 {
                     Status = false;
                 }
+            }
+        }catch (Exception ex) {
+                MessageBox.Show($"Error occurred while adding data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

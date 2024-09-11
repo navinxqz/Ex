@@ -33,6 +33,9 @@
             this.labelName = new System.Windows.Forms.Label();
             this.ProfilePic = new CuoreUI.Controls.cuiPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.showbtn = new System.Windows.Forms.PictureBox();
+            this.hidebtn2 = new System.Windows.Forms.PictureBox();
+            this.confirmpstxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.LessonCostTxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.DateSelect = new System.Windows.Forms.DateTimePicker();
             this.show_pass_btn = new System.Windows.Forms.PictureBox();
@@ -64,19 +67,16 @@
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bgWorkerAdd = new System.ComponentModel.BackgroundWorker();
             this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.showbtn = new System.Windows.Forms.PictureBox();
-            this.hidebtn2 = new System.Windows.Forms.PictureBox();
-            this.confirmpstxt = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.faddingTimer = new System.Windows.Forms.Timer(this.components);
             this.faddingTimer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).BeginInit();
             this.checkpanel.SuspendLayout();
             this.genderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -105,7 +105,6 @@
             this.ProfilePic.Name = "ProfilePic";
             this.ProfilePic.Size = new System.Drawing.Size(287, 287);
             this.ProfilePic.TabIndex = 1;
-            this.ProfilePic.Load += new System.EventHandler(this.ProfilePic_Load);
             this.ProfilePic.Click += new System.EventHandler(this.ProfilePic_Click);
             // 
             // panel1
@@ -132,6 +131,70 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 443);
             this.panel1.TabIndex = 40;
+            // 
+            // showbtn
+            // 
+            this.showbtn.BackColor = System.Drawing.Color.Transparent;
+            this.showbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showbtn.Image = ((System.Drawing.Image)(resources.GetObject("showbtn.Image")));
+            this.showbtn.Location = new System.Drawing.Point(275, 377);
+            this.showbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.showbtn.Name = "showbtn";
+            this.showbtn.Size = new System.Drawing.Size(45, 28);
+            this.showbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.showbtn.TabIndex = 51;
+            this.showbtn.TabStop = false;
+            this.showbtn.Visible = false;
+            this.showbtn.Click += new System.EventHandler(this.showbtn_Click);
+            // 
+            // hidebtn2
+            // 
+            this.hidebtn2.BackColor = System.Drawing.Color.Transparent;
+            this.hidebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hidebtn2.Image = ((System.Drawing.Image)(resources.GetObject("hidebtn2.Image")));
+            this.hidebtn2.Location = new System.Drawing.Point(275, 377);
+            this.hidebtn2.Margin = new System.Windows.Forms.Padding(2);
+            this.hidebtn2.Name = "hidebtn2";
+            this.hidebtn2.Size = new System.Drawing.Size(45, 28);
+            this.hidebtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.hidebtn2.TabIndex = 52;
+            this.hidebtn2.TabStop = false;
+            this.hidebtn2.Visible = false;
+            this.hidebtn2.Click += new System.EventHandler(this.hidebtn2_Click);
+            // 
+            // confirmpstxt
+            // 
+            this.confirmpstxt.Location = new System.Drawing.Point(28, 366);
+            this.confirmpstxt.Margin = new System.Windows.Forms.Padding(2);
+            this.confirmpstxt.Name = "confirmpstxt";
+            this.confirmpstxt.Size = new System.Drawing.Size(307, 54);
+            this.confirmpstxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.confirmpstxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.confirmpstxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.confirmpstxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.confirmpstxt.StateActive.Border.Width = -2;
+            this.confirmpstxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.confirmpstxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmpstxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.confirmpstxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.confirmpstxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.confirmpstxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.confirmpstxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.confirmpstxt.StateDisabled.Border.Width = -2;
+            this.confirmpstxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.confirmpstxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.confirmpstxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.confirmpstxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.confirmpstxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
+            this.confirmpstxt.TabIndex = 50;
+            this.confirmpstxt.Text = "Confirm Password";
+            this.confirmpstxt.Visible = false;
+            this.confirmpstxt.Enter += new System.EventHandler(this.confirmpstxt_Enter);
+            this.confirmpstxt.Leave += new System.EventHandler(this.confirmpstxt_Leave);
             // 
             // LessonCostTxt
             // 
@@ -647,70 +710,6 @@
             this.bunifuElipse11.ElipseRadius = 40;
             this.bunifuElipse11.TargetControl = this.LessonCostTxt;
             // 
-            // showbtn
-            // 
-            this.showbtn.BackColor = System.Drawing.Color.Transparent;
-            this.showbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.showbtn.Image = ((System.Drawing.Image)(resources.GetObject("showbtn.Image")));
-            this.showbtn.Location = new System.Drawing.Point(275, 377);
-            this.showbtn.Margin = new System.Windows.Forms.Padding(2);
-            this.showbtn.Name = "showbtn";
-            this.showbtn.Size = new System.Drawing.Size(45, 28);
-            this.showbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.showbtn.TabIndex = 51;
-            this.showbtn.TabStop = false;
-            this.showbtn.Visible = false;
-            this.showbtn.Click += new System.EventHandler(this.showbtn_Click);
-            // 
-            // hidebtn2
-            // 
-            this.hidebtn2.BackColor = System.Drawing.Color.Transparent;
-            this.hidebtn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hidebtn2.Image = ((System.Drawing.Image)(resources.GetObject("hidebtn2.Image")));
-            this.hidebtn2.Location = new System.Drawing.Point(275, 377);
-            this.hidebtn2.Margin = new System.Windows.Forms.Padding(2);
-            this.hidebtn2.Name = "hidebtn2";
-            this.hidebtn2.Size = new System.Drawing.Size(45, 28);
-            this.hidebtn2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.hidebtn2.TabIndex = 52;
-            this.hidebtn2.TabStop = false;
-            this.hidebtn2.Visible = false;
-            this.hidebtn2.Click += new System.EventHandler(this.hidebtn2_Click);
-            // 
-            // confirmpstxt
-            // 
-            this.confirmpstxt.Location = new System.Drawing.Point(28, 366);
-            this.confirmpstxt.Margin = new System.Windows.Forms.Padding(2);
-            this.confirmpstxt.Name = "confirmpstxt";
-            this.confirmpstxt.Size = new System.Drawing.Size(307, 54);
-            this.confirmpstxt.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.confirmpstxt.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.confirmpstxt.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.confirmpstxt.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.confirmpstxt.StateActive.Border.Width = -2;
-            this.confirmpstxt.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.confirmpstxt.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmpstxt.StateActive.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.confirmpstxt.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.confirmpstxt.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.confirmpstxt.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.confirmpstxt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.confirmpstxt.StateDisabled.Border.Width = -2;
-            this.confirmpstxt.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.confirmpstxt.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.confirmpstxt.StateDisabled.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.confirmpstxt.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.confirmpstxt.StateNormal.Content.Padding = new System.Windows.Forms.Padding(15, 12, -1, 13);
-            this.confirmpstxt.TabIndex = 50;
-            this.confirmpstxt.Text = "Confirm Password";
-            this.confirmpstxt.Visible = false;
-            this.confirmpstxt.Enter += new System.EventHandler(this.confirmpstxt_Enter);
-            this.confirmpstxt.Leave += new System.EventHandler(this.confirmpstxt_Leave);
-            // 
             // bunifuElipse12
             // 
             this.bunifuElipse12.ElipseRadius = 40;
@@ -744,14 +743,14 @@
             this.Load += new System.EventHandler(this.AddPeople_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hide_pass_btn)).EndInit();
             this.checkpanel.ResumeLayout(false);
             this.checkpanel.PerformLayout();
             this.genderPanel.ResumeLayout(false);
             this.genderPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showbtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidebtn2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
