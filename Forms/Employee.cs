@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,14 +65,14 @@ namespace AdminSystem.Forms
 
         private void faddingTimer_Tick(object sender, EventArgs e)
         {
-            if(h.Opacity>0.86)
+            /*if(h.Opacity>0.86)
             {
                 h.Opacity -= 0.01;
             }
             else
             {
                 faddingTimer.Stop();
-            }
+            }   */
         }
 
         private void faddingTime2_Tick(object sender, EventArgs e)

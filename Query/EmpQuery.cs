@@ -21,7 +21,7 @@ namespace AdminSystem.Query
 
                 if (byId && int.TryParse(search, out int id))
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE ID = {id}";
+                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE ID = @id";
                 }
                 else if (byUsername)
                 {
@@ -29,7 +29,7 @@ namespace AdminSystem.Query
                 }
                 else if (byFulName)
                 {
-                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{{search}}'";
+                    query = $"SELECT {GetCol(incPic)} FROM adminsystem.employee WHERE CONCAT(FIRSTNAME, ' ',LASTNAME) = '{search}'";
                 }
                 if (string.IsNullOrEmpty(query))
                 {
