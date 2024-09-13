@@ -39,7 +39,13 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.EmpData = new System.Windows.Forms.DataGridView();
-            this.Column11 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.bgWorkerGetEmp = new System.ComponentModel.BackgroundWorker();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.bgWorkerList = new System.ComponentModel.BackgroundWorker();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,13 +56,6 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bgWorkerGetEmp = new System.ComponentModel.BackgroundWorker();
-            this.panelView = new System.Windows.Forms.Panel();
-            this.bgWorkerList = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.EmpData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,8 +180,7 @@
             this.EmpData.AllowUserToDeleteRows = false;
             this.EmpData.AllowUserToResizeColumns = false;
             this.EmpData.AllowUserToResizeRows = false;
-            this.EmpData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.EmpData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmpData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmpData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -193,7 +191,6 @@
             this.EmpData.ColumnHeadersHeight = 60;
             this.EmpData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.EmpData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column11,
             this.ID,
             this.FullName,
             this.Username,
@@ -228,97 +225,6 @@
             this.EmpData.Size = new System.Drawing.Size(1253, 651);
             this.EmpData.TabIndex = 9;
             this.EmpData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column11
-            // 
-            this.Column11.FillWeight = 40F;
-            this.Column11.HeaderText = "";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 3;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.FillWeight = 200F;
-            this.FullName.HeaderText = "FullName";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "Username";
-            this.Username.FillWeight = 200F;
-            this.Username.HeaderText = "UserName";
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Age
-            // 
-            this.Age.DataPropertyName = "Age";
-            this.Age.HeaderText = "Age";
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // Birthday
-            // 
-            this.Birthday.DataPropertyName = "Birthday";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Birthday.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Birthday.HeaderText = "Birthday";
-            this.Birthday.Name = "Birthday";
-            this.Birthday.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "PhoneNo.";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Salary
-            // 
-            this.Salary.DataPropertyName = "Salary";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = "0";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
-            this.Salary.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Salary.HeaderText = "Salary";
-            this.Salary.Name = "Salary";
-            this.Salary.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.FillWeight = 50F;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // faddingTimer
             // 
@@ -362,6 +268,95 @@
             this.bgWorkerList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerList_DoWork);
             this.bgWorkerList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgrWorkerList_RunWorkerCompleted);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.FillWeight = 60F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 8;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.FillWeight = 90F;
+            this.FullName.HeaderText = "FullName";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.FillWeight = 70F;
+            this.Username.HeaderText = "UserName";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.FillWeight = 60F;
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.DataPropertyName = "Age";
+            this.Age.FillWeight = 50F;
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // Birthday
+            // 
+            this.Birthday.DataPropertyName = "Birthday";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.Birthday.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Birthday.FillWeight = 80F;
+            this.Birthday.HeaderText = "Birthday";
+            this.Birthday.Name = "Birthday";
+            this.Birthday.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.FillWeight = 80F;
+            this.phone.HeaderText = "PhoneNo.";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.FillWeight = 80F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Salary
+            // 
+            this.Salary.DataPropertyName = "Salary";
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = "0";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aqua;
+            this.Salary.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Salary.FillWeight = 40F;
+            this.Salary.HeaderText = "Salary";
+            this.Salary.Name = "Salary";
+            this.Salary.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.FillWeight = 2.442465F;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,7 +393,8 @@
         private System.Windows.Forms.Timer faddingTime2;
         private System.Windows.Forms.ImageList imageList1;
         private System.ComponentModel.BackgroundWorker bgWorkerGetEmp;
-        private System.Windows.Forms.DataGridViewImageColumn Column11;
+        private System.Windows.Forms.Panel panelView;
+        private System.ComponentModel.BackgroundWorker bgWorkerList;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
@@ -409,7 +405,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
-        private System.Windows.Forms.Panel panelView;
-        private System.ComponentModel.BackgroundWorker bgWorkerList;
     }
 }
