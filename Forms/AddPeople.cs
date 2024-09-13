@@ -262,6 +262,11 @@ namespace AdminSystem.Forms
                     confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
                     pass = false;
                 }
+                else
+                {
+                    confirmpstxt.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                    pass = true;
+                }
             }
             show_pass_btn.Visible = false;
             hide_pass_btn.Visible= false;
