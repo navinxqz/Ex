@@ -57,5 +57,23 @@ namespace AdminSystem.Forms
             if(home.Opacity < 1) { home.Opacity += 0.01; }
             else { faddingtimer2.Stop(); }
         }
+
+        private void bgWorkerGetTrainer_DoWork(object sender, DoWorkEventArgs e)
+        {
+            trainer = StaticClass.tQuery.AllTrainers(false, false);
+        }
+
+        private void bgWorkerGetTrainer_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(trainer != null)
+            {
+                panelView.Visible = true;
+                DataView = StaticClass.data.Grid(DataView, trainer);
+            }
+            else
+            {
+                panelView.Visible = false;
+            }
+        }
     }
 }
