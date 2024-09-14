@@ -78,16 +78,7 @@ namespace AdminSystem.Forms
 
         private void searchtxtbox_TextChanged(object sender, EventArgs e)
         {
-            if(searchtxtbox.Text != "Search")
-            {
-                try
-                {
-                    bgWorkerList.RunWorkerAsync();
-                }catch (Exception ex)
-                {
-                    Console.WriteLine($"Error! {ex.Message}");
-                }
-            }
+
         }
 
         private void bgWorkerList_DoWork(object sender, DoWorkEventArgs e)
@@ -104,6 +95,39 @@ namespace AdminSystem.Forms
             {
                 DataView = StaticClass.data.Grid(DataView, tList);
             }
+        }
+
+        private void searchtxtbox_Enter(object sender, EventArgs e)
+        {
+            if (searchtxtbox.Text == "Search")
+            {
+                searchtxtbox.Text = string.Empty;
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                if (searchtxtbox.TabStop == false)
+                {
+                    searchtxtbox.TabStop = true;
+                }
+            }
+        }
+
+        private void searchtxtbox_Leave(object sender, EventArgs e)
+        {
+            if (searchtxtbox.Text == "")
+            {
+                searchtxtbox.Text = "Search";
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddPeople a = new AddPeople(employee, TrainerAdd: true);
+            faddingtimer1.Start();
+            a.ShowDialog();
+            faddingtimer2.Start();
+            homeForm.DataRef();
+            panelView.Visible = false;
+            bgWorkerGetTrainer.RunWorkerAsync();
         }
     }
 }
