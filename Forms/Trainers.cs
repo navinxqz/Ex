@@ -75,5 +75,35 @@ namespace AdminSystem.Forms
                 panelView.Visible = false;
             }
         }
+
+        private void searchtxtbox_TextChanged(object sender, EventArgs e)
+        {
+            if(searchtxtbox.Text != "Search")
+            {
+                try
+                {
+                    bgWorkerList.RunWorkerAsync();
+                }catch (Exception ex)
+                {
+                    Console.WriteLine($"Error! {ex.Message}");
+                }
+            }
+        }
+
+        private void bgWorkerList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            tList = trainer.Where(trainer => trainer.Name.ToLower().Contains(searchtxtbox.Text) || 
+            trainer.Id.ToString().Contains(searchtxtbox.Text) || 
+            trainer.Name.Contains(searchtxtbox.Text) || 
+            trainer.Name.ToUpper().Contains(searchtxtbox.Text)).ToList();
+        }
+
+        private void bgWorkerList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if(tList != null)
+            {
+                DataView = StaticClass.data.Grid(DataView, tList);
+            }
+        }
     }
 }
