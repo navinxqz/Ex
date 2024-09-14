@@ -23,6 +23,15 @@ namespace AdminSystem.Forms
         public Trainers()
         {
             InitializeComponent();
+            DataView.AutoGenerateColumns = false;
+            bgWorkerGetTrainer.RunWorkerAsync();
+        }
+        public Trainers(EmployeeBase e, HomeForm hf, Home h)
+        {
+            InitializeComponent();
+            DataView.AutoGenerateColumns = false;
+            bgWorkerGetTrainer.RunWorkerAsync();
+            home = h; homeForm = hf; employee = e;
         }
 
         private void Trainers_Load(object sender, EventArgs e)
