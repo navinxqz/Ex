@@ -167,6 +167,12 @@
     <Compile Include="Forms\Subscription1.Designer.cs">
       <DependentUpon>Subscription1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Trainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trainers.Designer.cs">
+      <DependentUpon>Trainers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Query\EmpQuery.cs" />
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Subscription1.resx">
       <DependentUpon>Subscription1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trainers.resx">
+      <DependentUpon>Trainers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,10 +11,11 @@ namespace AdminSystem.Forms
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
         private List<Form> forms = new List<Form>();
-        private HomeForm home = new HomeForm();
-        private Employee emp = new Employee();
-        private EmployeeBase employee = new EmployeeBase();
-        //private Trainer trainer;
+        private HomeForm home;
+        private Employee emp;
+        private EmployeeBase employee;
+        private Trainers trainers;
+        //more to implement...
         
         public Home()
         {
@@ -48,7 +49,7 @@ namespace AdminSystem.Forms
             {
                 home = new HomeForm(e, this);
                 emp = new Employee(e, this);
-                //trainer = new Trainer(e, home, this);
+                trainers = new Trainer(e, home, this);
                 //further options will b added
 
                 if (!employee.Admin)
@@ -249,7 +250,7 @@ namespace AdminSystem.Forms
                 btnTrainer.Checked = true;
                 return;
             }
-            //LoadForm(emp);
+            LoadForm(trainers);
             ButtonSetting(btnTrainer);
         }
 

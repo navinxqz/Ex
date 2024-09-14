@@ -30,15 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trainers));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
             this.DataView = new System.Windows.Forms.DataGridView();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bgWorkerGetTrainer = new System.ComponentModel.BackgroundWorker();
+            this.faddingtimer1 = new System.Windows.Forms.Timer(this.components);
+            this.faddingtimer2 = new System.Windows.Forms.Timer(this.components);
+            this.bgWorkerList = new System.ComponentModel.BackgroundWorker();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +53,6 @@
             this.Specialized = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lesson_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.panelView = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bgWorkerGetTrainer = new System.ComponentModel.BackgroundWorker();
-            this.faddingtimer1 = new System.Windows.Forms.Timer(this.components);
-            this.faddingtimer2 = new System.Windows.Forms.Timer(this.components);
-            this.bgWorkerList = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
             this.panelView.SuspendLayout();
             this.SuspendLayout();
@@ -180,18 +180,18 @@
             this.DataView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DataView.ColumnHeadersHeight = 60;
             this.DataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
-            this.Name,
+            this.MName,
             this.Gender,
             this.Age,
             this.DOB,
@@ -200,14 +200,14 @@
             this.Specialized,
             this.Lesson_Cost,
             this.Status});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataView.DefaultCellStyle = dataGridViewCellStyle2;
             this.DataView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.DataView.EnableHeadersVisualStyles = false;
             this.DataView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
@@ -222,17 +222,56 @@
             this.DataView.Size = new System.Drawing.Size(1226, 618);
             this.DataView.TabIndex = 15;
             // 
+            // panelView
+            // 
+            this.panelView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelView.Controls.Add(this.DataView);
+            this.panelView.Location = new System.Drawing.Point(-6, 93);
+            this.panelView.Margin = new System.Windows.Forms.Padding(2);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(1331, 646);
+            this.panelView.TabIndex = 16;
+            this.panelView.Visible = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this.DataView;
+            // 
+            // bgWorkerGetTrainer
+            // 
+            this.bgWorkerGetTrainer.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerGetTrainer_DoWork);
+            this.bgWorkerGetTrainer.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerGetTrainer_RunWorkerCompleted);
+            // 
+            // faddingtimer1
+            // 
+            this.faddingtimer1.Interval = 20;
+            this.faddingtimer1.Tick += new System.EventHandler(this.faddingtimer1_Tick);
+            // 
+            // faddingtimer2
+            // 
+            this.faddingtimer2.Interval = 15;
+            this.faddingtimer2.Tick += new System.EventHandler(this.faddingtimer2_Tick);
+            // 
+            // bgWorkerList
+            // 
+            this.bgWorkerList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerList_DoWork);
+            this.bgWorkerList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerList_RunWorkerCompleted);
+            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             // 
-            // Name
+            // MName
             // 
-            this.Name.HeaderText = "Name";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.MName.DataPropertyName = "Name";
+            this.MName.HeaderText = "Name";
+            this.MName.MinimumWidth = 8;
+            this.MName.Name = "MName";
+            this.MName.ReadOnly = true;
             // 
             // Gender
             // 
@@ -284,43 +323,6 @@
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // panelView
-            // 
-            this.panelView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelView.Controls.Add(this.DataView);
-            this.panelView.Location = new System.Drawing.Point(-6, 93);
-            this.panelView.Margin = new System.Windows.Forms.Padding(2);
-            this.panelView.Name = "panelView";
-            this.panelView.Size = new System.Drawing.Size(1331, 646);
-            this.panelView.TabIndex = 16;
-            this.panelView.Visible = false;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 40;
-            this.bunifuElipse1.TargetControl = this.DataView;
-            // 
-            // bgWorkerGetTrainer
-            // 
-            this.bgWorkerGetTrainer.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerGetTrainer_DoWork);
-            this.bgWorkerGetTrainer.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerGetTrainer_RunWorkerCompleted);
-            // 
-            // faddingtimer1
-            // 
-            this.faddingtimer1.Interval = 20;
-            this.faddingtimer1.Tick += new System.EventHandler(this.faddingtimer1_Tick);
-            // 
-            // faddingtimer2
-            // 
-            this.faddingtimer2.Interval = 15;
-            this.faddingtimer2.Tick += new System.EventHandler(this.faddingtimer2_Tick);
-            // 
-            // bgWorkerList
-            // 
-            this.bgWorkerList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgWorkerList_DoWork);
-            this.bgWorkerList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgWorkerList_RunWorkerCompleted);
-            // 
             // Trainers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,8 +351,14 @@
         private CuoreUI.Controls.cuiButton btnAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DataView;
+        private System.Windows.Forms.Panel panelView;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.ComponentModel.BackgroundWorker bgWorkerGetTrainer;
+        private System.Windows.Forms.Timer faddingtimer1;
+        private System.Windows.Forms.Timer faddingtimer2;
+        private System.ComponentModel.BackgroundWorker bgWorkerList;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
@@ -359,11 +367,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Specialized;
         private System.Windows.Forms.DataGridViewTextBoxColumn Lesson_Cost;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
-        private System.Windows.Forms.Panel panelView;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.ComponentModel.BackgroundWorker bgWorkerGetTrainer;
-        private System.Windows.Forms.Timer faddingtimer1;
-        private System.Windows.Forms.Timer faddingtimer2;
-        private System.ComponentModel.BackgroundWorker bgWorkerList;
     }
 }

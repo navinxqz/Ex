@@ -10,8 +10,8 @@ namespace AdminSystem.Classes
         public int LessonPrice {  get; set; }
         public bool Status {  get; set; }
 
-        public Trainer(int id =0, string firstname=null, string lastname = null, string gender = null, string imgbase = null, string email = null, string phone = null, string password = null, DateTime birthday=default, Image pic =null, string specialized = null, int lessonPrice=0, bool status=false) 
-            : base(id, firstname, lastname, gender, imgbase, email, phone, password, birthday, pic)
+        public Trainer(int id = 0, string firstname = null, string lastname = null, string gender = null, string email = null, string phone = null, DateTime birthday = default, Image picture = null, string specialized = null, int lessonPrice = 0, bool status = false)
+            : base(id: id, firstname: firstname, lastname: lastname, gender: gender, email: email, phone: phone, birthday: birthday, pic: picture)
         { 
             Specialized = specialized;
             LessonPrice = lessonPrice;
