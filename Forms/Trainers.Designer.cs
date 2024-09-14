@@ -30,36 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Trainers));
-            this.bgWorkerList = new System.ComponentModel.BackgroundWorker();
-            this.bgWorkerGetEmp = new System.ComponentModel.BackgroundWorker();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.faddingTime2 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBtn = new CuoreUI.Controls.cuiButton();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.searchtxtbox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.DataView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Specialized = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lesson_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panelView = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DataView)).BeginInit();
+            this.panelView.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "guest-32.png");
-            // 
-            // faddingTime2
-            // 
-            this.faddingTime2.Interval = 15;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 40;
-            // 
-            // faddingTimer
-            // 
-            this.faddingTimer.Interval = 20;
             // 
             // searchBtn
             // 
@@ -92,11 +84,6 @@
             this.searchBtn.Size = new System.Drawing.Size(48, 51);
             this.searchBtn.TabIndex = 14;
             this.searchBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 35;
-            this.bunifuElipse1.TargetControl = this.searchtxtbox;
             // 
             // searchtxtbox
             // 
@@ -171,6 +158,141 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Trainers";
             // 
+            // DataView
+            // 
+            this.DataView.AllowUserToAddRows = false;
+            this.DataView.AllowUserToDeleteRows = false;
+            this.DataView.AllowUserToResizeColumns = false;
+            this.DataView.AllowUserToResizeRows = false;
+            this.DataView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DataView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.DataView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DataView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DataView.ColumnHeadersHeight = 60;
+            this.DataView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Name,
+            this.Gender,
+            this.Age,
+            this.DOB,
+            this.Email,
+            this.Phone,
+            this.Specialized,
+            this.Lesson_Cost,
+            this.Status});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DataView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.DataView.EnableHeadersVisualStyles = false;
+            this.DataView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.DataView.Location = new System.Drawing.Point(43, 16);
+            this.DataView.MultiSelect = false;
+            this.DataView.Name = "DataView";
+            this.DataView.ReadOnly = true;
+            this.DataView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DataView.RowHeadersVisible = false;
+            this.DataView.RowHeadersWidth = 80;
+            this.DataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataView.Size = new System.Drawing.Size(1226, 618);
+            this.DataView.TabIndex = 15;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
+            this.Name.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "Age";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // DOB
+            // 
+            this.DOB.HeaderText = "DOB";
+            this.DOB.Name = "DOB";
+            this.DOB.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Specialized
+            // 
+            this.Specialized.HeaderText = "Specialized";
+            this.Specialized.Name = "Specialized";
+            this.Specialized.ReadOnly = true;
+            // 
+            // Lesson_Cost
+            // 
+            this.Lesson_Cost.HeaderText = "Lesson_Cost";
+            this.Lesson_Cost.Name = "Lesson_Cost";
+            this.Lesson_Cost.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // panelView
+            // 
+            this.panelView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelView.Controls.Add(this.DataView);
+            this.panelView.Location = new System.Drawing.Point(-6, 93);
+            this.panelView.Margin = new System.Windows.Forms.Padding(2);
+            this.panelView.Name = "panelView";
+            this.panelView.Size = new System.Drawing.Size(1331, 646);
+            this.panelView.TabIndex = 16;
+            this.panelView.Visible = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this.DataView;
+            // 
             // Trainers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,26 +303,34 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Trainers";
             this.Text = "Trainers";
+            ((System.ComponentModel.ISupportInitialize)(this.DataView)).EndInit();
+            this.panelView.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.ComponentModel.BackgroundWorker bgWorkerList;
-        private System.ComponentModel.BackgroundWorker bgWorkerGetEmp;
-        private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Timer faddingTime2;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.Timer faddingTimer;
         private CuoreUI.Controls.cuiButton searchBtn;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox searchtxtbox;
         private CuoreUI.Controls.cuiButton btnAdd;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView DataView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Specialized;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Lesson_Cost;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
+        private System.Windows.Forms.Panel panelView;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
