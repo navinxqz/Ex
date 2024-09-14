@@ -33,10 +33,29 @@ namespace AdminSystem.Forms
             bgWorkerGetTrainer.RunWorkerAsync();
             home = h; homeForm = hf; employee = e;
         }
+        public Trainers(EmployeeBase e)
+        {
+            InitializeComponent();
+            DataView.AutoGenerateColumns = false;
+            bgWorkerGetTrainer.RunWorkerAsync();
+            employee = e;
+        }
 
         private void Trainers_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void faddingtimer1_Tick(object sender, EventArgs e)
+        {
+            if(home.Opacity > 0.86) { home.Opacity -= 0.01; }
+            else { faddingtimer1.Stop(); }
+        }
+
+        private void faddingtimer2_Tick(object sender, EventArgs e)
+        {
+            if(home.Opacity < 1) { home.Opacity += 0.01; }
+            else { faddingtimer2.Stop(); }
         }
     }
 }
