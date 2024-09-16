@@ -56,8 +56,8 @@ namespace AdminSystem.Forms
 
         private void faddingtimer2_Tick(object sender, EventArgs e)
         {
-            /*if(home.Opacity < 1) { home.Opacity += 0.01; }
-            else { faddingtimer2.Stop(); }  */
+            if(home.Opacity < 1) { home.Opacity += 0.01; }
+            else { faddingtimer2.Stop(); }
         }
 
         private void bgWorkerGetTrainer_DoWork(object sender, DoWorkEventArgs e)
