@@ -49,7 +49,7 @@ namespace AdminSystem.Forms
             {
                 home = new HomeForm(e, this);
                 emp = new Employee(e, this);
-                trainers = new Trainer(e, home, this);
+                trainers = new Trainers(e, home, this);
                 //further options will b added
 
                 if (!employee.Admin)
