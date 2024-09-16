@@ -1,4 +1,6 @@
-﻿using AdminSystem.Forms;
+﻿using AdminSystem.Classes;
+using AdminSystem.Forms;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,33 @@ namespace AdminSystem
 {
     public partial class Login : Form
     {
-        public Login()
+        private EmployeeBase eb = StaticClass.employeeBase;
+        bool s = false;
+        public Login(bool key)
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.s = key;
+
+            if(s) { LogPanel.Visible = true; }
+            else {  LogPanel.Visible = false; }
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtBox_Enter(ref KryptonTextBox t)
+        {
+            t.Text = string.Empty;
+            t.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+            if (txtUsername.TabStop == false || txtPassword.TabStop == false)
+            {
+                txtPassword.TabStop = true;
+                txtUsername.TabStop = true;
+            }
         }
 
         private void txtUsername_Leave(object sender, EventArgs e)
@@ -106,10 +127,12 @@ namespace AdminSystem
         {
             if (txtUsername.Text == "Username")
             {
-                txtUsername.Text = string.Empty;
+                /*txtUsername.Text = string.Empty;
                 txtUsername.StateActive.Content.Color1 = Color.FromArgb(189, 188, 205);
+                if (txtUsername.TabStop == false) { txtUsername.TabStop = true; }   */
 
-                if (txtUsername.TabStop == false) { txtUsername.TabStop = true; }
+                txtUsername.Text = string.Empty;
+                txtBox_Enter(ref txtUsername);
             }
         }   //for txtPassword.text its better for now to dryrun. will implement in future...
     }
